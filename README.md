@@ -5,7 +5,7 @@ This blog project has been built for the [NigeriaSE4ALL website](https://nigeria
 
 ---
 
-## How to use
+## How to use :bulb:
 
 Clone the repo by typing the command below into your terminal.
 
@@ -13,22 +13,24 @@ Clone the repo by typing the command below into your terminal.
 git clone https://github.com/chunkingz/NigeriaSE4ALL-Blog-Frontend.git
 ```
 
-and then...
+then...
 
 ```
 cd NigeriaSE4ALL-Blog-Frontend
 ``` 
 
+:heavy_exclamation_mark: Finally, make sure to clone the [NigeriaSE4ALL Blog Backend](https://github.com/chunkingz/NigeriaSE4ALL-Blog-Backend) server.
+
 
 ---
 
-## Development server
+## Development server :sparkles:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ---
 
-## Build
+## Build :rocket:
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
