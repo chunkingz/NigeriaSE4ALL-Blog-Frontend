@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~ngx-sharebuttons/themes/outline';
+
+/* Theme imports for share buttons */
+// @import '~ngx-sharebuttons/themes/material';
+// @import '~ngx-sharebuttons/themes/circles';
+// @import '~ngx-sharebuttons/themes/classic';
+// @import '~ngx-sharebuttons/themes/default';
+// @import '~ngx-sharebuttons/themes/modern';
+
+
+a {
+    text-decoration: none;
+}
+
+h1, h2{
+    font-family: 'Poppins Bold, Source Sans Pro', Arial, sans-serif;
+}
+
+.btn-se4all {
+    background-color: #1DD069;
+    color: #fff !important;
+}
+
+h2.blog-post-title>a {
+    color: #6c757d;
+}
+
+h2.blog-post-title>a:hover {
+    color: #212529;
+}
+
+svg {
+    padding-bottom: 3px;
+}
+
+
+.cta:hover, .btn-se4all:hover {
+    transform: translateY(-3px);
+    transition: all .2s ease-in;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.452);
+}
+
+@media (min-width: 1024) {
+    .btn-space {
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .flex-sm-column {
+        flex-direction: column !important;
+    }
+}
+
+

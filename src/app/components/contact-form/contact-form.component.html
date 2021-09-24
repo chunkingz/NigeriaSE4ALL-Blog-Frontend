@@ -1,0 +1,92 @@
+<main class="mb-5">
+
+    <section class="py-5 container">
+        <div class="row py-lg-5 g-2">
+            <div class="col-lg-8">
+                <h1>Contact us</h1>
+                <br>
+                <p class="text-muted">We would like to hear from you! If you have some questions about our data or would
+                    be interested in training about
+                    advanced data analysis, please let us know in the form below. </p>
+                <p class="text-muted">We may also be able to provide support in other areas, for example, project
+                    development of a site or conducting
+                    a joint study together.</p>
+                <p class="text-muted">Just complete the engagement form below, and we will get back to you, indicating
+                    to what extent we can support you
+                    or work together. For inspiration from our past activities, check out the blog.
+                </p>
+                <br>
+                <p>
+                    <a type="button" class="btn btn-lg btn-se4all cta" routerLink="">View the Blog...</a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="assets/contact-us-img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+
+        <h1>Engagement form</h1>
+
+        <form #formData="ngForm" (ngSubmit)="sendEmail($event, formData)">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="username" class="form-label"></label>
+                        <input type="text" ngModel #username="ngModel" class="form-control"
+                            name="username" id="username" placeholder="Your name" required>
+                        <div class="alert alert-danger" *ngIf="username.touched && !username.valid">Your name is
+                            required</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"></label>
+                        <input type="email" ngModel #email="ngModel" class="form-control"
+                            name="email" id="email" aria-describedby="emailHelp" required
+                            placeholder="Your email address">
+                        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Your email is required
+                        </div>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="orgName" class="form-label"></label>
+                        <input type="text" ngModel #orgName="ngModel" class="form-control"
+                            name="orgName" id="orgName" placeholder="Organisation name" required>
+                        <div class="alert alert-danger" *ngIf="orgName.touched && !orgName.valid">Your Organisation name
+                            is required</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="industry" class="form-label"></label>
+                        <textarea type="text" ngModel #industry="ngModel" class="form-control"
+                            name="industry" id="industry"
+                            placeholder="Industry or area of work of your Organisation (e.g. Solar mini-grid project developer)"
+                            rows="3" required></textarea>
+                        <div class="alert alert-danger" *ngIf="industry.touched && !industry.valid">
+                            Your industry is required</div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="mb-3">
+                        <label for="question" class="form-label"></label>
+                        <textarea type="text" ngModel #question="ngModel" class="form-control"
+                            name="question" id="question" required
+                            placeholder="Please describe your question or request to us." rows="14"></textarea>
+                        <div class="alert alert-danger" *ngIf="question.touched && !question.valid">
+                            Your question/request is required</div>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                    <button type="submit" class="btn btn-lg btn-se4all cta" [disabled]="!formData.valid">
+                        Send form</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</main>

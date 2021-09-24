@@ -1,0 +1,20 @@
+
+.bg-img {
+    background-color: #8ee7b4 !important;
+    background-image: url(/assets/footer-img.png);
+    color: #ffffff !important;
+    padding: 5rem .75rem 7rem .75rem !important;
+}
+
+
+.btt-btn:hover {
+    transform: translateY(-3px);
+    transition: all .2s ease-in;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.658);
+    fill: #fff;
+}
+
