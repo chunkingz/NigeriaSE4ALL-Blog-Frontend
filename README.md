@@ -7,7 +7,18 @@ This blog project has been built for the [NigeriaSE4ALL website](https://nigeria
 
 ## How to use
 
-Clone the repo by typing `git clone REPO_NAME` in your terminal.
+Clone the repo by typing the command below into your terminal.
+
+```
+git clone https://github.com/chunkingz/NigeriaSE4ALL-Blog-Frontend.git
+```
+
+and then...
+
+```
+cd NigeriaSE4ALL-Blog-Frontend
+``` 
+
 
 ---
 
