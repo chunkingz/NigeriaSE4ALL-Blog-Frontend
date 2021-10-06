@@ -1,4 +1,6 @@
 dist: bionic
+services:
+  - xvfb
 
 language: node_js
 node_js:
