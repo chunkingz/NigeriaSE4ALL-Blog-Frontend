@@ -1,16 +1,8 @@
-dist: trusty
-sudo: false
+dist: bionic
 
 language: node_js
 node_js:
-  - '8'
-
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  - node
 
 cache:
   directories:
@@ -18,6 +10,3 @@ cache:
 
 install:
   - npm install
-
-script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
