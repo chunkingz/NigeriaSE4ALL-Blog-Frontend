@@ -1,3 +1,4 @@
+[![Build Status](https://app.travis-ci.com/chunkingz/NigeriaSE4ALL-Blog-Frontend.svg?branch=master)](https://app.travis-ci.com/chunkingz/NigeriaSE4ALL-Blog-Frontend)
 
 # NigeriaSE4ALL Blog Frontend
 
