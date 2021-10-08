@@ -25,6 +25,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SubscribeComponent } from './components/subscribe/subscribe.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     SummaryPipe,
     BlogPostComponent,
     ContactFormComponent,
-    FormSuccessComponent
+    FormSuccessComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,

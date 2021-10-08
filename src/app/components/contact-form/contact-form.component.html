@@ -1,4 +1,4 @@
-<main class="mb-5">
+<main>
 
     <section class="py-5 container">
         <div class="row py-lg-5 g-2">
@@ -40,16 +40,14 @@
                         <label for="username" class="form-label"></label>
                         <input type="text" ngModel #username="ngModel" class="form-control"
                             name="username" id="username" placeholder="Your name" required>
-                        <div class="alert alert-danger" *ngIf="username.touched && !username.valid">Your name is
-                            required</div>
+                        <div class="alert alert-danger" *ngIf="username.touched && !username.valid">Your name is required</div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label"></label>
                         <input type="email" ngModel #email="ngModel" class="form-control"
                             name="email" id="email" aria-describedby="emailHelp" required
                             placeholder="Your email address">
-                        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Your email is required
-                        </div>
+                        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Your email is required</div>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
                         </div>
                     </div>
@@ -57,8 +55,7 @@
                         <label for="orgName" class="form-label"></label>
                         <input type="text" ngModel #orgName="ngModel" class="form-control"
                             name="orgName" id="orgName" placeholder="Organisation name" required>
-                        <div class="alert alert-danger" *ngIf="orgName.touched && !orgName.valid">Your Organisation name
-                            is required</div>
+                        <div class="alert alert-danger" *ngIf="orgName.touched && !orgName.valid">Your Organisation name is required</div>
                     </div>
                     <div class="mb-3">
                         <label for="industry" class="form-label"></label>
@@ -66,8 +63,7 @@
                             name="industry" id="industry"
                             placeholder="Industry or area of work of your Organisation (e.g. Solar mini-grid project developer)"
                             rows="3" required></textarea>
-                        <div class="alert alert-danger" *ngIf="industry.touched && !industry.valid">
-                            Your industry is required</div>
+                        <div class="alert alert-danger" *ngIf="industry.touched && !industry.valid">Your industry is required</div>
                     </div>
                 </div>
 
@@ -77,16 +73,20 @@
                         <textarea type="text" ngModel #question="ngModel" class="form-control"
                             name="question" id="question" required
                             placeholder="Please describe your question or request to us." rows="14"></textarea>
-                        <div class="alert alert-danger" *ngIf="question.touched && !question.valid">
-                            Your question/request is required</div>
+                        <div class="alert alert-danger" *ngIf="question.touched && !question.valid">Your question/request is required</div>
                     </div>
                     <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-                    <button type="submit" class="btn btn-lg btn-se4all cta" [disabled]="!formData.valid">
-                        Send form</button>
+                    <button type="submit" class="btn btn-lg btn-se4all cta" [disabled]="!formData.valid">Send form</button>
                 </div>
             </div>
         </form>
 
     </div>
+
+    <!-- START OF SUBSCRIBE FUNCTIONALITY -->
+
+    <subscribe></subscribe>
+
+    <!-- END OF SUBSCRIBE FUNCTIONALITY -->
 
 </main>

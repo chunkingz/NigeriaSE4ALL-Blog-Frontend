@@ -1,4 +1,4 @@
-<main class="mb-5" @blogAnimation>
+<main @blogAnimation>
 
     <section class="py-5 container" id="hero-section">
         <div class="row py-lg-5 g-2">
@@ -36,7 +36,9 @@
 
                 <div *ngFor="let blog of blogData">
                     <div class="col py-4">
-                        <div class="card shadow-lg">
+                        <a routerLink="blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
+                                        
+                        <div class="card shadow-lg" id="blog-post">
                             <img class="blog-preview-img" src="{{blog.image.url}}" alt="blog post image">
 
                             <div class="card-body">
@@ -66,7 +68,7 @@
                                     </p>
 
                                     <!-- Blog Teaser -->
-                                    <p>{{ blog.content | summary: 300 }}</p>
+                                    <p id="blog-teaser">{{ blog.content | summary: 300 }}</p>
 
                                     <hr>
 
@@ -77,7 +79,8 @@
                                     <!-- START OF BLOG READ MORE BUTTON -->
                                     <div class="mx-3">
                                         <a type="button" class="btn btn-md btn-outline-secondary"
-                                            routerLink="blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
+                                            routerLink="blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}"
+                                            >
                                             Read More...
                                         </a>
                                     </div>
@@ -102,6 +105,7 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                     </div>
 
                     <hr>
@@ -117,5 +121,11 @@
 
         </div>
     </div>
+
+    <!-- START OF SUBSCRIBE FUNCTIONALITY -->
+
+    <subscribe></subscribe>
+
+    <!-- END OF SUBSCRIBE FUNCTIONALITY -->
 
 </main>

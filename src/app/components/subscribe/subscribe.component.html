@@ -1,0 +1,19 @@
+<div class="site-newsletter bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="h4 mb-2">Subscribe to our newsletter</h3>
+        <p class="text-muted">Join our monthly newsletter and never miss out on new blog posts and promotions.</p>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-md-7 col-lg-5 ms-auto me-auto">
+            <div class="input-group mb-3 mt-3">
+              <input type="email" ngModel #email="ngModel" class="form-control" placeholder="Email address" aria-label="Email address" name="email">
+              <span class="input-group-btn">
+                <button class="btn btn-lg" id="subscribe" type="button" (click)="formSubmit(email)">Subscribe</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

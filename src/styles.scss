@@ -11,14 +11,14 @@
 
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 h1, h2{
     font-family: 'Poppins Bold, Source Sans Pro', Arial, sans-serif;
 }
 
-.btn-se4all {
+.btn-se4all, #subscribe {
     background-color: #1DD069;
     color: #fff !important;
 }
@@ -27,7 +27,7 @@ h2.blog-post-title>a {
     color: #6c757d;
 }
 
-h2.blog-post-title>a:hover {
+h2.blog-post-title>a:hover, #blog-teaser, .blog-post-meta {
     color: #212529;
 }
 
@@ -35,8 +35,7 @@ svg {
     padding-bottom: 3px;
 }
 
-
-.cta:hover, .btn-se4all:hover {
+.cta:hover, .btn-se4all:hover, #blog-post:hover {
     transform: translateY(-3px);
     transition: all .2s ease-in;
     transition-property: all;
