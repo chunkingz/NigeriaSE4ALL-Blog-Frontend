@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DataService } from 'src/app/services/data.service';
+import { blogAnimation } from './blog.component.animation';
 
 @Component({
   selector: 'blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
+  animations: [ blogAnimation ]
 })
 export class BlogComponent implements OnInit {
 
