@@ -2,3 +2,12 @@
 main {
     margin-top: 5rem;
 }
+
+
+/* Responsive */
+
+@media (max-width: 685px) {
+    img{
+        width: 300px;
+    }
+  }

@@ -19,6 +19,7 @@ import { ShareModule } from 'ngx-sharebuttons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ShareButtonModule } from 'ngx-sharebuttons/button';
+import {GoTopButtonModule} from 'ng-go-top-button';
 
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -26,6 +27,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
+import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component';
     BlogPostComponent,
     ContactFormComponent,
     FormSuccessComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    BlogCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component';
     ShareIconsModule,
     ShareButtonModule,
     ShareButtonsModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    GoTopButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DataService } from 'src/app/services/data.service';
-import { blogAnimation } from './blog.component.animation';
+import { blogAnimation } from '../animation/blog.component.animation';
 
 @Component({
   selector: 'blog',
@@ -12,15 +12,12 @@ import { blogAnimation } from './blog.component.animation';
 export class BlogComponent implements OnInit {
 
   blogData: any;
-  blogTags: any;
-  categoriesData: any;
 
   constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
     this._title.setTitle('SE4ALL Blog');
     this.getAllArticles();
-    this.getAllCategories();
   }
 
   /**
@@ -28,7 +25,6 @@ export class BlogComponent implements OnInit {
    */
   getAllArticles() {
     this._data.getArticles().subscribe(res => {
-      // console.log(res);
       this.blogData = res;
     }, error => {
       console.log('An unexpected error occurred');
@@ -36,18 +32,5 @@ export class BlogComponent implements OnInit {
     });
   }
 
-
-  /**
-   * Fetches all categories in the db
-   */
-   getAllCategories() {
-    this._data.getCategories().subscribe(res => {
-      // console.log(res2);
-      this.categoriesData = res;
-    }, error => {
-      console.log('An unexpected error occurred');
-      console.log(error);
-    });
-  }
 
 }

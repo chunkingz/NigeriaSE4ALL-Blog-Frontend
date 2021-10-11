@@ -9,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 export class SideBarComponent implements OnInit {
 
   categoriesData: any;
-
+  url: any;
 
   constructor(private _data: DataService) { }
 
@@ -22,9 +22,8 @@ export class SideBarComponent implements OnInit {
    * Fetches all categories in the db
    */
    getAllCategories() {
-    this._data.getCategories().subscribe(res2 => {
-      // console.log(res2);
-      this.categoriesData = res2;
+    this._data.getCategories().subscribe(res => {
+      this.categoriesData = res;
     }, error => {
       console.log('An unexpected error occurred');
       console.log(error);

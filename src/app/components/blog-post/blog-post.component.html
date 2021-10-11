@@ -5,7 +5,7 @@
 
             <!--START OF BLOG POST COLUMN  -->
 
-            <div class="col-md-8 pb-4">
+            <div class="col-lg-8 col-md-12 pb-4">
 
                 <div *ngFor="let blog of blogPostData">
 
@@ -65,7 +65,7 @@
 
 
             <!-- START OF SIDE BAR -->
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="position-sticky" style="top: 2rem;">
 
                     <!-- SIDE BAR TAGS -->
@@ -75,14 +75,14 @@
                         <span *ngFor="let blog of blogPostData">
                             <span *ngFor="let blogCategory of blog.categories">
 
-                            <button type="button" class="btn btn-se4all mb-2">
+                            <a type="button" class="btn btn-se4all mb-2" routerLink="../../../../../blog-category/{{ blogCategory.name }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-tag-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                                 </svg>
                                 {{ blogCategory.name }}
-                            </button>&nbsp;
+                            </a>&nbsp;
 
                             </span>
                         </span>

@@ -19,9 +19,7 @@ export class DataService {
    * @returns all articles in the db
    */
   getArticles(){
-    return this._http.get(
-      `${this._url}/articles`
-        )
+    return this._http.get(`${this._url}/articles`)
   }
 
 
@@ -31,9 +29,7 @@ export class DataService {
    * @param {string} url - the article url
    */
    getOneArticle(url: string){
-    return this._http.get(
-      `${this._url}/articles?url=${url}`
-        )
+    return this._http.get(`${this._url}/articles?url=${url}`)
   }
 
 
@@ -42,9 +38,7 @@ export class DataService {
    * @returns the total count of articles from the db
    */
    getArticlesCount(){
-    return this._http.get(
-      `${this._url}/articles/count`
-        )
+    return this._http.get(`${this._url}/articles/count`)
   }
 
 
@@ -53,21 +47,17 @@ export class DataService {
    * @returns all categories in the db
    */
    getCategories(){
-    return this._http.get(
-      `${this._url}/categories`
-        )
+    return this._http.get(`${this._url}/categories`)
   }
 
 
   /**
    * Get a single category from the db
-   * @returns a single category from the db
+   * @returns a single category from the db, along with all the associated articles.
    * @param {number} id - the category id
    */
-   getOneCategory(id:number){
-    return this._http.get(
-      `${this._url}/category/${id}`
-        )
+   getOneCategory(url: string){
+    return this._http.get(`${this._url}/categories?name=${url}`)
   }
 
 
@@ -76,9 +66,7 @@ export class DataService {
    * @returns the total count of categories from the db
    */
    getCategoriesCount(){
-    return this._http.get(
-      `${this._url}/categories/count`
-        )
+    return this._http.get(`${this._url}/categories/count`)
   }
   
 }
