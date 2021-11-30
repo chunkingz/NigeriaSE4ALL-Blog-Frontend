@@ -67,8 +67,8 @@
                                             </svg> {{ blog.user.username }} </span>
                                     </p>
 
-                                    <!-- Blog Teaser -->
-                                    <p id="blog-teaser">{{ blog.content | summary: 300 }}</p>
+                                    <!-- Blog Summary/Teaser -->
+                                    <p id="blog-teaser">{{ blog.summary | summary: 300 }}</p>
 
                                     <hr>
 

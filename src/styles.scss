@@ -14,8 +14,8 @@ a {
     text-decoration: none !important;
 }
 
-h1, h2{
-    font-family: 'Poppins Bold, Source Sans Pro', Arial, sans-serif;
+* {
+    font-family: 'Poppins Bold', 'Source Sans Pro', Arial, sans-serif;
 }
 
 .btn-se4all, #subscribe {
@@ -33,6 +33,13 @@ h2.blog-post-title>a:hover, #blog-teaser, .blog-post-meta {
 
 svg {
     padding-bottom: 3px;
+}
+
+img.blog-preview-img {
+    max-width: 100% !important; 
+    height: 400px;
+    object-fit: cover;
+    padding: 20px;
 }
 
 .cta:hover, .btn-se4all:hover, #blog-post:hover {
