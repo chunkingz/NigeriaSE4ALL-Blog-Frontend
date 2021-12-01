@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
+import { Constants } from 'src/app/constants/constants';
 
 
 @Component({
@@ -13,13 +14,31 @@ export class BlogPostComponent implements OnInit {
 
   slug: any;
   blogPostData: any;
+  dynamicData: any;
+  staticContent!: Constants;
+
 
   constructor(private _route: ActivatedRoute, private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
     this.fetchBlogPost();
+    this.getDynamicContent();
   }
 
+
+  /**
+   * Fetches all dynamic data from the db
+   */
+   getDynamicContent() {
+    this._data.getDynamicContent().subscribe(res => {
+      this.dynamicData = [res];
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
+  }
+
+  
   /**
    * When the component is initialized, get the slug/url field from the URL params
    * Pass this unique slug field to the service and fetch the corresponding blog post.

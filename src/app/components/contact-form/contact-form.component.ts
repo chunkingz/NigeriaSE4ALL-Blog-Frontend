@@ -3,6 +3,9 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { Constants } from 'src/app/constants/constants';
+import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'contact-form',
@@ -11,10 +14,27 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor(private _title: Title, private _router: Router) { }
+  dynamicData: any;
+  staticContent!: Constants;
+
+  constructor(private _title: Title, private _router: Router, private _data: DataService) { }
 
   ngOnInit() {
     this._title.setTitle('Contact Us');
+    this.getDynamicContent();
+  }
+
+
+  /**
+   * Fetches all dynamic data from the db
+   */
+   getDynamicContent() {
+    this._data.getDynamicContent().subscribe(res => {
+      this.dynamicData = [res];
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
   }
 
   // formSubmit(formValues: any) {

@@ -1,32 +1,48 @@
+<div *ngFor="let dynamicBlogData of dynamicData">
 
-<header class="header">
-  <div class="flex-container">
-    <div id="header-blitz-div">
-      <a href="#">
-        <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
-        <div class="h2-alternative">Nigeria Se4All</div>
-      </a>
+  <header class="header">
+    <div class="flex-container">
+      <div id="header-blitz-div">
+        <a href="#">
+          <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
+          <div class="h2-alternative">
+            {{ dynamicBlogData ? dynamicBlogData.nav_site_title : staticContent.k_nav_site_title }}
+          </div>
+        </a>
+      </div>
+      <div class="cell" id="map">
+        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_1 : staticContent.k_nav_txt_url_1 }}" target="_blank">
+          <img src="assets/i_map.svg" alt="map icon">
+          {{ dynamicBlogData ? dynamicBlogData.nav_txt_1 : staticContent.k_nav_txt_1 }}
+        </a>
+      </div>
+      <div class="cell" id="tools">
+        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_2 : staticContent.k_nav_txt_url_2 }}" target="_blank">
+          <img src="assets/i_layers.svg" alt="layers icon">
+            {{ dynamicBlogData ? dynamicBlogData.nav_txt_2 : staticContent.k_nav_txt_2 }}
+          </a>
+      </div>
+      <div class="cell" id="about">
+        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : staticContent.k_nav_txt_url_3 }}" target="_blank">
+          <img src="assets/i_info.svg" alt="info icon">
+            {{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : staticContent.k_nav_txt_3 }}
+          </a>
+      </div>
+      <div class="cell nav__logo-nigeria" id="header-logo-nigeria">
+        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : staticContent.k_nav_logo_url }}" target="_blank">
+          <img src="assets/logo-2-crest.png" alt="FMP Logo">
+        </a>
+      </div>
+      <div class="cell" id="hamburger">
+        <a data-toggle="mobile-menu-div" id="mobile-menu-toggle">
+          <img src="assets/i_hamburger.svg" alt="menu icon">
+        </a>
+      </div>
     </div>
-    <div class="cell" id="map">
-      <a href="https://nigeriase4all.gov.ng/map" target="_blank"><img src="assets/i_map.svg" alt="map icon">MAP</a>
-    </div>
-    <div class="cell" id="tools">
-      <a href="https://nigeriase4all.gov.ng/#landing-resources" target="_blank"><img src="assets/i_layers.svg" alt="layers icon">TOOLS</a>
-    </div>
-    <div class="cell" id="about">
-      <a href="https://nigeriase4all.gov.ng/about" target="_blank"><img src="assets/i_info.svg" alt="info icon">ABOUT</a>
-    </div>
-    <div class="cell nav__logo-nigeria" id="header-logo-nigeria">
-      <a href="https://www.power.gov.ng/" target="_blank">
-        <img src="assets/logo-2-crest.png" alt="FMP Logo">
-      </a>
-    </div>
-    <div class="cell" id="hamburger">
-      <a data-toggle="mobile-menu-div" id="mobile-menu-toggle"> <img src="assets/i_hamburger.svg" alt="menu icon"> </a>
-    </div>
-  </div>
 
 
-</header>
+  </header>
 
-<div id="page-top" class="below-header"></div>
+  <div id="page-top" class="below-header"></div>
+
+</div>

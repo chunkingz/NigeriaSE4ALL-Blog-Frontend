@@ -15,6 +15,14 @@ export class DataService {
 
 
   /**
+   * Get the dynamic content from the strapi CMS
+   * @returns all the dynamic content from the db
+   */
+   getDynamicContent(){
+    return this._http.get(`${this._url}/dynamic-blog-content`)
+  }
+
+  /**
    * Get all articles in the db
    * @returns all articles in the db
    */

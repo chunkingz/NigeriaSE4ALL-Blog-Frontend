@@ -1,3 +1,5 @@
+<div *ngFor="let dynamicBlogData of dynamicData">
+
 <main>
 
     <div class="container">
@@ -71,7 +73,8 @@
                     <!-- SIDE BAR TAGS -->
 
                     <div class="p-4 mb-3 bg-light rounded">
-                        <h4 class="fst-italic">Tags</h4>
+                        <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.tag_txt : staticContent.k_tag_txt }}</h4>
+
                         <span *ngFor="let blog of blogPostData">
                             <span *ngFor="let blogCategory of blog.categories">
 
@@ -103,3 +106,4 @@
     <!-- END OF SUBSCRIBE FUNCTIONALITY -->
 
 </main>
+</div>

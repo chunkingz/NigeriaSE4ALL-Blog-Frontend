@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
+import { Constants } from 'src/app/constants/constants';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'subscribe',
@@ -8,11 +10,27 @@ import Swal from 'sweetalert2';
 })
 export class SubscribeComponent implements OnInit {
 
-  constructor() { }
+  dynamicData: any;
+  staticContent!: Constants;
+
+  constructor(private _data: DataService) { }
 
   ngOnInit(): void {
+    this.getDynamicContent();
   }
 
+  /**
+   * Fetches all dynamic data from the db
+   */
+   getDynamicContent() {
+    this._data.getDynamicContent().subscribe(res => {
+      this.dynamicData = [res];
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
+  }
+  
   formSubmit(email: any) {
     const validatedEmail = this.validateEmail(email.value)
     if (!validatedEmail) {
