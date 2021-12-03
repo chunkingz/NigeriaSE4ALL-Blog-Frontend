@@ -42,11 +42,11 @@ export class Constants {
     private form_success_hero_subtitle_1 = "We will get in touch with you about your request with the email address you provided.";
     private btn5 = "Return to homepage";
     private nav_site_title = "Nigeria Se4All";
-    private nav_txt_1 = "MAP";
-    private nav_txt_2 = "TOOLS";
+    private nav_txt_1 = "BLOG";
+    private nav_txt_2 = "MAP";
     private nav_txt_3 = "ABOUT";
-    private nav_txt_url_1 = "https://nigeriase4all.gov.ng/map";
-    private nav_txt_url_2 = "https://nigeriase4all.gov.ng/#landing-resources";
+    private nav_txt_url_1 = "http://localhost:4200/blog";
+    private nav_txt_url_2 = "https://nigeriase4all.gov.ng/map";
     private nav_txt_url_3 = "https://nigeriase4all.gov.ng/about";
     private nav_logo_url = "https://www.power.gov.ng/";
     private subscribe_hero_title = "Subscribe to our newsletter";

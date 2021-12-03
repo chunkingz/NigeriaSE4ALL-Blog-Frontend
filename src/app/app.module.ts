@@ -28,6 +28,7 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { BlogCategoryComponent } from './components/blog-category/blog-category.
     ContactFormComponent,
     FormSuccessComponent,
     SubscribeComponent,
-    BlogCategoryComponent
+    BlogCategoryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

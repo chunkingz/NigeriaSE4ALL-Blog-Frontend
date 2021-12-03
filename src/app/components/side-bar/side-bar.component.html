@@ -1,6 +1,5 @@
-<div *ngFor="let dynamicBlogData of dynamicData">
+<div *ngFor="let dynamicBlogData of dynamicData" class="position-sticky" style="top: 2rem;">
 
-<div class="position-sticky" style="top: 2rem;">
 
     <!-- <div class="p-4 mb-3 bg-light rounded">
         <h4 class="fst-italic">Archives</h4>
@@ -16,7 +15,7 @@
 
         <span *ngFor="let category of categoriesData">
 
-            <a type="button" class="btn btn-se4all mb-2" routerLink="blog-category/{{category.name}}">
+            <a type="button" class="btn btn-se4all mb-2" routerLink="../blog-category/{{category.name}}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-tag-fill" viewBox="0 0 16 16">
                     <path
@@ -56,6 +55,5 @@
             </svg>
         </a>
     </div>
-</div>
 
 </div>

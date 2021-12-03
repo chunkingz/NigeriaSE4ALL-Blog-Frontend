@@ -10,21 +10,22 @@
           </div>
         </a>
       </div>
-      <div class="cell" id="map">
-        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_1 : staticContent.k_nav_txt_url_1 }}" target="_blank">
-          <img src="assets/i_map.svg" alt="map icon">
+      <div class="cell" id="blog">
+        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_1 : staticContent.k_nav_txt_url_1 }}">
+          <img src="assets/i_feather_blog.svg" alt="blog icon" class="nav-icon">
           {{ dynamicBlogData ? dynamicBlogData.nav_txt_1 : staticContent.k_nav_txt_1 }}
         </a>
+        <img src="assets/new_badge.svg" alt="new icon" id="new-icon">
       </div>
-      <div class="cell" id="tools">
+      <div class="cell" id="map">
         <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_2 : staticContent.k_nav_txt_url_2 }}" target="_blank">
-          <img src="assets/i_layers.svg" alt="layers icon">
+          <img src="assets/i_map.svg" alt="map icon" class="nav-icon">
             {{ dynamicBlogData ? dynamicBlogData.nav_txt_2 : staticContent.k_nav_txt_2 }}
           </a>
       </div>
       <div class="cell" id="about">
         <a href="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : staticContent.k_nav_txt_url_3 }}" target="_blank">
-          <img src="assets/i_info.svg" alt="info icon">
+          <img src="assets/i_info.svg" alt="info icon" class="nav-icon">
             {{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : staticContent.k_nav_txt_3 }}
           </a>
       </div>

@@ -44,12 +44,30 @@ header a{
 
 #header-logo-nigeria img {
     height: 5rem;
-    margin: 0;
+    margin: 1rem;
+}
+
+#new-icon {
+    height: 1rem;
 }
 
 /* Responsive layout - makes a one column layout */
 
-  @media (max-width: 470px) {
+@media (max-width: 800px) {
+    .flex-container {
+        margin: 10px 20px 1px 20px;
+    }
+    .nav-icon {
+        display: none;
+    }
+    div.h2-alternative {
+       display: none !important;
+    }
+    header {
+        margin-bottom: 2rem;
+    }
+}
+  @media (max-width: 640px) {
     .flex-container{
         display: flex;
         flex-direction: row;
@@ -57,17 +75,12 @@ header a{
         align-items: center;
         height: 45px;
     }
-    div.h2-alternative {
-       display: none !important;
-    }
-    #map, #tools, #about {
+    #blog, #map, #about {
         display: none;
     }
-    #header-blitz-div img, #header-logo-nigeria img {
-        height: 2rem;
-        margin: 0;
-        padding-right: 1rem;
-        padding-left: 1rem;
+    #header-blitz-div img, #header-logo-nigeria img, #hamburger {
+        height: 3rem;
+        margin-top: 1.5rem;
     }
     #hamburger{
         display: inline;

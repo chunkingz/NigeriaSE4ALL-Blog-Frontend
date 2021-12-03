@@ -13,7 +13,7 @@
                         staticContent.k_hero_subtitle_2 }}</p>
                     <br>
                     <p>
-                        <a type="button" class="btn btn-lg btn-se4all cta" routerLink="contact-us">
+                        <a type="button" class="btn btn-lg btn-se4all cta" routerLink="../contact-us">
                             {{ dynamicBlogData ? dynamicBlogData.btn2 : staticContent.k_btn2 }}
                         </a>
                     </p>
@@ -40,7 +40,7 @@
                     <div *ngFor="let blog of blogData">
                         <div class="col py-4">
                             <a
-                                routerLink="blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
+                                routerLink="../blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
 
                                 <div class="card shadow-lg" id="blog-post">
                                     <img class="blog-preview-img" src="{{blog.image.url}}" alt="blog post image">
@@ -94,7 +94,7 @@
                                             <div class="d-flex flex-lg-row flex-sm-column flex-xs-column">
                                                 <div *ngFor="let blogCategory of blog.categories">
                                                     <a type="button" class="btn btn-sm btn-se4all mb-2 mx-lg-1 mb-lg-0"
-                                                        routerLink="blog-category/{{blogCategory.name}}">
+                                                        routerLink="../blog-category/{{blogCategory.name}}">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                             fill="currentColor" class="bi bi-tag-fill"
                                                             viewBox="0 0 16 16">

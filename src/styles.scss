@@ -10,6 +10,14 @@
 // @import '~ngx-sharebuttons/themes/modern';
 
 
+$se4all-btn-bg-color: #1DD069;
+$se4all-btn-txt-color: #fff;
+$se4all-url-active: #6c757d;
+$se4all-url-hover: #212529;
+$se4all-v3-color: #fcbc0c
+;
+
+
 a {
     text-decoration: none !important;
 }
@@ -19,16 +27,21 @@ a {
 }
 
 .btn-se4all, #subscribe {
-    background-color: #1DD069;
-    color: #fff !important;
+    background-color: $se4all-btn-bg-color;
+    color: $se4all-btn-txt-color !important;
+}
+
+.btn-v3 {
+    background-color: $se4all-v3-color;
+    color: $se4all-btn-txt-color !important;
 }
 
 h2.blog-post-title>a {
-    color: #6c757d;
+    color: $se4all-url-active;
 }
 
 h2.blog-post-title>a:hover, #blog-teaser, .blog-post-meta {
-    color: #212529;
+    color: $se4all-url-hover;
 }
 
 svg {
@@ -42,7 +55,7 @@ img.blog-preview-img {
     padding: 20px;
 }
 
-.cta:hover, .btn-se4all:hover, #blog-post:hover {
+.cta:hover, .btn-se4all:hover, #blog-post:hover, .home-card:hover {
     transform: translateY(-3px);
     transition: all .2s ease-in;
     transition-property: all;
