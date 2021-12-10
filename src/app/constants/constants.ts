@@ -53,7 +53,49 @@ export class Constants {
     private subscribe_hero_subtitle_1 = "Join our monthly newsletter and never miss out on new blog posts and promotions.";
     private subscribe_hero_txt_1 = "Email address";
     private btn6 = "Subscribe";
-
+    private home_section1_hero = "Your partner for data and tools to support Sustainable Energy for All";
+    private home_section1_subtitle1 = "Nigeria SE4ALL, an initiative from the Ministry of Power, is working with you to generate the most accurate data and latest tools to empower better electrification planning in Nigeria.";
+    private home_section1_subtitle2 = "The data and tools are being continuously enriched – you can follow these updates via the blog or our social media channels at the end of the page.";
+    private btn7 = "Learn more";
+    private home_section2_hero = "We offer insights relevant for your industry";
+    private home_section2_subtitle1 = "The tools and available data relevant to your industry can be seen through the portals here"
+    private home_section3_cardtitle1 = "Mini-grids";
+    private home_section3_cardsubtitle1 = "Data and site selection tools for both off-grid and interconnected mini-grids, as well market insights and tips for effective project development.";
+    private home_section3_cardtitle2 = "Power Sector";
+    private home_section3_cardssubtitle2 = "Focused data about grid assets and national level progress towards 30:30:30.";
+    private home_section3_cardtitle3 = "Solar Home Systems";
+    private home_section3_cardsubtitle3 = "Tools to support selection of distribution locations, and analysis of potential customer base.";
+    private home_section4_hero = "Real-world applications and data";
+    private home_section4_subtitle = "Our interactive tools and electrification data help you make better decisions";
+    private home_section4_tagtitle1 = "Mini-grid";
+    private home_section4_tagtitle2 = "POWER SECTOR";
+    private home_section4_card1_maintitle1 = "Mini-grid site selection";
+    private home_section4_card1_maintitle2 = "Select sites by distance to grid";
+    private home_section4_card2_maintitle1 = "Medium Voltage grid datasets";
+    private home_section4_card2_maintitle2 = "View the largest collection of medium voltage grid data for Nigeria available";
+    private home_section4_card3_maintitle1 = "Real mini-grid data";
+    private home_section4_card3_maintitle2 = "The mini-grid monitor publishes actual data on operational mini-grids in Nigeria";
+    private home_section4_card4_maintitle1 = "The mini-grid developer toolkit";
+    private home_section4_card4_maintitle2 = "You can view our entire";
+    private btn8 = "View app";
+    private home_section5_hero = "Stay up-to-date with our blog";
+    private home_section5_subtitle = "Read about our recent activities";
+    private home_section7_title1 = "OFFICE";
+    private home_section7_subtitle1 = "Federal Ministry of Power <br>POWER HOUSE 14, Zambezi Crescent <br>Maitama, Abuja <br>Nigeria";
+    private home_section7_title2 = "EMAIL";
+    private home_section7_subtitle2 = "info@pwh.gov.ng";
+    private home_section7_title3 = "WEBSITE";
+    private home_section7_subtitle3 = "www.power.gov.ng";
+    private home_section8_title1 = "With financial support of";
+    private home_section8_title2 = "Implemented by";
+    private home_section8_eu_url = "https://europa.eu/european-union/index_en";
+    private home_section8_bmz_url = "http://www.bmz.de/en/index.html";
+    private home_section8_giz_url = "https://www.giz.de/en/html/index.html";
+    private home_section9_title1 = "Terms and conditions of service"
+    private home_section9_title2 = "2021 All Rights Reserved by nigeriase4all.gov.ng";
+    private home_section9_title3 = "Accreditation";
+    private home_section9_url1 = "http://test.nigeriase4all.gov.ng/termsofservice";
+    private home_section9_url2 = "http://test.nigeriase4all.gov.ng/accreditation";
 
 
 
@@ -109,4 +151,47 @@ export class Constants {
     get k_subscribe_hero_subtitle_1() { return this.subscribe_hero_subtitle_1 }
     get k_subscribe_hero_txt_1() { return this.subscribe_hero_txt_1 }
     get k_btn6() { return this.btn6 }
+    get k_home_section1_hero() { return this.home_section1_hero }
+    get k_home_section1_subtitle1() { return this.home_section1_subtitle1 }
+    get k_home_section1_subtitle2() { return this.home_section1_subtitle2 }
+    get k_btn7() { return this.btn7 }
+    get k_home_section2_hero() { return this.home_section2_hero }
+    get k_home_section2_subtitle1() { return this.home_section2_subtitle1 }
+    get k_home_section3_cardtitle1() { return this.home_section3_cardtitle1 }
+    get k_home_section3_cardsubtitle1() { return this.home_section3_cardsubtitle1 }
+    get k_home_section3_cardtitle2() { return this.home_section3_cardtitle2 }
+    get k_home_section3_cardssubtitle2() { return this.home_section3_cardssubtitle2 }
+    get k_home_section3_cardtitle3() {  return this.home_section3_cardtitle3 }
+    get k_home_section3_cardsubtitle3() { return this.home_section3_cardsubtitle3 }
+    get k_home_section4_hero() { return this.home_section4_hero }
+    get k_home_section4_subtitle() { return this.home_section4_subtitle }
+    get k_home_section4_tagtitle1() { return this.home_section4_tagtitle1 }
+    get k_home_section4_tagtitle2() { return this.home_section4_tagtitle2 }
+    get k_home_section4_card1_maintitle1() { return this.home_section4_card1_maintitle1 }
+    get k_home_section4_card1_maintitle2() { return this.home_section4_card1_maintitle2 }
+    get k_home_section4_card2_maintitle1() { return this.home_section4_card2_maintitle1 }
+    get k_home_section4_card2_maintitle2() { return this.home_section4_card3_maintitle2 }
+    get k_home_section4_card3_maintitle1() { return this.home_section4_card3_maintitle1 }
+    get k_home_section4_card3_maintitle2() { return this.home_section4_card3_maintitle2 }
+    get k_home_section4_card4_maintitle1() { return this.home_section4_card4_maintitle1 }
+    get k_home_section4_card4_maintitle2() { return this.home_section4_card4_maintitle2 }
+    get k_btn8() { return this.btn8 }
+    get k_home_section5_hero() { return this.home_section5_hero }
+    get k_home_section5_subtitle() { return this.home_section5_subtitle }
+    get k_home_section7_title1() { return this.home_section7_title1 }
+    get k_home_section7_subtitle1() { return this.home_section7_subtitle1 }
+    get k_home_section7_title2() { return this.home_section7_title2 }
+    get k_home_section7_subtitle2() { return this.home_section7_subtitle2 }
+    get k_home_section7_title3() { return this.home_section7_title3 }
+    get k_home_section7_subtitle3() { return this.home_section7_subtitle3 }
+    get k_home_section8_title1() { return this.home_section8_title1 }
+    get k_home_section8_title2() { return this.home_section8_title2 }
+    get k_home_section8_eu_url() { return this.home_section8_eu_url }
+    get k_home_section8_bmz_url() { return this.home_section8_bmz_url }
+    get k_home_section8_giz_url() { return this.home_section8_giz_url }
+    get k_home_section9_title1() { return this.home_section9_title1 }
+    get k_home_section9_title2() { return this.home_section9_title2 }
+    get k_home_section9_title3() { return this.home_section9_title3 }
+    get k_home_section9_url1() { return this.home_section9_url1 }
+    get k_home_section9_url2() { return this.home_section9_url2 }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Constants } from 'src/app/constants/constants';
+import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  dynamicData: any;
+  staticContent!: Constants;
+
+  constructor(private _data: DataService) { }
 
   ngOnInit(): void {
+    this.getDynamicContent();
   }
+
+  /**
+   * Fetches all dynamic data from the db
+   */
+   getDynamicContent() {
+    this._data.getDynamicContent().subscribe(res => {
+      this.dynamicData = [res];
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
+  }
+
 
 }

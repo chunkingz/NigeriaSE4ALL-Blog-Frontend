@@ -6,8 +6,8 @@ main {
 
 /* Responsive */
 
-@media (max-width: 685px) {
-    img{
-        width: 300px;
+@media (max-width: 425px) {
+    p.content markdown img {
+        width: 300px !important;
     }
   }
