@@ -39,6 +39,9 @@ yarn-error.log
 testem.log
 /typings
 
+# misc - remove the video subdirectory as they are quite heavy
+/src/assets/videos
+
 # System Files
 .DS_Store
 Thumbs.db

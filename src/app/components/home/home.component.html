@@ -3,28 +3,43 @@
     <main>
 
         <section class="section-1">
-        <div class="py-5 container" id="hero-section">
-            <div class="row py-lg-5 g-2">
-                <div class="col-lg-10">
-                    <h1 class="fw-bolder">{{ dynamicBlogData ? dynamicBlogData.home_section1_hero : staticContent.k_home_section1_hero }}</h1>
-                    <br>
-                    <p>{{ dynamicBlogData ? dynamicBlogData.home_section1_subtitle1 : staticContent.k_home_section1_subtitle1 }}</p>
-                    <p>{{ dynamicBlogData ? dynamicBlogData.home_section1_subtitle2 : staticContent.k_home_section1_subtitle2 }}</p>
-                    <br>
-                    <p>
-                        <a type="button" class="btn btn-lg btn-v3 cta" routerLink="../contact-us">
-                            {{ dynamicBlogData ? dynamicBlogData.btn7 : staticContent.k_btn7 }}
-                        </a>
-                    </p>
+
+            <!-- The Hero video -->
+            <iframe allow="autoplay"
+                src="https://www.youtube-nocookie.com/embed/FqXL8WVTE-w?autoplay=1&mute=1&controls=0&loop=1&playlist=FqXL8WVTE-w"
+                id="myVideo" frameborder="0" allowfullscreen></iframe>
+
+
+            <!-- The Hero Text -->
+            <div class="py-5 container-fluid" id="hero-section">
+                <div class="row py-lg-5 g-2">
+                    <div class="col-lg-10">
+                        <div class="content">
+                            <h1 class="home_section1_hero">{{ dynamicBlogData ? dynamicBlogData.home_section1_hero :
+                                staticContent.k_home_section1_hero }}</h1>
+                            <br>
+                            <p class="home_section1_subtitle">{{ dynamicBlogData ?
+                                dynamicBlogData.home_section1_subtitle1 : staticContent.k_home_section1_subtitle1 }}</p>
+                            <p class="home_section1_subtitle">{{ dynamicBlogData ?
+                                dynamicBlogData.home_section1_subtitle2 : staticContent.k_home_section1_subtitle2 }}</p>
+                            <br>
+                            <p>
+                                <a type="button" class="btn btn-lg btn-v3 cta" routerLink="../contact-us">
+                                    {{ dynamicBlogData ? dynamicBlogData.btn7 : staticContent.k_btn7 }}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
 
-        <section class="section-2 pt-5">
+        <section class="section-2 pt-5" style="position: relative; z-index: 1; margin-top: -5rem">
             <div class="container col-md-9 p-lg-4 mx-auto text-center">
-                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section2_hero : staticContent.k_home_section2_hero }}</h1>
-                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section2_subtitle1 : staticContent.k_home_section2_subtitle1 }}</p>
+                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section2_hero :
+                    staticContent.k_home_section2_hero }}</h1>
+                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section2_subtitle1 :
+                    staticContent.k_home_section2_subtitle1 }}</p>
             </div>
         </section>
 
@@ -33,34 +48,40 @@
                 <div class="card my-5 mx-4 shadow-lg home-card">
                     <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
                     <div class="card-body mt-3 color-1">
-                    <h5 class="card-title fw-bold mb-4">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle1 : staticContent.k_home_section3_cardtitle1 }}
-                    </h5>
-                    <p class="card-text mb-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section3_cardsubtitle1 : staticContent.k_home_section3_cardsubtitle1 }}
-                    </p>
+                        <h5 class="card-title fw-bold mb-4">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle1 :
+                            staticContent.k_home_section3_cardtitle1 }}
+                        </h5>
+                        <p class="card-text mb-5">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section3_cardsubtitle1 :
+                            staticContent.k_home_section3_cardsubtitle1 }}
+                        </p>
                     </div>
                 </div>
                 <div class="card my-5 mx-4 shadow-lg home-card">
                     <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
                     <div class="card-body mt-3 color-2">
-                    <h5 class="card-title fw-bold mb-4">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle2 : staticContent.k_home_section3_cardtitle2 }}
-                    </h5>
-                    <p class="card-text mb-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section3_cardssubtitle2 : staticContent.k_home_section3_cardssubtitle2 }}
-                    </p>
+                        <h5 class="card-title fw-bold mb-4">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle2 :
+                            staticContent.k_home_section3_cardtitle2 }}
+                        </h5>
+                        <p class="card-text mb-5">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section3_cardssubtitle2 :
+                            staticContent.k_home_section3_cardssubtitle2 }}
+                        </p>
                     </div>
                 </div>
                 <div class="card my-5 mx-4 shadow-lg home-card">
                     <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
                     <div class="card-body mt-3 color-3">
-                    <h5 class="card-title fw-bold mb-4">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle3 : staticContent.k_home_section3_cardtitle3 }}
-                    </h5>
-                    <p class="card-text mb-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section3_cardsubtitle3 : staticContent.k_home_section3_cardsubtitle3 }}
-                    </p>
+                        <h5 class="card-title fw-bold mb-4">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle3 :
+                            staticContent.k_home_section3_cardtitle3 }}
+                        </h5>
+                        <p class="card-text mb-5">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section3_cardsubtitle3 :
+                            staticContent.k_home_section3_cardsubtitle3 }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -69,8 +90,10 @@
         <section class="section-4 py-5">
 
             <div class="container col-md-9 p-lg-4 mx-auto mt-5 mb-1 text-center section-4-title">
-                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section4_hero : staticContent.k_home_section4_hero }}</h1>
-                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section4_subtitle : staticContent.k_home_section4_subtitle }}</p>
+                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section4_hero :
+                    staticContent.k_home_section4_hero }}</h1>
+                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section4_subtitle :
+                    staticContent.k_home_section4_subtitle }}</p>
             </div>
 
             <div class="container x-row">
@@ -79,13 +102,16 @@
                     <img src="assets/1-Mini-grid-site-selection.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
                     <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
                         <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 : staticContent.k_home_section4_tagtitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
+                        staticContent.k_home_section4_tagtitle1 }}
                     </div>
                     <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card1_maintitle1 : staticContent.k_home_section4_card1_maintitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card1_maintitle1 :
+                        staticContent.k_home_section4_card1_maintitle1 }}
                     </p>
                     <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card1_maintitle2 : staticContent.k_home_section4_card1_maintitle2 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card1_maintitle2 :
+                        staticContent.k_home_section4_card1_maintitle2 }}
                     </p>
                     <p>
                         <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
@@ -95,16 +121,20 @@
                 </div>
 
                 <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/2-Medium-Voltage-grid-datasets.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
+                    <img src="assets/2-Medium-Voltage-grid-datasets.jpg" class="section4-card-img mt-3 shadow-lg"
+                        alt="...">
                     <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
                         <div class="circular circular-power-sector"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle2 : staticContent.k_home_section4_tagtitle2 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle2 :
+                        staticContent.k_home_section4_tagtitle2 }}
                     </div>
                     <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card2_maintitle1 : staticContent.k_home_section4_card2_maintitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card2_maintitle1 :
+                        staticContent.k_home_section4_card2_maintitle1 }}
                     </p>
                     <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card2_maintitle2 : staticContent.k_home_section4_card2_maintitle2 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card2_maintitle2 :
+                        staticContent.k_home_section4_card2_maintitle2 }}
                     </p>
                     <p>
                         <a type="button" class="btn btn-lg fw-bold btn-power-sector cta">
@@ -117,13 +147,16 @@
                     <img src="assets/3-Real-mini-grid-data.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
                     <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
                         <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 : staticContent.k_home_section4_tagtitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
+                        staticContent.k_home_section4_tagtitle1 }}
                     </div>
                     <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card3_maintitle1 : staticContent.k_home_section4_card3_maintitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card3_maintitle1 :
+                        staticContent.k_home_section4_card3_maintitle1 }}
                     </p>
                     <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card3_maintitle2 : staticContent.k_home_section4_card3_maintitle2 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card3_maintitle2 :
+                        staticContent.k_home_section4_card3_maintitle2 }}
                     </p>
                     <p>
                         <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
@@ -133,16 +166,20 @@
                 </div>
 
                 <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/4-The-mini-grid-developer-toolkit.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
+                    <img src="assets/4-The-mini-grid-developer-toolkit.jpg" class="section4-card-img mt-3 shadow-lg"
+                        alt="...">
                     <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
                         <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 : staticContent.k_home_section4_tagtitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
+                        staticContent.k_home_section4_tagtitle1 }}
                     </div>
                     <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card4_maintitle1 : staticContent.k_home_section4_card4_maintitle1 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card4_maintitle1 :
+                        staticContent.k_home_section4_card4_maintitle1 }}
                     </p>
                     <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card4_maintitle2 : staticContent.k_home_section4_card4_maintitle2 }}
+                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card4_maintitle2 :
+                        staticContent.k_home_section4_card4_maintitle2 }}
                     </p>
                     <p>
                         <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
@@ -156,94 +193,107 @@
 
         <section class="section-5 pt-5">
             <div class="container col-md-9 p-lg-4 mx-auto text-center">
-                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section5_hero : staticContent.k_home_section5_hero }}</h1>
+                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section5_hero :
+                    staticContent.k_home_section5_hero }}</h1>
                 <br>
-                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section5_subtitle : staticContent.k_home_section5_subtitle }}</p>
+                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section5_subtitle :
+                    staticContent.k_home_section5_subtitle }}</p>
             </div>
         </section>
 
         <!-- Blog Section -->
         <section class="section-6 pb-5">
             <div class="container x-row">
-                
+
                 <div class="card mt-5 mb-5" style="max-width: 1440px;">
                     <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title fw-bold py-4">GIS basics for the rest of us</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                            <div class="card-text-badge-2">
-                                <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid</div>
+                        <div class="col-md-4">
+                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold py-4">GIS basics for the rest of us</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                    parturient montes, nascetur ridiculus mus.</p>
+                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
+                                    <div class="card-text-badge-2">
+                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
+                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
+                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <div class="card mb-5" style="max-width: 1440px;">
                     <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title fw-bold py-4">FMP training completed</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                            <div class="card-text-badge-2">
-                                <div class="rounded-pill text-white px-4 py-1">FMP</div>
-                                <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                <div class="rounded-pill rounded-pill-mini-shs text-white px-4 py-1">SHS</div>
+                        <div class="col-md-4">
+                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold py-4">FMP training completed</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                    parturient montes, nascetur ridiculus mus.</p>
+                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
+                                    <div class="card-text-badge-2">
+                                        <div class="rounded-pill text-white px-4 py-1">FMP</div>
+                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
+                                        <div class="rounded-pill rounded-pill-mini-shs text-white px-4 py-1">SHS</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <div class="card mb-5" style="max-width: 1440px;">
                     <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title fw-bold py-4">Feature of a SHS supplier</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                            <div class="card-text-badge-2">
-                                <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                <div class="rounded-pill rounded-pill-power-sector text-white px-4 py-1">Power sector</div>
+                        <div class="col-md-4">
+                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold py-4">Feature of a SHS supplier</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                    parturient montes, nascetur ridiculus mus.</p>
+                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
+                                    <div class="card-text-badge-2">
+                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
+                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
+                                        <div class="rounded-pill rounded-pill-power-sector text-white px-4 py-1">Power
+                                            sector</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <div class="card mb-5" style="max-width: 1440px;">
                     <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title fw-bold py-4"> Mobile mappers training</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                            <div class="card-text-badge-2">
-                                <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid</div>
+                        <div class="col-md-4">
+                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold py-4"> Mobile mappers training</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                                    parturient montes, nascetur ridiculus mus.</p>
+                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
+                                    <div class="card-text-badge-2">
+                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
+                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
+                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
 
@@ -255,41 +305,49 @@
                 <div class="row">
                     <div class="mt-5 col-lg-6 contact-info">
                         <div class="me-3">
-                        <img src="/assets/i_info.svg" alt="...">
+                            <img src="/assets/i_info.svg" alt="...">
                         </div>
                         <div>
-                            <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title1 : staticContent.k_home_section7_title1 }}</p>
+                            <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title1 :
+                                staticContent.k_home_section7_title1 }}</p>
                             <p class="lead fw-normal">
-                                Federal Ministry of Power <br>POWER HOUSE 14, Zambezi Crescent <br>Maitama, Abuja <br>Nigeria
+                                Federal Ministry of Power <br>POWER HOUSE 14, Zambezi Crescent <br>Maitama, Abuja
+                                <br>Nigeria
                             </p>
                         </div>
                     </div>
 
                     <div class="mt-5 col contact-info">
                         <div class="me-3">
-                        <img src="/assets/i_mail.svg" alt="...">
+                            <img src="/assets/i_mail.svg" alt="...">
                         </div>
                         <div>
-                        <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title2 : staticContent.k_home_section7_title2 }}</p>
-                        <p class="lead fw-normal">
-                            <a href="mailto:{{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle2 : staticContent.k_home_section7_subtitle2 }}" 
-                            class="text-reset">
-                            {{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle2 : staticContent.k_home_section7_subtitle2 }}
-                        </a></p>
+                            <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title2 :
+                                staticContent.k_home_section7_title2 }}</p>
+                            <p class="lead fw-normal">
+                                <a href="mailto:{{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle2 : staticContent.k_home_section7_subtitle2 }}"
+                                    class="text-reset">
+                                    {{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle2 :
+                                    staticContent.k_home_section7_subtitle2 }}
+                                </a>
+                            </p>
                         </div>
                     </div>
 
                     <div class="mt-5 col contact-info">
                         <div class="me-3">
-                        <img src="/assets/i_internet.svg" alt="...">
+                            <img src="/assets/i_internet.svg" alt="...">
                         </div>
                         <div>
-                        <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title3 : staticContent.k_home_section7_title3 }}</p>
-                        <p class="lead fw-normal">
-                            <a href="http://{{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle3 : staticContent.k_home_section7_subtitle3 }}" 
-                            target="_blank" class="text-reset">
-                            {{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle3 : staticContent.k_home_section7_subtitle3 }}
-                        </a></p>
+                            <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title3 :
+                                staticContent.k_home_section7_title3 }}</p>
+                            <p class="lead fw-normal">
+                                <a href="http://{{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle3 : staticContent.k_home_section7_subtitle3 }}"
+                                    target="_blank" class="text-reset">
+                                    {{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle3 :
+                                    staticContent.k_home_section7_subtitle3 }}
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -302,19 +360,22 @@
 
                 <div class="col-lg-8 text-center part-1 mt-5">
                     <div>
-                    <p class="fw-normal fs-4">{{ dynamicBlogData ? dynamicBlogData.home_section8_title1 : staticContent.k_home_section8_title1 }}</p>
-                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_eu_url : staticContent.k_home_section8_eu_url }}" 
-                        target="_blank"><img src="/assets/logo-1-eu.png" alt="EU logo"></a>
-                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_bmz_url : staticContent.k_home_section8_bmz_url }}" 
-                        target="_blank"><img src="/assets/logo-4-ger-coop.png" alt="GIZ Nigeria cooperation logo"></a>
+                        <p class="fw-normal fs-4">{{ dynamicBlogData ? dynamicBlogData.home_section8_title1 :
+                            staticContent.k_home_section8_title1 }}</p>
+                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_eu_url : staticContent.k_home_section8_eu_url }}"
+                            target="_blank"><img src="/assets/logo-1-eu.png" alt="EU logo"></a>
+                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_bmz_url : staticContent.k_home_section8_bmz_url }}"
+                            target="_blank"><img src="/assets/logo-4-ger-coop.png"
+                                alt="GIZ Nigeria cooperation logo"></a>
                     </div>
                 </div>
-        
+
                 <div class="col-lg-4 text-center part-2 mt-5">
                     <div>
-                        <p class="fw-normal fs-4">{{ dynamicBlogData ? dynamicBlogData.home_section8_title2 : staticContent.k_home_section8_title2 }}</p>
-                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_giz_url : staticContent.k_home_section8_giz_url }}" 
-                        target="_blank"><img src="/assets/logo-3-giz.png" alt="GIZ Logo"></a>
+                        <p class="fw-normal fs-4">{{ dynamicBlogData ? dynamicBlogData.home_section8_title2 :
+                            staticContent.k_home_section8_title2 }}</p>
+                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_giz_url : staticContent.k_home_section8_giz_url }}"
+                            target="_blank"><img src="/assets/logo-3-giz.png" alt="GIZ Logo"></a>
                     </div>
                 </div>
 
@@ -325,20 +386,24 @@
         <section class="section-9 py-4">
             <div class="container-fluid row mx-auto text-center footer-items">
                 <div class="col">
-                    <a href="{{ dynamicBlogData ? dynamicBlogData.home_section9_url1 : staticContent.k_home_section9_url1 }}" 
-                    target="_blank" class="text-reset">
-                    {{ dynamicBlogData ? dynamicBlogData.home_section9_title1 : staticContent.k_home_section9_title1 }}
-                </a></div>
-                <div class="col">&copy; 
+                    <a href="{{ dynamicBlogData ? dynamicBlogData.home_section9_url1 : staticContent.k_home_section9_url1 }}"
+                        target="_blank" class="text-reset">
+                        {{ dynamicBlogData ? dynamicBlogData.home_section9_title1 : staticContent.k_home_section9_title1
+                        }}
+                    </a>
+                </div>
+                <div class="col">&copy;
                     {{ dynamicBlogData ? dynamicBlogData.home_section9_title2 : staticContent.k_home_section9_title2 }}
 
                 </div>
                 <div class="col accred">
                     <div class="col">
-                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section9_url2 : staticContent.k_home_section9_url2 }}" 
-                        target="_blank" class="text-reset">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section9_title3 : staticContent.k_home_section9_title3 }}
-                    </a></div>
+                        <a href="{{ dynamicBlogData ? dynamicBlogData.home_section9_url2 : staticContent.k_home_section9_url2 }}"
+                            target="_blank" class="text-reset">
+                            {{ dynamicBlogData ? dynamicBlogData.home_section9_title3 :
+                            staticContent.k_home_section9_title3 }}
+                        </a>
+                    </div>
                     <div class="col">
                         <img src="/assets/logo-5-blitz.png" alt="SE4ALL Logo">
                     </div>
