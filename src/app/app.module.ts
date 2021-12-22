@@ -29,6 +29,9 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
 import { HomeComponent } from './components/home/home.component';
+import { MiniGridsComponent } from './components/mini-grids/mini-grids.component';
+import { PowerSectorComponent } from './components/power-sector/power-sector.component';
+import { SolarHomeSystemsComponent } from './components/solar-home-systems/solar-home-systems.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { HomeComponent } from './components/home/home.component';
     FormSuccessComponent,
     SubscribeComponent,
     BlogCategoryComponent,
-    HomeComponent
+    HomeComponent,
+    MiniGridsComponent,
+    PowerSectorComponent,
+    SolarHomeSystemsComponent
   ],
   imports: [
     BrowserModule,

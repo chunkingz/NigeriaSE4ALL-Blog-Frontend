@@ -1,6 +1,11 @@
 
 /* Navigation Bar */
 
+header {
+    position: relative;
+    background-color: #fff;
+}
+
 .flex-container{
     display: flex;
     justify-content: space-around;
