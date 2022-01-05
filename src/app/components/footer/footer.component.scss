@@ -1,13 +1,23 @@
 
-.footer-bg-img {
-    background-color: #8ee7b4 !important;
-    background-image: url(/assets/footer-img.png);
-    color: #ffffff !important;
-    padding: 5rem .75rem 7rem .75rem !important;
-}
+$se4all-home-bg-color: #777;
+$se4all-btn-txt-color: #fff;
+$se4all-section4-bg: #ffe293;
+$se4all-gray-bg: #eeeff1;
+$home-color1: #58c495;
+$home-color2: #085064;
+$home-color3: #f76904;
+$home-color4: #c5c4cf;
+$home-hr-color: #93939f;
 
 
-.btt-btn:hover, .ng-go-top-button-class:hover {
+// .footer-bg-img {
+//     background-color: #8ee7b4 !important;
+//     background-image: url(/assets/footer-img.png);
+//     color: #ffffff !important;
+//     padding: 5rem .75rem 7rem .75rem !important;
+// }
+
+.ng-go-top-button-class:hover {
     transform: translateY(-3px);
     transition: all .2s ease-in;
     transition-property: all;
@@ -30,6 +40,68 @@
     width: 50px;
 }
 
-.ng-go-top-button-class > fa-icon {
+.ng-go-top-button-class fa-icon {
     font-size: 2rem;
+}
+
+// Sections
+
+.section-1{
+    background-color: $se4all-gray-bg;
+    border-top: 1px solid $home-hr-color;
+}
+
+.section-1 .contact-info {
+    display: flex;
+}
+
+.section-2 .part-1 img {
+    height: 10rem;
+}
+
+.section-2 .part-2 img {
+    height: 5rem;
+}
+
+.section-2 .part-1, .section-2 .part-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-3 {
+    background-color: $se4all-home-bg-color !important;
+    // background-image: url("assets/videos/gif-hero-small.gif");
+    color: $se4all-btn-txt-color !important;
+//     padding: 5rem .75rem 7rem .75rem !important;
+}
+
+.section-3 .footer-items div {
+    display: flex;
+    justify-content: center;
+}
+
+.section-3 img {
+    height: 2rem;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 768px) {
+    .section-2 .part-1, .section-2 .part-2 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .section-3 .footer-items, .accred {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-3 .footer-items div {
+        margin-top: 2rem;
+    }
+    .section-3 .accred {
+        margin-top: 0 !important;
+    }
 }

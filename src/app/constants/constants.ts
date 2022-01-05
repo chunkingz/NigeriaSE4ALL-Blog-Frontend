@@ -96,7 +96,12 @@ export class Constants {
     private home_section9_title3 = "Accreditation";
     private home_section9_url1 = "http://test.nigeriase4all.gov.ng/termsofservice";
     private home_section9_url2 = "http://test.nigeriase4all.gov.ng/accreditation";
-
+    private Nav_txt_4 = "MINI-GRIDS";
+    private Nav_txt_5 = "POWER SECTOR";
+    private Nav_txt_6 = "SOLAR HOME SYSTEMS";
+    private Nav_txt_url_4 = "mini-grids";
+    private Nav_txt_url_5 = "power-sector";
+    private Nav_txt_url_6 = "solar-home-systems";
 
 
     // Get the private fields via the methods below
@@ -194,4 +199,10 @@ export class Constants {
     get k_home_section9_title3() { return this.home_section9_title3 }
     get k_home_section9_url1() { return this.home_section9_url1 }
     get k_home_section9_url2() { return this.home_section9_url2 }
+    get k_Nav_txt_4() { return this.Nav_txt_4 }
+    get k_Nav_txt_5() { return this.Nav_txt_5 }
+    get k_Nav_txt_6() { return this.Nav_txt_6 }
+    get k_Nav_txt_url_4() { return this.Nav_txt_url_4 }
+    get k_Nav_txt_url_5() { return this.Nav_txt_url_5 }
+    get k_Nav_txt_url_6() { return this.Nav_txt_url_6 }
 }

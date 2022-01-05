@@ -9,14 +9,8 @@ $home-color3: #f76904;
 $home-color4: #c5c4cf;
 $home-hr-color: #93939f;
 
-.section-9 {
-    background-color: $se4all-home-bg-color !important;
-    // background-image: url("assets/videos/gif-hero-small.gif");
-    color: $se4all-btn-txt-color !important;
-//     padding: 5rem .75rem 7rem .75rem !important;
-}
 
-.section-2, .section-3, .section-5, .section-6, .section-7{
+.section-2, .section-3, .section-5, .section-6{
     background-color: $se4all-gray-bg;
 }
 
@@ -62,37 +56,6 @@ $home-hr-color: #93939f;
 .section-6 .img-fluid {
     height: 16rem;
     object-fit: cover;
-}
-
-.section-7 {
-    border-top: 1px solid $home-hr-color;
-}
-
-.section-7 .contact-info {
-    display: flex;
-}
-
-.section-8 .part-1 img {
-    height: 10rem;
-}
-
-.section-8 .part-2 img {
-    height: 5rem;
-}
-
-.section-8 .part-1, .section-8 .part-2 {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.section-9 .footer-items div {
-    display: flex;
-    justify-content: center;
-}
-
-.section-9 img {
-    height: 2rem;
-    object-fit: contain;
 }
 
 .text-wrap {
@@ -159,6 +122,7 @@ $home-hr-color: #93939f;
 /* Style the video: 100% width and height to cover the entire window */
 .section-1 {
     margin-top: -4rem;
+    background: rgba(0, 0, 0, 0.5);
 }
 .section-2 {
     margin-top: -8rem;
@@ -182,6 +146,7 @@ $home-hr-color: #93939f;
     position: relative;
     top: -5rem;
     // background: rgba(0, 0, 0, 0.5);
+    // padding: 1rem;
     color: #fff;
 }
 
@@ -276,10 +241,6 @@ $home-hr-color: #93939f;
         height: 23rem;
         object-fit: cover;
     }
-    .section-8 .part-1, .section-8 .part-2 {
-        display: flex;
-        justify-content: center;
-    }
     // Make section 1 responsive
     .section-1 {
         margin-top: -13rem;
@@ -324,21 +285,6 @@ $home-hr-color: #93939f;
     .section-6 .img-fluid {
         height: 18rem;
         object-fit: cover;
-    }
-    .section-9 .footer-items, .accred {
-        display: flex;
-        // justify-content: center;
-        flex-direction: column;
-    }
-    .section-9 .footer-items div {
-        margin-top: 2rem;
-    }
-    .section-9 img {
-        height: 2rem;
-        object-fit: contain;
-    }
-    .section-9 .accred {
-        margin-top: 0 !important;
     }
     // Make section 1 responsive
     .section-1 #hero-section {
