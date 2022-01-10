@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
   constructor(private _data: DataService) { }
 

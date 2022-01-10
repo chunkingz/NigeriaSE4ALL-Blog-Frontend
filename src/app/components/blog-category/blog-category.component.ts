@@ -20,6 +20,7 @@ export class BlogCategoryComponent implements OnInit {
   categoriesData: any;
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
 
   constructor(private _route: ActivatedRoute, private _data: DataService, private _title: Title) { }

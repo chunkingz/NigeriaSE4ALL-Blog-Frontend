@@ -5,12 +5,13 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-mini-grids',
   templateUrl: './mini-grids.component.html',
-  styleUrls: ['./mini-grids.component.scss', '../home/home.component.scss']
+  styleUrls: ['./mini-grids.component.scss']
 })
 export class MiniGridsComponent implements OnInit {
 
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
   constructor(private _data: DataService) { }
 

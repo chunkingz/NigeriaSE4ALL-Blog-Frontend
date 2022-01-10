@@ -14,6 +14,7 @@ export class FooterComponent implements OnInit {
   faArrowUp = faArrowUp;
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
   constructor(private _data: DataService) { }
 

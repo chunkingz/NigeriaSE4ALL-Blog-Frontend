@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'mini-grids', component: MiniGridsComponent},
   { path: 'power-sector', component: PowerSectorComponent},
   { path: 'solar-home-systems', component: SolarHomeSystemsComponent},
-  { path: '**', component: BlogComponent}
+  { path: '**', component: HomeComponent}
 ];
 
 @NgModule({

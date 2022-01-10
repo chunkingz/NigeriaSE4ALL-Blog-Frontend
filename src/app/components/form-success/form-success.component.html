@@ -4,13 +4,13 @@
 
         <div class="container">
 
-            <h1>{{ dynamicBlogData ? dynamicBlogData.form_success_hero_title : staticContent.k_form_success_hero_title }}</h1>
+            <h1>{{ dynamicBlogData ? dynamicBlogData.form_success_hero_title : constants.form_success_hero_title }}</h1>
             <br>
-            <p>{{ dynamicBlogData ? dynamicBlogData.form_success_hero_subtitle_1 : staticContent.k_form_success_hero_subtitle_1 }}</p>
+            <p>{{ dynamicBlogData ? dynamicBlogData.form_success_hero_subtitle_1 : constants.form_success_hero_subtitle_1 }}</p>
             <br>
             <p>
                 <a type="button" class="btn btn-lg btn-se4all cta" routerLink="">
-                    {{ dynamicBlogData ? dynamicBlogData.btn5 : staticContent.k_btn5 }}
+                    {{ dynamicBlogData ? dynamicBlogData.btn5 : constants.btn5 }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"

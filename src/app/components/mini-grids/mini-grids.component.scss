@@ -1,0 +1,318 @@
+
+$se4all-home-bg-color: #777;
+$se4all-btn-txt-color: #fff;
+$se4all-gray-bg: #eeeff1;
+$se4all-gray-bg2: #e0e2e9;
+$home-color1: #58c495;
+$home-color2: #085064;
+$home-color3: #f76904;
+$home-color4: #c5c4cf;
+$home-hr-color: #93939f;
+
+
+.section-6, .section-5{
+    background-color: $se4all-gray-bg;
+}
+
+.section-2, .section-3-download {
+    background-color: $se4all-gray-bg;
+}
+
+.section-3-blog, .section-3-market, .section-4 {
+    background-color: $se4all-gray-bg2;
+}
+
+.btn-mini-grid {
+    background-color: $home-color1;
+    color: $se4all-btn-txt-color !important;
+}
+
+.section-5 .card {
+    // width: 24rem;
+    border-radius: 20px;
+}
+
+.section-5 .card img{
+    height: 10rem;
+    object-fit: contain;
+}
+
+.section-2 img{
+    width: 34rem;
+    border-radius: 10px;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.section-4 .card{
+    border-radius: 20px;
+}
+
+.section-4 .card img {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.section-4 .img-fluid {
+    height: 16rem;
+    object-fit: cover;
+}
+
+.text-wrap {
+    width: 34rem;
+}
+
+.card:hover, .section4-card-img:hover, table a:hover {
+    cursor: pointer;
+}
+
+.x-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-title, .card-text-badge, .card-text-badge-2 {
+    display: flex;
+}
+
+.card-text-badge, .card-text-badge-2 {
+    justify-content: space-between;
+}
+
+.card-text-badge-2 div{
+    margin-right: 1rem;
+}
+
+.rounded-pill {
+    background-color: $home-color4;
+}
+
+.circular {
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-top: .2rem;
+}
+
+.circular-mini-grid, .rounded-pill-mini-grid {
+    background-color: $home-color1;
+}
+
+.color-1 {
+    border-top: 10px solid $home-color1;
+}
+.color-2 {
+    border-top: 10px solid $home-color2;
+}
+.color-3 {
+    border-top: 10px solid $home-color3;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+.section-1 {
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.section-1 #hero-section {
+    padding: 5rem;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    position: relative;
+    top: -5rem;
+    color: #fff;
+}
+
+.section-1 .home_section1_hero {
+    font-size: 3.2rem;
+    font-weight: bolder;
+}
+
+.section-1 .home_section1_subtitle {
+    font-size: 1.3rem;
+}
+
+.home-card {
+    padding: 1rem;
+    width: 45%;
+}
+
+td svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+// Responsive Web Design Section
+
+@media (max-width: 1024px) {
+    .section-5 .card {
+        width: 26rem;
+    }
+    .text-wrap {
+        width: 26rem;
+    }
+    .section-2 img {
+        width: 26rem;
+        height: 15rem;
+        object-fit: cover;
+    }
+    .section-2-card {
+        margin-left: 24px !important;
+        margin-right: 24px !important;
+    }
+    .section-2-title, .section-2-card {
+        padding-bottom: 3rem;
+    }
+    .section-4 .img-fluid {
+        height: 18rem;
+        object-fit: cover;
+    }
+    // Make section 1 responsive
+    .section-1 {
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    .section-1 #hero-section {
+        padding: 5rem 5rem 0 5rem;
+    }
+    .section-1 .home_section1_hero {
+        font-size: 2.5rem;
+    }
+    .section-1 .home_section1_subtitle {
+        font-size: 1rem;
+    }
+    .home-card {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .section-5 .card {
+        width: 18rem;
+    }
+    .section-2 img {
+        width: 40rem;
+        height: 20rem;
+        object-fit: cover;
+    }
+    .section-2-card {
+        margin-left: 34px !important;
+        margin-right: 34px !important;
+    }
+    .section-2-title, .section-2-card {
+        padding-bottom: 3rem;
+    }
+    .text-wrap {
+        width: 38rem;
+    }
+    p.lead {
+        margin-bottom: 0px;
+        padding-bottom: 1rem;
+    }
+    .card-text-badge {
+        flex-direction: column;
+    }
+    .card-text-badge-2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .section-4 .img-fluid {
+        height: 23rem;
+        object-fit: cover;
+    }
+    // Make section 1 responsive
+
+    .content {
+        top: 2rem;
+    }
+    .section-1 .home_section1_hero {
+        font-size: 2rem;
+    }
+    .section-1 #hero-section {
+        padding: 0 5rem 1rem 5rem;
+    }
+    .section-1 {
+        padding-bottom: 5rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .section-5 .card {
+        width: 22rem;
+    }
+    .section-2 img {
+        width: 22rem;
+        height: 10rem;
+        object-fit: cover;
+    }
+    .section-2-card {
+        margin-left: 24px !important;
+        margin-right: 24px !important;
+    }
+    .section-2-title, .section-2-card {
+        padding-bottom: 3rem;
+    }
+    .text-wrap {
+        width: 22rem;
+    }
+    .section-4 .card img {
+        border-radius: 20px 20px 0px 0px;
+    }
+    .section-4 .img-fluid {
+        height: 18rem;
+        object-fit: cover;
+    }
+    // Make section 1 responsive
+    .section-1 #hero-section {
+        padding: 1rem;
+    }
+    .section-1 .home_section1_hero {
+        font-size: 1rem;
+    }
+    .section-1 {
+        padding-bottom: 5rem;
+    }
+    .content br {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn-lg{
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    .section-2 img {
+        width: 19rem;
+    }
+    .text-wrap {
+        width: 20rem;
+    }
+    .card-text-badge-2{
+        flex-direction: column;
+    }
+    .card-text-badge-2 div{
+        width: 10rem;
+        margin-bottom: .5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .section-2 img {
+        width: 15rem;
+    }
+    .text-wrap {
+        width: 16rem;
+    }
+
+
+}
+

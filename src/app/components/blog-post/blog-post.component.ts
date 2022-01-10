@@ -16,6 +16,7 @@ export class BlogPostComponent implements OnInit {
   blogPostData: any;
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
 
   constructor(private _route: ActivatedRoute, private _data: DataService, private _title: Title) { }

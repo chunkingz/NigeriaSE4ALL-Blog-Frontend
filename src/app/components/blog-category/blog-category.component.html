@@ -3,7 +3,7 @@
     <main @blogAnimation>
 
         <section class="py-5 container text-muted" id="hero-section">
-            <h1>{{ dynamicBlogData ? dynamicBlogData.hero_category : staticContent.k_hero_category }}</h1>
+            <h1>{{ dynamicBlogData ? dynamicBlogData.hero_category : constants.hero_category }}</h1>
             <h5>{{title}}</h5>
         </section>
 
@@ -64,7 +64,7 @@
                                             <!-- START OF BLOG READ MORE BUTTON -->
                                             <div class="mx-3">
                                                 <a type="button" class="btn btn-md btn-outline-secondary">
-                                                    {{ dynamicBlogData ? dynamicBlogData.btn1 : staticContent.k_btn1 }}
+                                                    {{ dynamicBlogData ? dynamicBlogData.btn1 : constants.btn1 }}
 
                                                 </a>
                                             </div>
@@ -102,7 +102,7 @@
 
 
                         <div class="p-4 mb-3 bg-light rounded">
-                            <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.tag_txt : staticContent.k_tag_txt }}</h4>
+                            <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.tag_txt : constants.tag_txt }}</h4>
                             <span *ngFor="let category of categoriesData">
 
                                 <a type="button" class="btn btn-se4all mb-2"
@@ -121,12 +121,12 @@
                         </div>
 
                         <div class="p-4 mb-3 bg-light rounded">
-                            <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.social_txt : staticContent.k_social_txt }}</h4>
+                            <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.social_txt : constants.social_txt }}</h4>
 
                             <!-- LinkedIn, Facebook, and Email -->
 
                             <a type="button" class="btn btn-se4all" id="linkedin-color"
-                                href="{{ dynamicBlogData ? dynamicBlogData.linkedin_url : staticContent.k_linkedin_url }}" target="_blank">
+                                href="{{ dynamicBlogData ? dynamicBlogData.linkedin_url : constants.linkedin_url }}" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
                                     <path
@@ -134,7 +134,7 @@
                                 </svg>
                             </a>&nbsp;
                             <a type="button" class="btn btn-se4all" id="facebook-color"
-                                href="{{ dynamicBlogData ? dynamicBlogData.facebook_url : staticContent.k_facebook_url }}" target="_blank">
+                                href="{{ dynamicBlogData ? dynamicBlogData.facebook_url : constants.facebook_url }}" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-facebook" viewBox="0 0 16 16">
                                     <path
@@ -142,7 +142,7 @@
                                 </svg>
                             </a>&nbsp;
                             <a type="button" class="btn btn-se4all" id="email-color"
-                                href="{{ dynamicBlogData ? dynamicBlogData.email_url : staticContent.k_email_url }}" target="_blank">
+                                href="{{ dynamicBlogData ? dynamicBlogData.email_url : constants.email_url }}" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-envelope-fill" viewBox="0 0 16 16">
                                     <path

@@ -5,16 +5,16 @@
         <section class="py-5 container" id="hero-section">
             <div class="row py-lg-5 g-2">
                 <div class="col-lg-8">
-                    <h1>{{ dynamicBlogData ? dynamicBlogData.hero_title : staticContent.k_hero_title }}</h1>
+                    <h1>{{ dynamicBlogData ? dynamicBlogData.hero_title : constants.hero_title }}</h1>
                     <br>
                     <p class="text-muted">{{ dynamicBlogData ? dynamicBlogData.hero_subtitle_1 :
-                        staticContent.k_hero_subtitle_1 }} </p>
+                        constants.hero_subtitle_1 }} </p>
                     <p class="text-muted">{{ dynamicBlogData ? dynamicBlogData.hero_subtitle_2 :
-                        staticContent.k_hero_subtitle_2 }}</p>
+                        constants.hero_subtitle_2 }}</p>
                     <br>
                     <p>
                         <a type="button" class="btn btn-lg btn-se4all cta" routerLink="../contact-us">
-                            {{ dynamicBlogData ? dynamicBlogData.btn2 : staticContent.k_btn2 }}
+                            {{ dynamicBlogData ? dynamicBlogData.btn2 : constants.btn2 }}
                         </a>
                     </p>
                 </div>
@@ -83,7 +83,7 @@
                                             <!-- START OF BLOG READ MORE BUTTON -->
                                             <div class="mx-3">
                                                 <a type="button" class="btn btn-md btn-outline-secondary">
-                                                    {{ dynamicBlogData ? dynamicBlogData.btn1 : staticContent.k_btn1 }}
+                                                    {{ dynamicBlogData ? dynamicBlogData.btn1 : constants.btn1 }}
 
                                                 </a>
                                             </div>

@@ -14,6 +14,7 @@ export class SideBarComponent implements OnInit {
   url: any;
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
 
   constructor(private _data: DataService) { }

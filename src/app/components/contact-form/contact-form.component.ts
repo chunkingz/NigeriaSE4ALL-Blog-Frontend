@@ -16,6 +16,7 @@ export class ContactFormComponent implements OnInit {
 
   dynamicData: any;
   staticContent!: Constants;
+  constants = Constants;
 
   constructor(private _title: Title, private _router: Router, private _data: DataService) { }
 
