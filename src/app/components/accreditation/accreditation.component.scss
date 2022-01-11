@@ -1,0 +1,22 @@
+
+main {
+    font-family: 'Source Sans Pro', Arial, sans-serif !important;
+}
+
+img {
+    width: 150px !important;
+}
+
+p {
+    font-size: 14pt;
+}
+
+a {
+    color: #1DD069;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        text-align: center;
+    }
+}

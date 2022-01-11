@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccreditationComponent } from './components/accreditation/accreditation.component';
 import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'mini-grids', component: MiniGridsComponent},
   { path: 'power-sector', component: PowerSectorComponent},
   { path: 'solar-home-systems', component: SolarHomeSystemsComponent},
+  { path: 'accreditation', component: AccreditationComponent},
   { path: '**', component: HomeComponent}
 ];
 

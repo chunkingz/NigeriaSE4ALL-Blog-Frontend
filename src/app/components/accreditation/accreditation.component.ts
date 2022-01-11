@@ -3,11 +3,11 @@ import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-mini-grids',
-  templateUrl: './mini-grids.component.html',
-  styleUrls: ['./mini-grids.component.scss']
+  selector: 'accreditation',
+  templateUrl: './accreditation.component.html',
+  styleUrls: ['./accreditation.component.scss']
 })
-export class MiniGridsComponent implements OnInit {
+export class AccreditationComponent implements OnInit {
 
   dynamicData: any;
   constants = Constants;

@@ -95,7 +95,7 @@ export class Constants {
     static home_section9_title2 = "2021 All Rights Reserved by nigeriase4all.gov.ng";
     static home_section9_title3 = "Accreditation";
     static home_section9_url1 = "http://test.nigeriase4all.gov.ng/termsofservice";
-    static home_section9_url2 = "http://test.nigeriase4all.gov.ng/accreditation";
+    static home_section9_url2 = "accreditation";
     static Nav_txt_4 = "MINI-GRIDS";
     static Nav_txt_5 = "POWER SECTOR";
     static Nav_txt_6 = "SOLAR HOME SYSTEMS";
@@ -126,4 +126,41 @@ export class Constants {
     static minigrids_section5_card1_subtitle = "A toolkit which breaks down the potential steps in the development of a mini-grid project"
     static minigrids_section5_card2_title = "Mini-grid investment atlas"
     static minigrids_section5_card2_subtitle = "An atlas of selected mini-grid sites with potential for development"
+
+    static accreditation_hero = "Accreditation"
+    static accreditation_title1 = "Authors and web development"
+
+    static accreditation_pt1_txt1 = "INTEGRATION environment & energy GmbH"
+    static accreditation_pt1_txt2 = "mailto:ohaas@integration.org"
+    static accreditation_pt1_txt3 = "Mr Oliver Haas"
+    static accreditation_pt1_txt4 = "http://www.integration.org/"
+    static accreditation_pt1_txt5 = "www.integration.org"
+    static accreditation_pt1_img_url = "https://nigeriase4all.gov.ng/static/logos/logo-9-integration.svg"
+
+    static accreditation_pt2_txt1 = "Reiner Lemoine Institut gGmbH"
+    static accreditation_pt2_txt2 = "mailto:philipp.blechinger@rl-institut.de"
+    static accreditation_pt2_txt3 = "Dr Philipp Blechinger"
+    static accreditation_pt2_txt4 = "http://www.reiner-lemoine-institut.de/"
+    static accreditation_pt2_txt5 = "www.reiner-lemoine-institut.de"
+    static accreditation_pt2_img_url = "https://nigeriase4all.gov.ng/static/logos/logo-10-rli.png"
+
+    static accreditation_pt3_txt1 = ""
+    static accreditation_pt3_txt2 = "mailto:kingstonfortune@gmail.com"
+    static accreditation_pt3_txt3 = "Fortune King"
+    static accreditation_pt3_txt4 = "https://github.com/chunkingz/"
+    static accreditation_pt3_txt5 = "View my portfolio"
+    static accreditation_pt3_img_url = ""
+
+    static accreditation_pt4_txt1 = "Design"
+    static accreditation_pt4_txt2 = "Alsino Skowronnek"
+    static accreditation_pt4_txt3 = "http://www.alsino.io/"
+    static accreditation_pt4_txt4 = "www.alsino.io"
+
+    static accreditation_pt5_txt1 = "Images"
+    static accreditation_pt5_txt2 = "Features for Government: Johnny Greig Int / Alamy Stock Photo"
+    static accreditation_pt5_txt3 = "Features for General public: Red Confidential / "
+    static accreditation_pt5_txt4 = "http://www.shutterstock.com/"
+    static accreditation_pt5_txt5 = "Shutterstock.com"
+    static accreditation_pt5_txt6 = "About, Federal Ministry of Power (FMP), our mandate: Agbebiyi Adekunle Sunday / "
+
 }
