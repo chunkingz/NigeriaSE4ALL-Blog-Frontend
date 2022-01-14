@@ -3,7 +3,7 @@ import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-mini-grids',
+  selector: 'mini-grids',
   templateUrl: './mini-grids.component.html',
   styleUrls: ['./mini-grids.component.scss']
 })

@@ -45,9 +45,9 @@ export class Constants {
     static nav_txt_1 = "BLOG";
     static nav_txt_2 = "MAP";
     static nav_txt_3 = "ABOUT";
-    static nav_txt_url_1 = "http://localhost:4200/blog";
+    static nav_txt_url_1 = "blog";
     static nav_txt_url_2 = "https://nigeriase4all.gov.ng/map";
-    static nav_txt_url_3 = "https://nigeriase4all.gov.ng/about";
+    static nav_txt_url_3 = "about";
     static nav_logo_url = "https://www.power.gov.ng/";
     static subscribe_hero_title = "Subscribe to our newsletter";
     static subscribe_hero_subtitle_1 = "Join our monthly newsletter and never miss out on new blog posts and promotions.";

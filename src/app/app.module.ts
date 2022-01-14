@@ -33,6 +33,7 @@ import { MiniGridsComponent } from './components/mini-grids/mini-grids.component
 import { PowerSectorComponent } from './components/power-sector/power-sector.component';
 import { SolarHomeSystemsComponent } from './components/solar-home-systems/solar-home-systems.component';
 import { AccreditationComponent } from './components/accreditation/accreditation.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { AccreditationComponent } from './components/accreditation/accreditation
     MiniGridsComponent,
     PowerSectorComponent,
     SolarHomeSystemsComponent,
-    AccreditationComponent
+    AccreditationComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-power-sector',
+  selector: 'power-sector',
   templateUrl: './power-sector.component.html',
   styleUrls: ['./power-sector.component.scss', '../home/home.component.scss']
 })

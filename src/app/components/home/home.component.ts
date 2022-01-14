@@ -4,7 +4,7 @@ import { DataService } from 'src/app/services/data.service';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

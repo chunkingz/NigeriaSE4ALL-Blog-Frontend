@@ -3,7 +3,7 @@ import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-solar-home-systems',
+  selector: 'solar-home-systems',
   templateUrl: './solar-home-systems.component.html',
   styleUrls: ['./solar-home-systems.component.scss', '../home/home.component.scss']
 })

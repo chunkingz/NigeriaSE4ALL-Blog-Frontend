@@ -1,0 +1,177 @@
+
+$se4all-green: #1DD069;
+$se4all-white: #fff;
+$se4all-txt-grey: #464646;
+$se4all-grey1: #EEEFF1;
+$se4all-grey2: #E0E2E9;
+
+a, .heading-green {
+    color: $se4all-green;
+}
+
+p, div {
+    color: $se4all-txt-grey;
+}
+
+body, p, li {
+    font-size: 15pt;
+}
+
+.btn.btn-success {
+    background-color: $se4all-green;
+    border-color: $se4all-green;
+}
+
+.heading-green {
+    font-weight: 600;
+}
+
+.section-1 a {
+    color: inherit !important;
+}
+
+.section-1 .btn, .section-5 .btn {
+    color: $se4all-white !important;
+}
+
+.section-1, .section-3, .section-5 {
+    background-color: $se4all-grey1;
+}
+.section-2, .section-4 {
+    background-color: $se4all-grey2;
+}
+
+h2 {
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20pt;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-body p {
+    font-size: 15pt;
+}
+
+.section-1 .card {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.section-1 .card img{
+    height: 10rem;
+    object-fit: contain;
+}
+
+.section-1 .x-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-1 .shadow-lg {
+    box-shadow: 0 1rem 1rem rgb(0 0 0 / 20%) !important;
+}
+
+.section-1 .shadow-lg:hover {
+    box-shadow: 0 0 0 rgb(0 0 0 / 10%) !important;
+}
+
+// .section-1 .shadow-lg {
+//     box-shadow: 0 1rem 1rem rgb(0 0 0 / 20%) !important;
+// 1rem 1rem 1rem rgb(0 0 0 / 28%) !important
+// }
+
+.about-inline-logo {
+    float: left;
+}
+
+.about-list {
+    clear: left;
+}
+
+#sdg7-logo {
+    width: 16%;
+}
+
+#sdg7-logo > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.center--align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-fmp__item img, #about-nesp-content img {
+    width: 100%;
+}
+
+.about-stakeholder__img img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.section-about__img img {
+    float: right;
+}
+
+// Responsive Web Design Section
+
+@media (max-width: 1024px) {
+    .section-1 .card {
+        width: 26rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-1 .card {
+        width: 18rem;
+    }
+    .about-fmp__item img, #about-nesp-content img {
+        width: 100%;
+    }
+    #sustainable-img {
+        width: 100%;
+    }
+    h2 {
+        font-size: 26pt;
+    }
+}
+
+@media (max-width: 425px) {
+    .section-1 .card {
+        width: 22rem;
+    }
+    #sdg7-logo {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto !important;
+        padding-bottom: 2rem;
+    }
+    .about-inline-logo {
+        float: none;
+    }
+    #blitz-logo {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto !important;
+        padding-bottom: 2rem;
+    }
+    h3 {
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 320px) {
+    #sdg7-logo {
+        width: 90%;
+    }
+}
