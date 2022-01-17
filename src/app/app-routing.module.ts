@@ -10,6 +10,7 @@ import { FormSuccessComponent } from './components/form-success/form-success.com
 import { HomeComponent } from './components/home/home.component';
 import { MiniGridsComponent } from './components/mini-grids/mini-grids.component';
 import { PowerSectorComponent } from './components/power-sector/power-sector.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { SolarHomeSystemsComponent } from './components/solar-home-systems/solar-home-systems.component';
 import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'accreditation', component: AccreditationComponent},
   { path: 'about', component: AboutComponent},
   { path: 'terms-of-service', component: TermsOfServiceComponent},
+  { path: 'privacy-policy', component: PrivacyPolicyComponent},
   { path: '**', component: HomeComponent}
 ];
 

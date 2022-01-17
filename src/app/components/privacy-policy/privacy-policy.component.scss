@@ -8,16 +8,16 @@ $se4all-grey1: #EEEFF1;
     background-color: $se4all-grey1;
 }
 
-body, p, a, li {
-    font-size: 14pt;
-}
-
-a, .heading-green {
+a {
     color: $se4all-green;
 }
 
 p, div {
     color: $se4all-txt-grey;
+}
+
+body, p, li {
+    font-size: 15pt;
 }
 
 h2 {
@@ -26,14 +26,31 @@ h2 {
     text-align: center;
 }
 
-.mod {
-    font-style: italic;
-    font-size: medium;
+h3 {
+    font-size: 20pt;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
 }
+
+.pp-content {
+    margin-bottom: 3rem;
+}
+
+li {
+    margin-bottom: 1.5rem;
+}
+
 
 @media (max-width: 768px) {
     h2 {
         font-size: 26pt;
-        padding-top: 0 !important;
     }
 }
+
+@media (max-width: 425px) {
+    h3 {
+        font-weight: 500;
+    }
+}
+

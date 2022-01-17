@@ -35,6 +35,7 @@ import { SolarHomeSystemsComponent } from './components/solar-home-systems/solar
 import { AccreditationComponent } from './components/accreditation/accreditation.component';
 import { AboutComponent } from './components/about/about.component';
 import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-
     SolarHomeSystemsComponent,
     AccreditationComponent,
     AboutComponent,
-    TermsOfServiceComponent
+    TermsOfServiceComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
