@@ -36,6 +36,7 @@ import { AccreditationComponent } from './components/accreditation/accreditation
 import { AboutComponent } from './components/about/about.component';
 import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { AboutMapComponent } from './components/about-map/about-map.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     AccreditationComponent,
     AboutComponent,
     TermsOfServiceComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    AboutMapComponent
   ],
   imports: [
     BrowserModule,

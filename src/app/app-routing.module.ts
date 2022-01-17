@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutMapComponent } from './components/about-map/about-map.component';
 import { AboutComponent } from './components/about/about.component';
 import { AccreditationComponent } from './components/accreditation/accreditation.component';
 import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'terms-of-service', component: TermsOfServiceComponent},
   { path: 'privacy-policy', component: PrivacyPolicyComponent},
+  { path: 'about-map', component: AboutMapComponent},
   { path: '**', component: HomeComponent}
 ];
 

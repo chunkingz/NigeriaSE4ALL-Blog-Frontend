@@ -1,0 +1,80 @@
+
+$se4all-green: #1DD069;
+$se4all-txt-grey: #464646;
+$se4all-grey1: #EEEFF1;
+
+
+.section-1 {
+    background-color: $se4all-grey1;
+}
+
+a {
+    color: $se4all-green;
+}
+
+p, div {
+    color: $se4all-txt-grey;
+}
+
+body, p, li {
+    font-size: 15pt;
+}
+
+h2 {
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20pt;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.about-content {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.license-content {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+li {
+    margin-bottom: 1.5rem;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 2rem;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26pt;
+    }
+}
+
+@media (max-width: 425px) {
+    h3 {
+        font-weight: 500;
+    }
+}
+
