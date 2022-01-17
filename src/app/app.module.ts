@@ -34,6 +34,7 @@ import { PowerSectorComponent } from './components/power-sector/power-sector.com
 import { SolarHomeSystemsComponent } from './components/solar-home-systems/solar-home-systems.component';
 import { AccreditationComponent } from './components/accreditation/accreditation.component';
 import { AboutComponent } from './components/about/about.component';
+import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { AboutComponent } from './components/about/about.component';
     PowerSectorComponent,
     SolarHomeSystemsComponent,
     AccreditationComponent,
-    AboutComponent
+    AboutComponent,
+    TermsOfServiceComponent
   ],
   imports: [
     BrowserModule,

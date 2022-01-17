@@ -1,0 +1,34 @@
+
+$se4all-green: #1DD069;
+$se4all-txt-grey: #464646;
+
+
+body, p, a, li {
+    font-size: 14pt;
+}
+
+a, .heading-green {
+    color: $se4all-green;
+}
+
+p, div {
+    color: $se4all-txt-grey;
+}
+
+h2 {
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mod {
+    font-style: italic;
+    font-size: medium;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26pt;
+        padding-top: 0 !important;
+    }
+}

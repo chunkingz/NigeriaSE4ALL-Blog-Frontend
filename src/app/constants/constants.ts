@@ -92,9 +92,9 @@ export class Constants {
     static home_section8_bmz_url = "http://www.bmz.de/en/index.html";
     static home_section8_giz_url = "https://www.giz.de/en/html/index.html";
     static home_section9_title1 = "Terms and conditions of service"
-    static home_section9_title2 = "2021 All Rights Reserved by nigeriase4all.gov.ng";
+    static home_section9_title2 = "2022 All Rights Reserved by nigeriase4all.gov.ng";
     static home_section9_title3 = "Accreditation";
-    static home_section9_url1 = "http://test.nigeriase4all.gov.ng/termsofservice";
+    static home_section9_url1 = "terms-of-service";
     static home_section9_url2 = "accreditation";
     static Nav_txt_4 = "MINI-GRIDS";
     static Nav_txt_5 = "POWER SECTOR";
