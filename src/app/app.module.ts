@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogComponent } from './components/blog/blog.component';
@@ -65,6 +66,7 @@ import { AboutMapComponent } from './components/about-map/about-map.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CollapseModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

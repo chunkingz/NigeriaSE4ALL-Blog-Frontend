@@ -14,8 +14,7 @@ $se4all-btn-bg-color: #1DD069;
 $se4all-btn-txt-color: #fff;
 $se4all-url-active: #6c757d;
 $se4all-url-hover: #212529;
-$se4all-v3-color: #fcbc0c
-;
+$se4all-v3-color: #fcbc0c;
 
 
 a {
@@ -79,3 +78,9 @@ img.blog-preview-img {
 }
 
 
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";

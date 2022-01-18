@@ -12,6 +12,8 @@ export class NavbarComponent implements OnInit {
   dynamicData: any;
   staticContent!: Constants;
   constants = Constants;
+  isCollapsed = true;
+
 
   constructor(private _data: DataService) { }
 

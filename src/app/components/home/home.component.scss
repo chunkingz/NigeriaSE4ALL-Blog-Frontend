@@ -8,10 +8,16 @@ $home-color2: #085064;
 $home-color3: #f76904;
 $home-color4: #c5c4cf;
 $home-hr-color: #93939f;
+$se4all-v3-color: #fcbc0c;
 
 
 .section-2, .section-3, .section-5, .section-6{
     background-color: $se4all-gray-bg;
+}
+
+.btn-v3 {
+    background-color: $se4all-v3-color;
+    color: $se4all-btn-txt-color !important;
 }
 
 .section-4 {
@@ -66,7 +72,7 @@ $home-hr-color: #93939f;
     cursor: pointer;
 }
 
-.section-3 .x-row {
+.section-3 .x-row, .section-4 .x-row {
     display: flex;
     flex-wrap: wrap;
 }
@@ -161,6 +167,11 @@ $home-hr-color: #93939f;
 
 
 // Responsive Web Design Section
+@media (max-width: 1440px) {
+    .section-1 {
+        margin-top: -3rem;
+    }
+}
 
 @media (max-width: 1024px) {
     .section-3 .card {
@@ -170,7 +181,7 @@ $home-hr-color: #93939f;
         width: 26rem;
     }
     .section-4 img {
-        width: 26rem;
+        width: 100%;
         height: 15rem;
         object-fit: cover;
     }
@@ -187,7 +198,7 @@ $home-hr-color: #93939f;
     }
     // Make section 1 responsive
     .section-1 {
-        margin-top: -7.4rem;
+        margin-top: -7rem;
     }
     .section-2 {
         margin-top: -18rem;
@@ -211,11 +222,6 @@ $home-hr-color: #93939f;
     .section-3 .card {
         width: 18rem;
     }
-    .section-4 img {
-        width: 40rem;
-        height: 20rem;
-        object-fit: cover;
-    }
     .section-4-card {
         margin-left: 34px !important;
         margin-right: 34px !important;
@@ -224,7 +230,7 @@ $home-hr-color: #93939f;
         padding-bottom: 3rem;
     }
     .text-wrap {
-        width: 38rem;
+        width: 100%;
     }
     p.lead {
         margin-bottom: 0px;
@@ -243,13 +249,13 @@ $home-hr-color: #93939f;
     }
     // Make section 1 responsive
     .section-1 {
-        margin-top: -13rem;
+        margin-top: -9.5rem;
     }
     .section-2 {
         margin-top: -21rem;
     }
     .content {
-        top: 4rem;
+        top: 3rem;
     }
     .section-1 .home_section1_hero {
         font-size: 2rem;
@@ -263,11 +269,6 @@ $home-hr-color: #93939f;
 @media (max-width: 425px) {
     .section-3 .card {
         width: 22rem;
-    }
-    .section-4 img {
-        width: 22rem;
-        height: 10rem;
-        object-fit: cover;
     }
     .section-4-card {
         margin-left: 24px !important;
@@ -293,14 +294,8 @@ $home-hr-color: #93939f;
     .section-1 .home_section1_hero {
         font-size: 1rem;
     }
-    .section-1 {
-        margin-top: -16.2rem;
-    }
     .section-2 {
         margin-top: -24.6rem;
-    }
-    .content {
-        top: 7rem;
     }
     .content br {
         display: none;
@@ -312,9 +307,6 @@ $home-hr-color: #93939f;
         padding: 0.5rem;
         font-size: 1rem;
     }
-    .section-4 img {
-        width: 19rem;
-    }
     .text-wrap {
         width: 20rem;
     }
@@ -325,26 +317,17 @@ $home-hr-color: #93939f;
         width: 10rem;
         margin-bottom: .5rem;
     }
-    .section-1 {
-        margin-top: -16.7rem;
-    }
     .section-2 {
         margin-top: -25rem;
     }
 }
 
 @media (max-width: 320px) {
-    .section-4 img {
-        width: 15rem;
-    }
     .text-wrap {
         width: 16rem;
     }
     .section-1 .home_section1_subtitle {
         display: none;
-    }
-    .section-1 {
-        margin-top: -17.3rem;
     }
     .section-2 {
         margin-top: -25.8rem;
