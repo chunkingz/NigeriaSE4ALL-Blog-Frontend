@@ -19,6 +19,7 @@ export class Constants {
     static contact_hero_subtitle_2 = "We may also be able to provide support in other areas, for example, project development of a site or conducting a joint study together.";
     static contact_hero_subtitle_3 = "Just complete the engagement form below, and we will get back to you, indicating to what extent we can support you or work together. For inspiration from our past activities, check out the blog.";
     static btn3 = "View the Blog...";
+    
     static contact_page_txt_1 = "Engagement form";
     static contact_page_txt_2 = "Your name";
     static contact_page_txt_3 = "Your email address";
@@ -78,6 +79,7 @@ export class Constants {
     static home_section4_card4_maintitle1 = "The mini-grid developer toolkit";
     static home_section4_card4_maintitle2 = "You can view our entire";
     static btn8 = "View app";
+
     static home_section5_hero = "Stay up-to-date with our blog";
     static home_section5_subtitle = "Read about our recent activities";
     static home_section7_title1 = "OFFICE";
@@ -96,12 +98,14 @@ export class Constants {
     static home_section9_title3 = "Accreditation";
     static home_section9_url1 = "terms-of-service";
     static home_section9_url2 = "accreditation";
+
     static Nav_txt_4 = "MINI-GRIDS";
     static Nav_txt_5 = "POWER SECTOR";
     static Nav_txt_6 = "SOLAR HOME SYSTEMS";
     static Nav_txt_url_4 = "mini-grids";
     static Nav_txt_url_5 = "power-sector";
     static Nav_txt_url_6 = "solar-home-systems";
+
     static minigrids_section2_hero = "Our interactive mini-grid maps";
     static minigrids_section2_hero_subtitle = "Explore up-to-date data via our web apps";
     static minigrids_section2_card1_title = "Off-grid mini-grid locater";
@@ -144,7 +148,7 @@ export class Constants {
     static accreditation_pt2_txt5 = "www.reiner-lemoine-institut.de"
     static accreditation_pt2_img_url = "https://nigeriase4all.gov.ng/static/logos/logo-10-rli.png"
 
-    static accreditation_pt3_txt1 = ""
+    static accreditation_pt3_txt1 = "Front End Development"
     static accreditation_pt3_txt2 = "mailto:kingstonfortune@gmail.com"
     static accreditation_pt3_txt3 = "Fortune King"
     static accreditation_pt3_txt4 = "https://github.com/chunkingz/"

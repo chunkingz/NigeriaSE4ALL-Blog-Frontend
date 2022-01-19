@@ -5,7 +5,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'power-sector',
   templateUrl: './power-sector.component.html',
-  styleUrls: ['./power-sector.component.scss', '../home/home.component.scss']
+  styleUrls: ['./power-sector.component.scss', '../mini-grids/mini-grids.component.scss']
 })
 export class PowerSectorComponent implements OnInit {
 

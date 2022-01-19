@@ -5,7 +5,7 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'solar-home-systems',
   templateUrl: './solar-home-systems.component.html',
-  styleUrls: ['./solar-home-systems.component.scss', '../home/home.component.scss']
+  styleUrls: ['./solar-home-systems.component.scss', '../mini-grids/mini-grids.component.scss']
 })
 export class SolarHomeSystemsComponent implements OnInit {
 

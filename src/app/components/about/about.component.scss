@@ -73,6 +73,10 @@ h3 {
     flex-wrap: wrap;
 }
 
+.section-1 h3 {
+    text-align: center;
+}
+
 .section-1 .shadow-lg {
     box-shadow: 0 1rem 1rem rgb(0 0 0 / 20%) !important;
 }
@@ -129,9 +133,6 @@ h3 {
 @media (max-width: 768px) {
     .section-1 .card {
         width: 18rem;
-    }
-    .about-fmp__item img, #about-nesp-content img {
-        width: 100%;
     }
     #sustainable-img {
         width: 100%;
