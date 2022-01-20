@@ -15,7 +15,6 @@ export class BlogPostComponent implements OnInit {
   slug: any;
   blogPostData: any;
   dynamicData: any;
-  staticContent!: Constants;
   constants = Constants;
 
 

@@ -13,7 +13,6 @@ export class SideBarComponent implements OnInit {
   categoriesData: any;
   url: any;
   dynamicData: any;
-  staticContent!: Constants;
   constants = Constants;
 
 

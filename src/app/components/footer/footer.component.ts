@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
@@ -13,7 +13,6 @@ export class FooterComponent implements OnInit {
 
   faArrowUp = faArrowUp;
   dynamicData: any;
-  staticContent!: Constants;
   constants = Constants;
 
   constructor(private _data: DataService) { }

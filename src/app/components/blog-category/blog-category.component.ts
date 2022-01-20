@@ -19,7 +19,6 @@ export class BlogCategoryComponent implements OnInit {
   title:any;
   categoriesData: any;
   dynamicData: any;
-  staticContent!: Constants;
   constants = Constants;
 
 

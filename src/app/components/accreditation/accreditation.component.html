@@ -1,65 +1,79 @@
-<main>
+<div *ngFor="let dynamicBlogData of dynamicData">
+
+  <main>
     <div class="container">
-        <h1 class="text-center my-5">{{ constants.accreditation_hero }}</h1>
+      <h1 class="text-center my-5">{{ dynamicBlogData ? dynamicBlogData.accreditation_hero : constants.accreditation_hero }}</h1>
 
-        <h2 class="text-center">{{ constants.accreditation_title1 }}</h2>
+      <h2 class="text-center">{{ dynamicBlogData ? dynamicBlogData.accreditation_title1 : constants.accreditation_title1 }}</h2>
 
-        <div class="row justify-content-center pt-3">
-            <div class="col-md-6">
-                <p class="mt-5">
-                    {{ constants.accreditation_pt1_txt1 }} <br>
-                    Contact: <a href="{{ constants.accreditation_pt1_txt2 }}">{{ constants.accreditation_pt1_txt3 }}</a> <br>
-                    <a href="{{ constants.accreditation_pt1_txt4 }}" target="_blank">{{ constants.accreditation_pt1_txt5 }}</a> 
-                </p>
-            </div>
-            <div class="col-md-3 mt-5">
-                <img src="{{ constants.accreditation_pt1_img_url }}" alt="">
-            </div>
+      <div class="row justify-content-center pt-3">
+        <div class="col-md-6">
+          <p class="mt-5">
+            {{ dynamicBlogData ? dynamicBlogData.accreditation_pt1_txt1 : constants.accreditation_pt1_txt1 }} <br>
+            Contact: <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt1_txt2 : constants.accreditation_pt1_txt2 }}">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt1_txt3 : constants.accreditation_pt1_txt3 }}</a> <br>
+            <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt1_txt4 : constants.accreditation_pt1_txt4 }}" target="_blank">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt1_txt5 : constants.accreditation_pt1_txt5 }}</a>
+          </p>
         </div>
-
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-                <p>
-                    {{ constants.accreditation_pt2_txt1 }} <br>
-                    Contact: <a href="{{ constants.accreditation_pt2_txt2 }}">{{ constants.accreditation_pt2_txt3 }}</a> <br>
-                    <a href="{{ constants.accreditation_pt2_txt4 }}" target="_blank">{{ constants.accreditation_pt2_txt5 }}</a> 
-                </p>
-            </div>
-            <div class="col-md-3" id="reiner">
-                <img src="{{ constants.accreditation_pt2_img_url }}" alt="">
-            </div>
+        <div class="col-md-3 mt-5">
+          <img src="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt1_img_url : constants.accreditation_pt1_img_url }}" alt="">
         </div>
+      </div>
 
-        <div class="row justify-content-center mt-5">
-            <div class="col-9">
-                <h2>{{ constants.accreditation_pt3_txt1 }}</h2>
-                <p>
-                    Contact: <a href="{{ constants.accreditation_pt3_txt2 }}">{{ constants.accreditation_pt3_txt3 }}</a> <br>
-                    <a href="{{ constants.accreditation_pt3_txt4 }}" target="_blank">{{ constants.accreditation_pt3_txt5 }}</a> 
-                </p>
-            </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <p>
+            {{ dynamicBlogData ? dynamicBlogData.accreditation_pt2_txt1 : constants.accreditation_pt2_txt1 }} <br>
+            Contact: <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt2_txt2 : constants.accreditation_pt2_txt2 }}">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt2_txt3 : constants.accreditation_pt2_txt3 }}</a> <br>
+            <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt2_txt4 : constants.accreditation_pt2_txt4 }}" target="_blank">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt2_txt5 : constants.accreditation_pt2_txt5 }}</a>
+          </p>
         </div>
+        <div class="col-md-3" id="reiner">
+          <img src="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt2_img_url : constants.accreditation_pt2_img_url }}" alt="">
+        </div>
+      </div>
 
-        <div class="row justify-content-center mt-5">
-            <div class="col-9">
-                <h2>{{ constants.accreditation_pt4_txt1 }}</h2>
-                <p>
-                    {{ constants.accreditation_pt4_txt2 }} <br>
-                    <a href="{{ constants.accreditation_pt4_txt3 }}" target="_blank">{{ constants.accreditation_pt4_txt4 }}</a> 
-                </p>
-            </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-9">
+          <h2>{{ dynamicBlogData ? dynamicBlogData.accreditation_pt3_txt1 : constants.accreditation_pt3_txt1 }}</h2>
+          <p>
+            Contact: <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt3_txt2 : constants.accreditation_pt3_txt2 }}">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt3_txt3 : constants.accreditation_pt3_txt3 }}</a> <br>
+            <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt3_txt4 : constants.accreditation_pt3_txt4 }}" target="_blank">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt3_txt5 : constants.accreditation_pt3_txt5 }}</a>
+          </p>
         </div>
-        <div class="row my-5 justify-content-center">
-            <div class="col-9">
-                <h2>{{ constants.accreditation_pt5_txt1 }}</h2>
-                <p>
-                    {{ constants.accreditation_pt5_txt2 }} <br>
+      </div>
 
-                    {{ constants.accreditation_pt5_txt3 }} <a href="{{ constants.accreditation_pt5_txt4 }}" target="_blank">{{ constants.accreditation_pt5_txt5 }}</a> <br>
-                    
-                    {{ constants.accreditation_pt5_txt6 }} <a href="{{ constants.accreditation_pt5_txt4 }}" target="_blank">{{ constants.accreditation_pt5_txt5 }}</a>
-                </p>
-            </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-9">
+          <h2>{{ dynamicBlogData ? dynamicBlogData.accreditation_pt4_txt1 : constants.accreditation_pt4_txt1 }}</h2>
+          <p>
+            {{ dynamicBlogData ? dynamicBlogData.accreditation_pt4_txt2 : constants.accreditation_pt4_txt2 }} <br>
+            <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt4_txt3 : constants.accreditation_pt4_txt3 }}" target="_blank">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt4_txt4 : constants.accreditation_pt4_txt4 }}</a>
+          </p>
         </div>
+      </div>
+      <div class="row my-5 justify-content-center">
+        <div class="col-9">
+          <h2>{{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt1 : constants.accreditation_pt5_txt1 }}</h2>
+          <p>
+            {{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt2 : constants.accreditation_pt5_txt2 }} <br>
+
+            {{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt3 : constants.accreditation_pt5_txt3 }} 
+            <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt4 : constants.accreditation_pt5_txt4 }}" target="_blank">
+              {{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt5 : constants.accreditation_pt5_txt5 }}</a> <br>
+
+            {{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt6 : constants.accreditation_pt5_txt6 }} 
+            <a href="{{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt4 : constants.accreditation_pt5_txt4 }}" target="_blank">
+                {{ dynamicBlogData ? dynamicBlogData.accreditation_pt5_txt5 : constants.accreditation_pt5_txt5 }}</a>
+          </p>
+        </div>
+      </div>
     </div>
-</main>
+  </main>
+</div>

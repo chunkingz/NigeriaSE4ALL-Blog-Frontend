@@ -11,7 +11,6 @@ import { DataService } from 'src/app/services/data.service';
 export class FormSuccessComponent implements OnInit {
 
   dynamicData: any;
-  staticContent!: Constants;
   constants = Constants;
 
   constructor(private _title: Title, private _data: DataService) { }

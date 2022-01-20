@@ -23,6 +23,22 @@ export class DataService {
   }
 
   /**
+   * Get the Terms of Service dynamic content from the strapi CMS
+   * @returns all the dynamic content from the db
+   */
+   getDynamicTOSContent(){
+    return this._http.get(`${this._url}/dynamic-tos-content`)
+  }
+
+  /**
+   * Get the Privacy Policy dynamic content from the strapi CMS
+   * @returns all the dynamic content from the db
+   */
+   getDynamicPPContent(){
+    return this._http.get(`${this._url}/dynamic-privacy-policy-content`)
+  }
+
+  /**
    * Get all articles in the db
    * @returns all articles in the db
    */

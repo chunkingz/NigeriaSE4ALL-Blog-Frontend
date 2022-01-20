@@ -10,7 +10,6 @@ import { DataService } from 'src/app/services/data.service';
 export class NavbarComponent implements OnInit {
 
   dynamicData: any;
-  staticContent!: Constants;
   constants = Constants;
   isCollapsed = true;
 

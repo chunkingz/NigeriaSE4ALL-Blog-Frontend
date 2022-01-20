@@ -1,30 +1,43 @@
-<main>
-    <section class="section-1 py-lg-5">
-        <div class="container">
+<div *ngFor="let dynamicBlogData of dynamicData">
 
-            <h2 class="text-center py-3"> Terms and Conditions of Service </h2>
-            
-            <p class="py-1 mod">Last Modification: 25th June 2020</p>
+    <main>
+        <section class="section-1 py-lg-5">
+            <div class="container">
 
-            <p class="py-3">We welcome all Users to our website. Please read the following Terms of Service (`Terms`) carefully before using this Website. Your access to and use of the website are subject to your acceptance of and compliance with these Terms.</p>
-            
-            <ol>
-                <li class="py-3">
-                    Users shall be granted a non-exclusive, non-transferable, non-sublicensable perpetual licence to use the content of the website (“Content”) for your own personal and/or business purposes, and to copy, modify, adapt, merge, translate, disassemble, or create derivative works based upon the whole or any part of the Content. We reserve all rights not expressly granted to you by these Terms.
-                </li>
+                <h2 class="text-center py-3">{{ dynamicBlogData ? dynamicBlogData.tos_hero : constants.tos_hero }}</h2>
+                
+                <p class="py-1 mod">{{ dynamicBlogData ? dynamicBlogData.tos_txt_1 : constants.tos_txt_1 }}</p>
 
-                <li class="py-3">
-                    All Content on the Website and all applicable Intellectual Property Rights subsisting in the Content unless otherwise stated, belong to us, or have been licensed to us under our <a href="/about-map" target="_blank">Third Party Licence Terms</a>. Our status as the owners of the Content on our website (or that of identified licensors where indicated) are always to be acknowledged.
-                </li>
+                <p class="py-3">{{ dynamicBlogData ? dynamicBlogData.tos_txt_2 : constants.tos_txt_2 }}</p>
+                
+                <ol>
+                    <li class="py-3">
+                        {{ dynamicBlogData ? dynamicBlogData.tos_txt_4_1 : constants.tos_txt_4_1 }} 
+                        {{ dynamicBlogData ? dynamicBlogData.tos_txt_4_2 : constants.tos_txt_4_2 }}
+                    </li>
 
-                <li class="py-3">
-                    We may collect your personal data in your use of the Website. Where we do so, such information shall be collected, held and processed in accordance with your rights and our obligations under the Nigeria Data Protection Regulations 2019 (NDPR) and we will take appropriate steps to ensure that your information is protected consistent with the principles set out in the NDPR, these Terms of Services, and our <a href="/privacy-policy" target="_blank">Privacy Policy</a>, whether that is held by us or shared by us with third parties.<p></p>
-                </li>
+                    <li class="py-3">
+                        {{ dynamicBlogData ? dynamicBlogData.tos_txt_5_1 : constants.tos_txt_5_1 }}
+                         <a href="/about-map" target="_blank">{{ dynamicBlogData ? dynamicBlogData.tos_txt_5_2 : constants.tos_txt_5_2 }}</a>. 
+                         {{ dynamicBlogData ? dynamicBlogData.tos_txt_5_3 : constants.tos_txt_5_3 }}
+                    </li>
 
-            </ol>
+                    <li class="py-3">
+                        {{ dynamicBlogData ? dynamicBlogData.tos_txt_6_1 : constants.tos_txt_6_1 }} 
+                        {{ dynamicBlogData ? dynamicBlogData.tos_txt_6_2 : constants.tos_txt_6_2 }} 
+                        <a href="/privacy-policy" target="_blank">{{ dynamicBlogData ? dynamicBlogData.tos_txt_6_3 : constants.tos_txt_6_3 }}</a>
+                        {{ dynamicBlogData ? dynamicBlogData.tos_txt_6_4 : constants.tos_txt_6_4 }}
+                    </li>
 
-            <p class="py-3"> For full details of our collection, use and holding of personal data, information about your legal rights as a data subject and how to exercise them, please refer to our <a href="/privacy-policy" target="_blank">Privacy Policy.</a></p>
-    
-        </div>
-    </section>
-</main>
+                </ol>
+
+                <p class="py-3"> 
+                    {{ dynamicBlogData ? dynamicBlogData.tos_txt_7 : constants.tos_txt_7 }} 
+                    <a href="/privacy-policy" target="_blank">{{ dynamicBlogData ? dynamicBlogData.tos_txt_6_3 : constants.tos_txt_6_3 }}</a>
+                </p>
+        
+            </div>
+        </section>
+    </main>
+
+</div>

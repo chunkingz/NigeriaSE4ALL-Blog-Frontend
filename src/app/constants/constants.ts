@@ -79,25 +79,28 @@ export class Constants {
     static home_section4_card4_maintitle1 = "The mini-grid developer toolkit";
     static home_section4_card4_maintitle2 = "You can view our entire";
     static btn8 = "View app";
-
     static home_section5_hero = "Stay up-to-date with our blog";
     static home_section5_subtitle = "Read about our recent activities";
-    static home_section7_title1 = "OFFICE";
-    static home_section7_subtitle1 = "Federal Ministry of Power <br>POWER HOUSE 14, Zambezi Crescent <br>Maitama, Abuja <br>Nigeria";
-    static home_section7_title2 = "EMAIL";
-    static home_section7_subtitle2 = "info@pwh.gov.ng";
-    static home_section7_title3 = "WEBSITE";
-    static home_section7_subtitle3 = "www.power.gov.ng";
-    static home_section8_title1 = "With financial support of";
-    static home_section8_title2 = "Implemented by";
-    static home_section8_eu_url = "https://europa.eu/european-union/index_en";
-    static home_section8_bmz_url = "http://www.bmz.de/en/index.html";
-    static home_section8_giz_url = "https://www.giz.de/en/html/index.html";
-    static home_section9_title1 = "Terms and conditions of service"
-    static home_section9_title2 = "2022 All Rights Reserved by nigeriase4all.gov.ng";
-    static home_section9_title3 = "Accreditation";
-    static home_section9_url1 = "terms-of-service";
-    static home_section9_url2 = "accreditation";
+
+    static footer_section1_title1 = "OFFICE";
+    static footer_section1_subtitle1_1 = "Federal Ministry of Power";
+    static footer_section1_subtitle1_2 = "POWER HOUSE 14, Zambezi Crescent";
+    static footer_section1_subtitle1_3 = "Maitama, Abuja";
+    static footer_section1_subtitle1_4 = "Nigeria";
+    static footer_section1_title2 = "EMAIL";
+    static footer_section1_subtitle2 = "info@pwh.gov.ng";
+    static footer_section1_title3 = "WEBSITE";
+    static footer_section1_subtitle3 = "www.power.gov.ng";
+    static footer_section2_title1 = "With financial support of";
+    static footer_section2_title2 = "Implemented by";
+    static footer_section2_eu_url = "https://europa.eu/european-union/index_en";
+    static footer_section2_bmz_url = "http://www.bmz.de/en/index.html";
+    static footer_section2_giz_url = "https://www.giz.de/en/html/index.html";
+    static footer_section3_title1 = "Terms and conditions of service"
+    static footer_section3_title2 = "2022 All Rights Reserved by nigeriase4all.gov.ng";
+    static footer_section3_title3 = "Accreditation";
+    static footer_section3_url1 = "terms-of-service";
+    static footer_section3_url2 = "accreditation";
 
     static Nav_txt_4 = "MINI-GRIDS";
     static Nav_txt_5 = "POWER SECTOR";

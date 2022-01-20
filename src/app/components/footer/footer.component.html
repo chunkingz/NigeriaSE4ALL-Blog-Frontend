@@ -1,124 +1,122 @@
 
 <div *ngFor="let dynamicBlogData of dynamicData">
 
-<section class="section-1">
-    <div class="container mx-auto p-5">
-        <div class="float-end mb-1">
+    <section class="section-1">
+        <div class="container mx-auto p-5">
 
-            <ng-go-top-button [speed]="50" [acceleration]="2" [scrollDistance]="500"
-                [classNames]="'ng-go-top-button-class'">
-                <fa-icon [icon]="faArrowUp"></fa-icon>
-            </ng-go-top-button>
+            <div class="float-end mb-1" id="back-to-top-button">
 
-        </div>
-        <div class="row">
-            <div class="mt-5 col-lg-6 contact-info">
-                <div class="me-3">
-                    <img src="/assets/i_info.svg" alt="...">
+                <ng-go-top-button [speed]="50" [acceleration]="2" [scrollDistance]="500"
+                    [classNames]="'ng-go-top-button-class'">
+                    <fa-icon [icon]="faArrowUp"></fa-icon>
+                </ng-go-top-button>
+
+            </div>
+
+            <div class="row">
+                <div class="mt-5 col-lg-6 contact-info">
+                    <div class="me-3">
+                        <img src="/assets/i_info.svg" alt="...">
+                    </div>
+                    <div>
+                        <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.footer_section1_title1 :
+                            constants.footer_section1_title1 }}</p>
+                        <p class="lead fw-normal">
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle1_1 : constants.footer_section1_subtitle1_1 }} <br>
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle1_2 : constants.footer_section1_subtitle1_2 }} <br>
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle1_3 : constants.footer_section1_subtitle1_3 }} <br>
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle1_4 : constants.footer_section1_subtitle1_4 }}
+                        </p>
+                    </div>
                 </div>
+
+                <div class="mt-5 col contact-info">
+                    <div class="me-3">
+                        <img src="/assets/i_mail.svg" alt="...">
+                    </div>
+                    <div>
+                        <p class="fw-bold">
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_title2 : constants.footer_section1_title2 }}</p>
+                        <p class="lead fw-normal">
+                            <a href="mailto:{{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle2 : constants.footer_section1_subtitle2 }}"
+                                class="text-reset">
+                                {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle2 : constants.footer_section1_subtitle2 }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-5 col contact-info">
+                    <div class="me-3">
+                        <img src="/assets/i_internet.svg" alt="...">
+                    </div>
+                    <div>
+                        <p class="fw-bold">
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_title3 : constants.footer_section1_title3 }}</p>
+                        <p class="lead fw-normal">
+                            <a href="http://{{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle3 : constants.footer_section1_subtitle3 }}"
+                                target="_blank" class="text-reset">
+                                {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle3 : constants.footer_section1_subtitle3 }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-2 py-5">
+
+        <div class="container-fluid row">
+
+            <div class="col-lg-8 text-center part-1 mt-5">
                 <div>
-                    <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title1 :
-                        constants.home_section7_title1 }}</p>
-                    <p class="lead fw-normal">
-                        Federal Ministry of Power <br>POWER HOUSE 14, Zambezi Crescent <br>Maitama, Abuja
-                        <br>Nigeria
-                    </p>
+                    <p class="fw-normal fs-4">
+                        {{ dynamicBlogData ? dynamicBlogData.footer_section2_title1 : constants.footer_section2_title1 }}</p>
+                    <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section2_eu_url : constants.footer_section2_eu_url }}"
+                        target="_blank"><img src="/assets/logo-1-eu.png" alt="EU logo"></a>
+                    <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section2_bmz_url : constants.footer_section2_bmz_url }}"
+                        target="_blank"><img src="/assets/logo-4-ger-coop.png" alt="GIZ Nigeria cooperation logo"></a>
                 </div>
             </div>
 
-            <div class="mt-5 col contact-info">
-                <div class="me-3">
-                    <img src="/assets/i_mail.svg" alt="...">
-                </div>
+            <div class="col-lg-4 text-center part-2 mt-5">
                 <div>
-                    <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title2 :
-                        constants.home_section7_title2 }}</p>
-                    <p class="lead fw-normal">
-                        <a href="mailto:{{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle2 : constants.home_section7_subtitle2 }}"
-                            class="text-reset">
-                            {{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle2 :
-                            constants.home_section7_subtitle2 }}
-                        </a>
-                    </p>
+                    <p class="fw-normal fs-4">
+                        {{ dynamicBlogData ? dynamicBlogData.footer_section2_title2 : constants.footer_section2_title2 }}</p>
+                    <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section2_giz_url : constants.footer_section2_giz_url }}"
+                        target="_blank"><img src="/assets/logo-3-giz.png" alt="GIZ Logo"></a>
                 </div>
             </div>
 
-            <div class="mt-5 col contact-info">
-                <div class="me-3">
-                    <img src="/assets/i_internet.svg" alt="...">
-                </div>
-                <div>
-                    <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section7_title3 :
-                        constants.home_section7_title3 }}</p>
-                    <p class="lead fw-normal">
-                        <a href="http://{{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle3 : constants.home_section7_subtitle3 }}"
-                            target="_blank" class="text-reset">
-                            {{ dynamicBlogData ? dynamicBlogData.home_section7_subtitle3 :
-                            constants.home_section7_subtitle3 }}
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section-2 py-5">
-
-    <div class="container-fluid row">
-
-        <div class="col-lg-8 text-center part-1 mt-5">
-            <div>
-                <p class="fw-normal fs-4">{{ dynamicBlogData ? dynamicBlogData.home_section8_title1 :
-                    constants.home_section8_title1 }}</p>
-                <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_eu_url : constants.home_section8_eu_url }}"
-                    target="_blank"><img src="/assets/logo-1-eu.png" alt="EU logo"></a>
-                <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_bmz_url : constants.home_section8_bmz_url }}"
-                    target="_blank"><img src="/assets/logo-4-ger-coop.png"
-                        alt="GIZ Nigeria cooperation logo"></a>
-            </div>
         </div>
 
-        <div class="col-lg-4 text-center part-2 mt-5">
-            <div>
-                <p class="fw-normal fs-4">{{ dynamicBlogData ? dynamicBlogData.home_section8_title2 :
-                    constants.home_section8_title2 }}</p>
-                <a href="{{ dynamicBlogData ? dynamicBlogData.home_section8_giz_url : constants.home_section8_giz_url }}"
-                    target="_blank"><img src="/assets/logo-3-giz.png" alt="GIZ Logo"></a>
-            </div>
-        </div>
+    </section>
 
-    </div>
-
-</section>
-
-<section class="section-3 py-4">
-    <div class="container-fluid row mx-auto text-center footer-items">
-        <div class="col">
-            <a href="{{ dynamicBlogData ? dynamicBlogData.home_section9_url1 : constants.home_section9_url1 }}"
-                target="_blank" class="text-reset">
-                {{ dynamicBlogData ? dynamicBlogData.home_section9_title1 : constants.home_section9_title1
-                }}
-            </a>
-        </div>
-        <div class="col">&copy;
-            {{ dynamicBlogData ? dynamicBlogData.home_section9_title2 : constants.home_section9_title2 }}
-
-        </div>
-        <div class="col accred">
+    <section class="section-3 py-4">
+        <div class="container-fluid row mx-auto text-center footer-items">
             <div class="col">
-                <a href="{{ dynamicBlogData ? dynamicBlogData.home_section9_url2 : constants.home_section9_url2 }}"
+                <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section3_url1 : constants.footer_section3_url1 }}"
                     target="_blank" class="text-reset">
-                    {{ dynamicBlogData ? dynamicBlogData.home_section9_title3 :
-                    constants.home_section9_title3 }}
+                    {{ dynamicBlogData ? dynamicBlogData.footer_section3_title1 : constants.footer_section3_title1 }}
                 </a>
             </div>
-            <div class="col">
-                <img src="/assets/logo-5-blitz.png" alt="SE4ALL Logo">
+            <div class="col">&copy;
+                {{ dynamicBlogData ? dynamicBlogData.footer_section3_title2 : constants.footer_section3_title2 }}
+
+            </div>
+            <div class="col accred">
+                <div class="col">
+                    <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section3_url2 : constants.footer_section3_url2 }}"
+                        target="_blank" class="text-reset">
+                        {{ dynamicBlogData ? dynamicBlogData.footer_section3_title3 : constants.footer_section3_title3 }}
+                    </a>
+                </div>
+                <div class="col">
+                    <img src="/assets/logo-5-blitz.png" alt="SE4ALL Logo">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    
 </div> 

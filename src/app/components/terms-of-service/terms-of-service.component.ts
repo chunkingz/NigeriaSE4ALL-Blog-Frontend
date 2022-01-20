@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TermsOfServiceConstants } from 'src/app/constants/tos-constants';
+import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'terms-of-service',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsOfServiceComponent implements OnInit {
 
-  constructor() { }
+  dynamicData: any;
+  constants = TermsOfServiceConstants;
 
-  ngOnInit(): void {
+  constructor(private _data: DataService) { }
+
+
+  ngOnInit() {
+    this.getDynamicTOSContent();
+  }
+
+
+  /**
+   * Fetches all dynamic data from the db
+   */
+   getDynamicTOSContent() {
+    this._data.getDynamicTOSContent().subscribe(res => {
+      this.dynamicData = [res];
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
   }
 
 }
