@@ -19,16 +19,16 @@ export class SideBarComponent implements OnInit {
   constructor(private _data: DataService) { }
 
   ngOnInit() {
-    this.getAllCategories();
-    this.getDynamicContent();
+    this.getAllCategories("categories");
+    this.getDynamicContent("dynamic-blog-content");
   }
 
 
   /**
    * Fetches all dynamic data from the db
    */
-   getDynamicContent() {
-    this._data.getDynamicContent().subscribe(res => {
+   getDynamicContent(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');
@@ -40,8 +40,8 @@ export class SideBarComponent implements OnInit {
   /**
    * Fetches all categories in the db
    */
-   getAllCategories() {
-    this._data.getCategories().subscribe(res => {
+   getAllCategories(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
       this.categoriesData = res;
     }, error => {
       console.log('An unexpected error occurred');

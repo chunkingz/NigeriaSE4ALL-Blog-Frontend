@@ -6,14 +6,23 @@
 
             <div class="float-end mb-1" id="back-to-top-button">
 
-                <ng-go-top-button [speed]="50" [acceleration]="2" [scrollDistance]="500"
-                    [classNames]="'ng-go-top-button-class'">
+                <ng-go-top-button [speed]="50" [acceleration]="2" [scrollDistance]="900" 
+                [styles]="{
+                    'border-radius': '50%',
+                    'right': '5px',
+                    'color': 'green',
+                    'border': '5px solid',
+                    'width': '5rem',
+                    'height': '5rem',
+                    'margin-right': '2rem',
+                    'margin-top': '14rem'
+                 }">
                     <fa-icon [icon]="faArrowUp"></fa-icon>
                 </ng-go-top-button>
 
             </div>
 
-            <div class="row">
+            <div class="row" id="footer-info">
                 <div class="mt-5 col-lg-6 contact-info">
                     <div class="me-3">
                         <img src="/assets/i_info.svg" alt="...">

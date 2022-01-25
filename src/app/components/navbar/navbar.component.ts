@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
    * Fetches all dynamic data from the db
    */
    getDynamicContent() {
-    this._data.getDynamicContent().subscribe(res => {
+    this._data.getDynamicContent("dynamic-blog-content").subscribe(res => {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');

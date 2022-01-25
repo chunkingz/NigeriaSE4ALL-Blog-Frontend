@@ -37,6 +37,7 @@ $se4all-v3-color: #fcbc0c;
 .section-3 .card {
     width: 24rem;
     border-radius: 20px;
+    height: 80%;
 }
 
 .section-3 .card img{
@@ -220,7 +221,7 @@ $se4all-v3-color: #fcbc0c;
 
 @media (max-width: 768px) {
     .section-3 .card {
-        width: 18rem;
+        width: 95%;
     }
     .section-4-card {
         margin-left: 34px !important;
@@ -268,7 +269,7 @@ $se4all-v3-color: #fcbc0c;
 
 @media (max-width: 425px) {
     .section-3 .card {
-        width: 22rem;
+        width: 90%;
     }
     .section-4-card {
         margin-left: 24px !important;
@@ -303,6 +304,9 @@ $se4all-v3-color: #fcbc0c;
 }
 
 @media (max-width: 375px) {
+    .section-3 .card {
+        width: 85%;
+    }
     .btn-lg{
         padding: 0.5rem;
         font-size: 1rem;

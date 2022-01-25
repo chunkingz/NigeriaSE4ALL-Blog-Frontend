@@ -26,17 +26,17 @@ a {
 }
 
 .btn-se4all, #subscribe {
-    background-color: $se4all-btn-bg-color;
+    background-color: $se4all-btn-bg-color !important;
     color: $se4all-btn-txt-color !important;
 }
 
 .btn-v3 {
-    background-color: $se4all-v3-color;
+    background-color: $se4all-v3-color !important;
     color: $se4all-btn-txt-color !important;
 }
 
 h2.blog-post-title>a {
-    color: $se4all-url-active;
+    color: $se4all-url-active !important;
 }
 
 h2.blog-post-title>a:hover, #blog-teaser, .blog-post-meta {

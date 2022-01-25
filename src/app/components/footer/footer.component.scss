@@ -10,37 +10,11 @@ $home-color4: #c5c4cf;
 $home-hr-color: #93939f;
 
 
-// .footer-bg-img {
-//     background-color: #8ee7b4 !important;
-//     background-image: url(/assets/footer-img.png);
-//     color: #ffffff !important;
-//     padding: 5rem .75rem 7rem .75rem !important;
-// }
-
-.ng-go-top-button-class:hover {
-    transform: translateY(-3px);
-    transition: all .2s ease-in;
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
-    transition-delay: 0s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.658);
-    fill: #fff;
+#footer-info{
+    clear: both;
 }
 
-.ng-go-top-button-class {
-
-   border-radius: 50px;
-   right: 10px;
-   color: green;
-   border: 5px solid;
-   line-height: 20px;
-    // position: fixed;
-    height: 50px;
-    width: 50px;
-}
-
-.ng-go-top-button-class fa-icon {
+ng-go-top-button fa-icon {
     font-size: 2rem;
 }
 

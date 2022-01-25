@@ -15,15 +15,14 @@ export class PrivacyPolicyComponent implements OnInit {
   constructor(private _data: DataService) { }
 
   ngOnInit() {
-    this.getDynamicPPContent();
+    this.getDynamicContent("dynamic-privacy-policy-content");
   }
-
 
   /**
    * Fetches all dynamic data from the db
    */
-   getDynamicPPContent() {
-    this._data.getDynamicPPContent().subscribe(res => {
+   getDynamicContent(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');

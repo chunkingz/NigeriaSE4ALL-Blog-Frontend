@@ -20,7 +20,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this._title.setTitle('SE4ALL Blog');
-    this.getAllArticles();
+    this.getAllArticles("articles");
     this.getDynamicContent();
   }
 
@@ -28,7 +28,7 @@ export class BlogComponent implements OnInit {
    * Fetches all dynamic data from the db
    */
    getDynamicContent() {
-    this._data.getDynamicContent().subscribe(res => {
+    this._data.getDynamicContent("dynamic-blog-content").subscribe(res => {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');
@@ -39,8 +39,8 @@ export class BlogComponent implements OnInit {
   /**
    * Fetches all articles in the db
    */
-  getAllArticles() {
-    this._data.getArticles().subscribe(res => {
+  getAllArticles(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
       this.blogData = res;
     }, error => {
       console.log('An unexpected error occurred');

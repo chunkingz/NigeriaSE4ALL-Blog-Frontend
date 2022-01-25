@@ -15,16 +15,20 @@
                 <div class="row py-lg-5 g-2">
                     <div class="col-lg-10">
                         <div class="content">
-                            <h1 class="home_section1_hero">{{ dynamicBlogData ? dynamicBlogData.home_section1_hero :
-                                constants.home_section1_hero }}</h1>
+                            <h1 class="home_section1_hero">
+                                {{ dynamicBlogData ? dynamicBlogData.home_section1_hero : constants.home_section1_hero }}
+                            </h1>
                             <br>
-                            <p class="home_section1_subtitle">{{ dynamicBlogData ?
-                                dynamicBlogData.home_section1_subtitle1 : constants.home_section1_subtitle1 }}</p>
-                            <p class="home_section1_subtitle">{{ dynamicBlogData ?
-                                dynamicBlogData.home_section1_subtitle2 : constants.home_section1_subtitle2 }}</p>
+                            <p class="home_section1_subtitle">
+                                {{ dynamicBlogData ? dynamicBlogData.home_section1_subtitle1 : constants.home_section1_subtitle1 }}
+                            </p>
+                            <p class="home_section1_subtitle">
+                                {{ dynamicBlogData ? dynamicBlogData.home_section1_subtitle2 : constants.home_section1_subtitle2 }}
+                            </p>
                             <br>
                             <p>
-                                <a type="button" class="btn btn-lg btn-v3 cta" routerLink="../contact-us">
+                                <a type="button" class="btn btn-lg btn-v3 cta" 
+                                routerLink="{{ dynamicBlogData ? dynamicBlogData.home_hero_btn_url : constants.home_hero_btn_url }}">
                                     {{ dynamicBlogData ? dynamicBlogData.btn7 : constants.btn7 }}
                                 </a>
                             </p>
@@ -46,63 +50,28 @@
         <section class="section-3 pb-5">
             <div class="container x-row">
 
-                <!-- Card link to mini-grids component -->
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <a routerLink="mini-grids" class="text-reset">
+                <!-- Card link to mini-grids/power-sector/solar-home-systems components -->
 
-                        <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
-                        <div class="card-body mt-3 color-1">
-                            <h5 class="card-title fw-bold mb-4">
-                                {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle1 :
-                                constants.home_section3_cardtitle1 }}
-                            </h5>
-                            <p class="card-text mb-5">
-                                {{ dynamicBlogData ? dynamicBlogData.home_section3_cardsubtitle1 :
-                                constants.home_section3_cardsubtitle1 }}
-                            </p>
-                        </div>
+                <div *ngFor="let section3Data of section3DynamicData">
 
-                    </a>
+                    <div class="card my-5 mx-4 shadow-lg home-card">
+                        <a routerLink="{{ section3Data.card_url }}" class="text-reset">
+
+                            <img src="{{ section3Data.card_img[0].url }}" class="card-img-top p-3 mt-3" alt="{{ section3Data.card_img_alt }}">
+                            <div class="card-body mt-3 color-1">
+                                <h5 class="card-title fw-bold mb-4">
+                                    {{ section3Data.card_title }}
+                                </h5>
+                                <p class="card-text mb-5">
+                                    {{ section3Data.card_subtitle }}
+                                </p>
+                            </div>
+
+                        </a>
+                    </div>
+
                 </div>
 
-                <!-- Card link to power-sector component -->
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <a routerLink="power-sector" class="text-reset">
-
-                        <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
-                        <div class="card-body mt-3 color-2">
-                            <h5 class="card-title fw-bold mb-4">
-                                {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle2 :
-                                constants.home_section3_cardtitle2 }}
-                            </h5>
-                            <p class="card-text mb-5">
-                                {{ dynamicBlogData ? dynamicBlogData.home_section3_cardssubtitle2 :
-                                constants.home_section3_cardssubtitle2 }}
-                            </p>
-                        </div>
-
-                    </a>
-                </div>
-
-                <!-- Card link to solar-home-systems component -->
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <a routerLink="solar-home-systems" class="text-reset">
-
-                        <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
-                        <div class="card-body mt-3 color-3">
-                            <h5 class="card-title fw-bold mb-4">
-                                {{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle3 :
-                                constants.home_section3_cardtitle3 }}
-                            </h5>
-                            <p class="card-text mb-5">
-                                {{ dynamicBlogData ? dynamicBlogData.home_section3_cardsubtitle3 :
-                                constants.home_section3_cardsubtitle3 }}
-                            </p>
-                        </div>
-                    
-                    </a>
-                </div>
-                
             </div>
         </section>
 
@@ -221,7 +190,7 @@
         </section>
 
         <!-- Blog Section -->
-        <section class="section-6 pb-5">
+        <section class="section-6 pt-1 pb-5">
             <div class="container x-row">
 
                 <div class="card mt-5 mb-5" style="max-width: 1440px;">

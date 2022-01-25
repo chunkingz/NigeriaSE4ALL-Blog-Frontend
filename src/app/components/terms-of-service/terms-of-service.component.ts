@@ -15,17 +15,15 @@ export class TermsOfServiceComponent implements OnInit {
 
   constructor(private _data: DataService) { }
 
-
   ngOnInit() {
-    this.getDynamicTOSContent();
+    this.getDynamicContent("dynamic-tos-content");
   }
-
 
   /**
    * Fetches all dynamic data from the db
    */
-   getDynamicTOSContent() {
-    this._data.getDynamicTOSContent().subscribe(res => {
+   getDynamicContent(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');

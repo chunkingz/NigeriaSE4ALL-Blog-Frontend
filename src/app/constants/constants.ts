@@ -54,18 +54,21 @@ export class Constants {
     static subscribe_hero_subtitle_1 = "Join our monthly newsletter and never miss out on new blog posts and promotions.";
     static subscribe_hero_txt_1 = "Email address";
     static btn6 = "Subscribe";
+
     static home_section1_hero = "Your partner for data and tools to support Sustainable Energy for All";
     static home_section1_subtitle1 = "Nigeria SE4ALL, an initiative from the Ministry of Power, is working with you to generate the most accurate data and latest tools to empower better electrification planning in Nigeria.";
     static home_section1_subtitle2 = "The data and tools are being continuously enriched – you can follow these updates via the blog or our social media channels at the end of the page.";
     static btn7 = "Learn more";
     static home_section2_hero = "We offer insights relevant for your industry";
     static home_section2_subtitle1 = "The tools and available data relevant to your industry can be seen through the portals here"
+
     static home_section3_cardtitle1 = "Mini-grids";
     static home_section3_cardsubtitle1 = "Data and site selection tools for both off-grid and interconnected mini-grids, as well market insights and tips for effective project development.";
     static home_section3_cardtitle2 = "Power Sector";
     static home_section3_cardssubtitle2 = "Focused data about grid assets and national level progress towards 30:30:30.";
     static home_section3_cardtitle3 = "Solar Home Systems";
     static home_section3_cardsubtitle3 = "Tools to support selection of distribution locations, and analysis of potential customer base.";
+
     static home_section4_hero = "Real-world applications and data";
     static home_section4_subtitle = "Our interactive tools and electrification data help you make better decisions";
     static home_section4_tagtitle1 = "Mini-grid";
@@ -81,6 +84,8 @@ export class Constants {
     static btn8 = "View app";
     static home_section5_hero = "Stay up-to-date with our blog";
     static home_section5_subtitle = "Read about our recent activities";
+    static home_hero_youtube_video = "https://www.youtube-nocookie.com/embed/FqXL8WVTE-w?autoplay=1&mute=1&controls=0&loop=1&playlist=FqXL8WVTE-w"
+    static home_hero_btn_url = "../contact-us"
 
     static footer_section1_title1 = "OFFICE";
     static footer_section1_subtitle1_1 = "Federal Ministry of Power";
