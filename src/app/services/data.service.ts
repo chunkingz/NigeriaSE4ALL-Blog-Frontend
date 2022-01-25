@@ -60,4 +60,11 @@ export class DataService {
     return this._http.get(`${this._url}/categories/count`)
   }
   
+   /**
+   * Get the dynamic content from the strapi CMS via enpoint and filter input
+   * @returns one or many entries given the filter statement
+   */
+  getDynamicContentWithFilter(apiEndPoint: string, filter: string){
+    return this._http.get(`${this._url}/${apiEndPoint}?${filter}`)
+  }
 }
