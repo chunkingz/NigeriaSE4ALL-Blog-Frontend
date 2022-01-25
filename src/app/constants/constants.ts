@@ -71,6 +71,7 @@ export class Constants {
 
     static home_section4_hero = "Real-world applications and data";
     static home_section4_subtitle = "Our interactive tools and electrification data help you make better decisions";
+
     static home_section4_tagtitle1 = "Mini-grid";
     static home_section4_tagtitle2 = "POWER SECTOR";
     static home_section4_card1_maintitle1 = "Mini-grid site selection";
@@ -81,6 +82,7 @@ export class Constants {
     static home_section4_card3_maintitle2 = "The mini-grid monitor publishes actual data on operational mini-grids in Nigeria";
     static home_section4_card4_maintitle1 = "The mini-grid developer toolkit";
     static home_section4_card4_maintitle2 = "You can view our entire";
+    
     static btn8 = "View app";
     static home_section5_hero = "Stay up-to-date with our blog";
     static home_section5_subtitle = "Read about our recent activities";

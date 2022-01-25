@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   dynamicData: any;
   section3DynamicData: any;
+  section4DynamicData: any;
   constants = Constants;
 
   constructor(private _data: DataService) { }
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getHomeDynamicContent("dynamic-blog-content");
     this.getSection3DynamicContent("home-section-3-cards");
+    this.getSection4DynamicContent("home-section-4-cards");
   }
 
   /**
@@ -38,7 +40,19 @@ export class HomeComponent implements OnInit {
    */
    getSection3DynamicContent(apiEndPoint: string) {
     this._data.getDynamicContent(apiEndPoint).subscribe(res => {
-      this.section3DynamicData = res;            
+      this.section3DynamicData = res;      
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
+  }
+
+  /**
+   * Fetches Section 4 dynamic data from the db
+   */
+   getSection4DynamicContent(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
+      this.section4DynamicData = res;      
     }, error => {
       console.log('An unexpected error occurred');
       console.log(error);

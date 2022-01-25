@@ -78,102 +78,40 @@
         <section class="section-4 py-5">
 
             <div class="container col-md-9 p-lg-4 mx-auto mt-5 mb-1 text-center section-4-title">
-                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section4_hero :
-                    constants.home_section4_hero }}</h1>
-                <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section4_subtitle :
-                    constants.home_section4_subtitle }}</p>
+                <h1 class="fw-bold">
+                    {{ dynamicBlogData ? dynamicBlogData.home_section4_hero : constants.home_section4_hero }}
+                </h1>
+                <p class="lead fw-normal">
+                    {{ dynamicBlogData ? dynamicBlogData.home_section4_subtitle : constants.home_section4_subtitle }}
+                </p>
             </div>
 
             <div class="container x-row">
 
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/1-Mini-grid-site-selection.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
-                    </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card1_maintitle1 :
-                        constants.home_section4_card1_maintitle1 }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card1_maintitle2 :
-                        constants.home_section4_card1_maintitle2 }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
-                </div>
+                <div *ngFor="let section4Data of section4DynamicData">
 
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/2-Medium-Voltage-grid-datasets.jpg" class="section4-card-img mt-3 shadow-lg"
-                        alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-power-sector"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle2 :
-                        constants.home_section4_tagtitle2 }}
+                    <div class="section-4-card mb-5 mx-5">
+                        <img src="{{ section4Data.card_img[0].url }}" class="section4-card-img mt-3 shadow-lg" alt="{{ section4Data.card_img_alt }}">
+                        <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
+                            <div class="circular" [style.backgroundColor]="section4Data.card_url  === 'mini-grids' ? '#58c495' : '#085064'">
+                        
+                        </div>
+                            {{ section4Data.card_tag_title }}
+                        </div>
+                        <p class="main-title fw-bold fs-5">
+                            {{ section4Data.card_title }}
+                        </p>
+                        <p class="main-title fw-normal fs-5 text-wrap">
+                            {{ section4Data.card_subtitle }}
+                        </p>
+                        <p>
+                            <a type="button" routerLink="{{ section4Data.card_url }}" class="btn btn-lg fw-bold btn-mini-grid cta"
+                            [style.backgroundColor]="section4Data.card_url  === 'mini-grids' ? '#58c495' : '#085064'">
+                                {{ section4Data.card_btn_txt }}
+                            </a>
+                        </p>
                     </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card2_maintitle1 :
-                        constants.home_section4_card2_maintitle1 }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card2_maintitle2 :
-                        constants.home_section4_card2_maintitle2 }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-power-sector cta">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
-                </div>
 
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/3-Real-mini-grid-data.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
-                    </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card3_maintitle1 :
-                        constants.home_section4_card3_maintitle1 }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card3_maintitle2 :
-                        constants.home_section4_card3_maintitle2 }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
-                </div>
-
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/4-The-mini-grid-developer-toolkit.jpg" class="section4-card-img mt-3 shadow-lg"
-                        alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
-                    </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card4_maintitle1 :
-                        constants.home_section4_card4_maintitle1 }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_card4_maintitle2 :
-                        constants.home_section4_card4_maintitle2 }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
                 </div>
 
             </div>
