@@ -12,6 +12,8 @@ export class MiniGridsComponent implements OnInit {
 
   dynamicData: any;
   minigridDownloadData: any;
+  appCardsData: any;
+  ressourcesCardsData: any;
   blogData: any;
   constants = Constants;
 
@@ -19,8 +21,10 @@ export class MiniGridsComponent implements OnInit {
 
   ngOnInit() {
     this.getDynamicContent("dynamic-blog-content");
+    this.getApps("subpage-webmap-cards");
     this.getDownloadData("download-section-minigrids");
     this.getAllArticles("articles");
+    this.getRessources("subpage-ressource-cards");
   }
 
   /**
@@ -51,13 +55,39 @@ export class MiniGridsComponent implements OnInit {
    * Fetches all articles in the db and filter by the minigrid category
    * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
    */
-   getAllArticles(apiEndPoint: string) {
-    this._data.getDynamicContentWithFilter(apiEndPoint, 'categories.name=Minigrid%20Sector').subscribe(res => {
-      this.blogData = res;
+   getApps(apiEndPoint: string) {
+    this._data.getDynamicContentWithFilter(apiEndPoint, 'category.name=Minigrid%20Sector').subscribe(res => {
+      this.appCardsData = res;
     }, error => {
       console.log('An unexpected error occurred');
       console.log(error);
     });
   }
+
+   /**
+   * Fetches all Apps cards in the db and filter by the minigrid category
+   * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
+   */
+    getRessources(apiEndPoint: string) {
+      this._data.getDynamicContentWithFilter(apiEndPoint, 'category.name=Minigrid%20Sector').subscribe(res => {
+        this.ressourcesCardsData = res;
+      }, error => {
+        console.log('An unexpected error occurred');
+        console.log(error);
+      });
+    }
+
+     /**
+   * Fetches all Ressource cards in the db and filter by the minigrid category
+   * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
+   */
+      getAllArticles(apiEndPoint: string) {
+        this._data.getDynamicContentWithFilter(apiEndPoint, 'categories.name=Minigrid%20Sector').subscribe(res => {
+          this.blogData = res;
+        }, error => {
+          console.log('An unexpected error occurred');
+          console.log(error);
+        });
+      }
 
 }

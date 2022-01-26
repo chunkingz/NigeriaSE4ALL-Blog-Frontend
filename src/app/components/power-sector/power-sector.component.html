@@ -8,11 +8,9 @@
             <div class="container-fluid" id="hero-section">
                 <div class="row py-lg-5 g-2">
                     <div class="content text-center">
-                        <h1 class="home_section1_hero">{{ dynamicBlogData ? dynamicBlogData.home_section3_cardtitle2 :
-                            constants.home_section3_cardtitle2 }}</h1>
+                        <h1 class="home_section1_hero">Power Sector</h1>
                         <br>
-                        <p class="home_section1_subtitle">{{ dynamicBlogData ? dynamicBlogData.minigrids_hero_subtitle1 : constants.minigrids_hero_subtitle1 }}</p>
-                        <p class="home_section1_subtitle">{{ dynamicBlogData ? dynamicBlogData.minigrids_hero_subtitle2 : constants.minigrids_hero_subtitle2 }}</p>
+                        <p class="home_section1_subtitle">{{ dynamicBlogData.power_sector_hero_subtitle }}</p>
                         <br>
                     </div>
                 </div>
@@ -22,58 +20,29 @@
         <section class="section-2 py-5">
 
             <div class="container col-md-9 p-lg-4 mx-auto mt-5 mb-1 text-center section-2-title">
-                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.minigrids_section2_hero :
+                <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.power_sector_section2_hero :
                     constants.minigrids_section2_hero }}</h1>
                 <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.minigrids_section2_hero_subtitle :
                     constants.minigrids_section2_hero_subtitle }}</p>
             </div>
 
             <div class="container x-row">
-
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/1-Mini-grid-site-selection.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
+                <div *ngFor="let app of appCardsData">
+                    <div class="section-4-card mb-5 mx-5">
+                        <img src="{{app.image.url}}" class="section4-card-img mt-3 shadow-lg" alt="...">
+                        <p class="main-title fw-bold fs-5">
+                            {{ app.title }}
+                        </p>
+                        <p class="main-title fw-normal fs-5 text-wrap">
+                        {{app.subtitle}}
+                        </p>
+                        <p>
+                            <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta" href="{{app.url}}">
+                                {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
+                            </a>
+                        </p>
                     </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card1_title :
-                        constants.minigrids_section2_card1_title }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card1_subtitle :
-                        constants.minigrids_section2_card1_subtitle }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
                 </div>
-
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="assets/2-Medium-Voltage-grid-datasets.jpg" class="section4-card-img mt-3 shadow-lg" alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
-                    </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card2_title :
-                        constants.minigrids_section2_card2_title }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card2_subtitle :
-                        constants.minigrids_section2_card2_subtitle }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
-                </div>
-
             </div>
         </section>
 
@@ -131,98 +100,47 @@
             </div>
         </section>
 
-        <section class="section-3-download py-5">
+        <section class="section-4-download py-5">
             <div class="container p-lg-4 mx-auto text-center">
                 <h1 class="fw-bold">{{ constants.minigrids_section4_hero }}</h1>
                 <br>
                 <p class="lead fw-normal">{{ constants.minigrids_section4_subtitle }}</p>
             </div>
+            <!-- Dynamic Download Data from the API-->                                         
             <div class="container p-lg-4 mx-auto text-center">
-                <table class="table table-hover table-responsive-sm">
-                    <thead>
-                      <tr>
-                        <th scope="col">{{ constants.minigrids_section4_col1 }}</th>
-                        <th scope="col">{{ constants.minigrids_section4_col2 }}</th>
-                        <th scope="col">{{ constants.minigrids_section4_col3 }}</th>
-                        <th scope="col">{{ constants.minigrids_section4_col4 }}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row">SE4ALL Grid Data MV Lines</td>
-                        <td>10/04/21</td>
-                        <td>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-cc" viewBox="0 0 16 16">
-                            <path d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z"/>
-                            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                            </svg>
-                        </td>
-                        <td>
-                            <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
-                            <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
-                            <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                            </svg>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">Locations of current mini-grids</td>
-                        <td>10/04/21</td>
-                        <td>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-cc" viewBox="0 0 16 16">
-                            <path d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z"/>
-                            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                            </svg>
-                        </td>
-                        <td>
-                            <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
+                <div *ngFor="let data of poweSectorDownloadData">
+                    <table class="table table-hover table-responsive-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">{{ constants.minigrids_section4_col1 }}</th>
+                            <th scope="col">{{ constants.minigrids_section4_col2 }}</th>
+                            <th scope="col">{{ constants.minigrids_section4_col3 }}</th>
+                            <th scope="col">{{ constants.minigrids_section4_col4 }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row">{{data.Dataset}}</td>
+                            <td>{{data.Last_update}}</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-cc" viewBox="0 0 16 16">
+                                <path d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z"/>
+                                <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                                </svg>
+                            </td>
+                            <td>
+                                <a href="{{ data.download_url }}" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
                                 <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
                                 <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                              </svg>
-                              </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">Nation-wide clusters</td>
-                        <td>10/04/21</td>
-                        <td>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-cc" viewBox="0 0 16 16">
-                            <path d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z"/>
-                            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                            </svg>
-                        </td>
-                        <td>
-                            <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
-                                <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
-                                <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                              </svg>
-                              </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="row">Off-grid clusters</td>
-                        <td>10/04/21</td>
-                        <td>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-cc" viewBox="0 0 16 16">
-                            <path d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z"/>
-                            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
-                            </svg>
-                        </td>
-                        <td>
-                            <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
-                                <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
-                                <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
-                              </svg>
-                            </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p class="mt-5">{{ constants.minigrids_section4_more }}</p>
+                                </svg>
+                                </a>
+                            </td>
+                        </tr>                        
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <p class="mt-5">{{ constants.minigrids_section4_more }}</p> -->
             </div>
         </section>
 
@@ -235,81 +153,27 @@
         </section>
 
         <!-- Blog Section -->
-        <section class="section-4 pb-5">
+        <section class="section-4 pt-1 pb-5">
             <div class="container x-row">
-
-                <div class="card mt-5 mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4">GIS basics for the rest of us</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
+                <div *ngFor="let blog of blogData">
+                    <a routerLink="../blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
+                        <div class="card mt-5 mb-5" style="max-width: 1440px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{blog.image.url}}" class="img-fluid" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold py-4"> {{ blog.title }}</h5>
+                                        <p class="card-text">{{ blog.summary}}</p>
+                                        <div class="card-text-badge pt-5 fw-lighter"><em>By {{ blog.user.username }} - {{ blog.published_date | date:'longDate' }}</em>                                    
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="card mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4">GIS basics for the rest of us</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4">GIS basics for the rest of us</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                    </a> 
+                </div>                                         
             </div>
         </section>
 
@@ -322,28 +186,21 @@
 
         <section class="section-5 pb-5">
             <div class="container x-row">
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
-                    <div class="card-body mt-3">
-                        <h5 class="card-title fw-bold mb-4">
-                            {{ constants.minigrids_section5_card1_title }}
-                        </h5>
-                        <p class="card-text mb-5">
-                            {{ constants.minigrids_section5_card1_subtitle }}
-                        </p>
+                <div *ngFor="let ressource of ressourcesCardsData">
+                    <div class="card my-5 mx-4 shadow-lg home-card">
+                        <a href="{{ressource.url}}" target="_blank" >
+                            <img src="{{ressource.image.url}}" class="card-img-top p-3 mt-3" alt="...">
+                            <div class="card-body mt-3">
+                                <h5 class="card-title fw-bold mb-4">
+                                    {{ ressource.title}}
+                                </h5>
+                                <p class="card-text mb-5">
+                                    {{ ressource.subtitle }}
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <img src="assets/logo-2-crest.png" class="card-img-top p-3 mt-3" alt="...">
-                    <div class="card-body mt-3">
-                        <h5 class="card-title fw-bold mb-4">
-                            {{ constants.minigrids_section5_card2_title }}
-                        </h5>
-                        <p class="card-text mb-5">
-                            {{ constants.minigrids_section5_card2_subtitle }}
-                        </p>
-                    </div>
-                </div>
+                </div>                
             </div>
         </section>
 

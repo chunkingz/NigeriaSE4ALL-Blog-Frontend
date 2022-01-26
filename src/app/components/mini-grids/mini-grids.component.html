@@ -29,51 +29,22 @@
             </div>
 
             <div class="container x-row">
-
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="{{dynamicBlogData.minigrids_section2_card1_image.url}}" class="section4-card-img mt-3 shadow-lg" alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
+                <div *ngFor="let app of appCardsData">
+                    <div class="section-4-card mb-5 mx-5">
+                        <img src="{{app.image.url}}" class="section4-card-img mt-3 shadow-lg" alt="...">
+                        <p class="main-title fw-bold fs-5">
+                            {{ app.title }}
+                        </p>
+                        <p class="main-title fw-normal fs-5 text-wrap">
+                        {{app.subtitle}}
+                        </p>
+                        <p>
+                            <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta" href="{{app.url}}">
+                                {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
+                            </a>
+                        </p>
                     </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card1_title :
-                        constants.minigrids_section2_card1_title }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card1_subtitle :
-                        constants.minigrids_section2_card1_subtitle }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta" href="{{dynamicBlogData.minigrids_section2_card1_url}}">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
                 </div>
-
-                <div class="section-4-card mb-5 mx-5">
-                    <img src="{{dynamicBlogData.minigrids_section2_card2_image.url}}" class="section4-card-img mt-3 shadow-lg" alt="...">
-                    <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                        <div class="circular circular-mini-grid"></div>
-                        {{ dynamicBlogData ? dynamicBlogData.home_section4_tagtitle1 :
-                        constants.home_section4_tagtitle1 }}
-                    </div>
-                    <p class="main-title fw-bold fs-5">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card2_title :
-                        constants.minigrids_section2_card2_title }}
-                    </p>
-                    <p class="main-title fw-normal fs-5 text-wrap">
-                        {{ dynamicBlogData ? dynamicBlogData.minigrids_section2_card2_subtitle :
-                        constants.minigrids_section2_card2_subtitle }}
-                    </p>
-                    <p>
-                        <a type="button" class="btn btn-lg fw-bold btn-mini-grid cta" href="{{dynamicBlogData.minigrids_section2_card1_url}}">
-                            {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
-                        </a>
-                    </p>
-                </div>
-
             </div>
         </section>
 
@@ -211,39 +182,28 @@
 
         <section class="section-6 pt-5">
             <div class="container p-lg-4 mx-auto text-center">
-                <h1 class="fw-bold"> {{ dynamicBlogData ? dynamicBlogData.minigrids_section6_hero : constants.minigrids_section6_hero }}</h1>
-                <p class="lead fw-normal"> {{ dynamicBlogData ? dynamicBlogData.minigrids_section6_subtitle : constants.minigrids_section6_subtitle }}</p>
+                <h1 class="fw-bold">{{ constants.minigrids_section6_hero }}</h1>
+                <p class="lead fw-normal">{{ constants.minigrids_section6_subtitle }}</p>
             </div>
         </section>
 
         <section class="section-5 pb-5">
             <div class="container x-row">
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <a href="{{dynamicBlogData.minigrids_section5_card2_url}}" target="_blank" >
-                        <img src="{{dynamicBlogData.minigrids_section5_card1_image.url}}" class="card-img-top p-3 mt-3" alt="...">
-                        <div class="card-body mt-3">
-                            <h5 class="card-title fw-bold mb-4">
-                                {{ dynamicBlogData ? dynamicBlogData.minigrids_section5_card1_title : constants.minigrids_section5_card1_title }}
-                            </h5>
-                            <p class="card-text mb-5">
-                                {{ dynamicBlogData ? dynamicBlogData.minigrids_section5_card1_subtitle : constants.minigrids_section5_card1_subtitle }}
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <a href="{{dynamicBlogData.minigrids_section5_card2_url}}" target="_blank">
-                        <img src="{{dynamicBlogData.minigrids_section5_card2_image.url}}" class="card-img-top p-3 mt-3" alt="...">
-                        <div class="card-body mt-3">
-                            <h5 class="card-title fw-bold mb-4">
-                                {{ dynamicBlogData ? dynamicBlogData.minigrids_section5_card2_title : constants.minigrids_section5_card2_title }}
-                            </h5>
-                            <p class="card-text mb-5">
-                                {{ dynamicBlogData ? dynamicBlogData.minigrids_section5_card2_subtitle : constants.minigrids_section5_card2_subtitle }}
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                <div *ngFor="let ressource of ressourcesCardsData">
+                    <div class="card my-5 mx-4 shadow-lg home-card">
+                        <a href="{{ressource.url}}" target="_blank" >
+                            <img src="{{ressource.image.url}}" class="card-img-top p-3 mt-3" alt="...">
+                            <div class="card-body mt-3">
+                                <h5 class="card-title fw-bold mb-4">
+                                    {{ ressource.title}}
+                                </h5>
+                                <p class="card-text mb-5">
+                                    {{ ressource.subtitle }}
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>                
             </div>
         </section>
 
