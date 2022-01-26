@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   dynamicData: any;
   section3DynamicData: any;
   section4DynamicData: any;
+  blogData: any;
   constants = Constants;
 
   constructor(private _data: DataService) { }
@@ -21,6 +22,8 @@ export class HomeComponent implements OnInit {
     this.getHomeDynamicContent("dynamic-blog-content");
     this.getSection3DynamicContent("home-section-3-cards");
     this.getSection4DynamicContent("home-section-4-cards");
+    this.getAllBlogArticles("articles");
+
   }
 
   /**
@@ -53,6 +56,19 @@ export class HomeComponent implements OnInit {
    getSection4DynamicContent(apiEndPoint: string) {
     this._data.getDynamicContent(apiEndPoint).subscribe(res => {
       this.section4DynamicData = res;      
+    }, error => {
+      console.log('An unexpected error occurred');
+      console.log(error);
+    });
+  }
+
+  /**
+   * Fetches all blog articles in the db
+   * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
+   */
+   getAllBlogArticles(apiEndPoint: string) {
+    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
+      this.blogData = res;
     }, error => {
       console.log('An unexpected error occurred');
       console.log(error);

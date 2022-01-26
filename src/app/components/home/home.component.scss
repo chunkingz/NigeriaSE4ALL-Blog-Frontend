@@ -62,6 +62,7 @@ $se4all-v3-color: #fcbc0c;
 
 .section-6 .img-fluid {
     height: 16rem;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -195,7 +196,6 @@ $se4all-v3-color: #fcbc0c;
     }
     .section-6 .img-fluid {
         height: 18rem;
-        object-fit: cover;
     }
     // Make section 1 responsive
     .section-1 {
@@ -246,7 +246,6 @@ $se4all-v3-color: #fcbc0c;
     }
     .section-6 .img-fluid {
         height: 23rem;
-        object-fit: cover;
     }
     // Make section 1 responsive
     .section-1 {
@@ -286,7 +285,6 @@ $se4all-v3-color: #fcbc0c;
     }
     .section-6 .img-fluid {
         height: 18rem;
-        object-fit: cover;
     }
     // Make section 1 responsive
     .section-1 #hero-section {

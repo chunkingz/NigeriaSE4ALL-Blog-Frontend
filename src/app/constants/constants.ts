@@ -88,6 +88,7 @@ export class Constants {
     static home_section5_subtitle = "Read about our recent activities";
     static home_hero_youtube_video = "https://www.youtube-nocookie.com/embed/FqXL8WVTE-w?autoplay=1&mute=1&controls=0&loop=1&playlist=FqXL8WVTE-w"
     static home_hero_btn_url = "../contact-us"
+    static btn9 = "See all Blog posts";
 
     static footer_section1_title1 = "OFFICE";
     static footer_section1_subtitle1_1 = "Federal Ministry of Power";

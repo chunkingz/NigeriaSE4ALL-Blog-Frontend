@@ -93,7 +93,7 @@
                     <div class="section-4-card mb-5 mx-5">
                         <img src="{{ section4Data.card_img[0].url }}" class="section4-card-img mt-3 shadow-lg" alt="{{ section4Data.card_img_alt }}">
                         <div class="tag-title fw-light mb-4 text-uppercase pt-4 fs-6">
-                            <div class="circular" [style.backgroundColor]="section4Data.card_url  === 'mini-grids' ? '#58c495' : '#085064'">
+                            <div class="circular {{section4Data.class_style_1}}">
                         
                         </div>
                             {{ section4Data.card_tag_title }}
@@ -105,8 +105,8 @@
                             {{ section4Data.card_subtitle }}
                         </p>
                         <p>
-                            <a type="button" routerLink="{{ section4Data.card_url }}" class="btn btn-lg fw-bold btn-mini-grid cta"
-                            [style.backgroundColor]="section4Data.card_url  === 'mini-grids' ? '#58c495' : '#085064'">
+                            <a type="button" routerLink="{{ section4Data.card_url }}" 
+                            class="btn btn-lg fw-bold btn-mini-grid cta {{section4Data.class_style_1}}">
                                 {{ section4Data.card_btn_txt }}
                             </a>
                         </p>
@@ -131,96 +131,50 @@
         <section class="section-6 pt-1 pb-5">
             <div class="container x-row">
 
-                <div class="card mt-5 mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4">GIS basics for the rest of us</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
+                <div *ngFor="let blog of blogData">
+
+                    <div class="card my-5">
+                        <a class="text-reset"
+                                routerLink="../blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
+
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{blog.image.url}}" class="img-fluid" alt="{{ blog.title }}">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold py-4" id="blog-title">{{ blog.title }}</h5>
+                                        <p class="card-text" id="blog-summary">{{ blog.summary | summary: 200}}</p>
+                                        <div class="card-text-badge pt-5 fw-lighter">
+
+                                            <div id="author-and-date">
+                                                <em>By {{ blog.user.username }} - {{ blog.published_date | date:'longDate' }}</em>
+                                            </div>
+                                            
+                                            <div class="card-text-badge-2" id="blog-categories">
+                                                <div *ngFor="let blogCategory of blog.categories">
+                                                    <a type="button" class="text-reset" routerLink="../blog-category/{{blogCategory.name}}">
+                                                        <div class="rounded-pill text-white px-4 py-1 rounded-pill-mini-grid {{ blogCategory.class_style_1 }}">
+                                                            {{ blogCategory.name }}
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                 </div>
-                <div class="card mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4">FMP training completed</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">FMP</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-mini-shs text-white px-4 py-1">SHS</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4">Feature of a SHS supplier</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-power-sector text-white px-4 py-1">Power
-                                            sector</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-5" style="max-width: 1440px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="/assets/blog-home-img.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold py-4"> Mobile mappers training</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-                                    parturient montes, nascetur ridiculus mus.</p>
-                                <div class="card-text-badge pt-5 fw-lighter"><em>By Ilya Rybin - Jul 22, 2021</em>
-                                    <div class="card-text-badge-2">
-                                        <div class="rounded-pill text-white px-4 py-1">GIS</div>
-                                        <div class="rounded-pill text-white px-4 py-1">Geodata</div>
-                                        <div class="rounded-pill rounded-pill-mini-grid text-white px-4 py-1">Mini-grid
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="text-center py-5" id="all-blog-posts-btn">
+                    <a routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_1 : constants.nav_txt_url_1 }}" 
+                    type="button" class="btn btn-lg btn-v3 cta mx-auto">
+                        {{ dynamicBlogData ? dynamicBlogData.btn9 : constants.btn9 }}
+                    </a>
                 </div>
 
             </div>

@@ -17,7 +17,7 @@ export class MiniGridsComponent implements OnInit {
 
   constructor(private _data: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getDynamicContent("dynamic-blog-content");
     this.getDownloadData("download-section-minigrids");
     this.getAllArticles("articles");
