@@ -1,72 +1,72 @@
 
-<div *ngFor="let dynamicBlogData of dynamicData" class="outer-div">
-<nav class="navbar navbar-expand-md fixed-top px-3">
+<div *ngFor="let dynamicBlogData of dynamicData" class="outer-div" @navbarAnimation>
 
-  <a class="navbar-brand" routerLink="/">
-    
-    <div id="header-blitz-div">
-      <a href="/">
-        <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
-        <div class="h2-alternative">
-          {{ dynamicBlogData ? dynamicBlogData.nav_site_title : constants.nav_site_title }}
-        </div>
+  <nav class="navbar navbar-expand-md fixed-top px-3">
+
+    <a class="navbar-brand" routerLink="/">
+      
+      <div id="header-blitz-div">
+        <a href="/">
+          <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
+          <div class="h2-alternative">
+            {{ dynamicBlogData ? dynamicBlogData.nav_site_title : constants.nav_site_title }}
+          </div>
+        </a>
+      </div>
+    </a>
+
+    <div class="nav-logo-nigeria" id="header-logo-nigeria">
+      <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
+        <img src="assets/logo-2-crest.png" alt="FMP Logo">
       </a>
     </div>
-  </a>
 
-  <div class="nav-logo-nigeria" id="header-logo-nigeria">
-    <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
-      <img src="assets/logo-2-crest.png" alt="FMP Logo">
-    </a>
-  </div>
+    <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarCollapse">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </button>
 
-  <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarCollapse">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-    </svg>
-  </button>
-
-  <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarCollapse" [isAnimated]="true">
-    <ul class="navbar-nav mr-auto mx-auto">
-      
-      <li class="nav-item cell" id="mini-grid">
-        <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
-          <div class="circular circular-mini-grid"></div> 
-            <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_4 : constants.Nav_txt_4 }}</span>
-        </a>
-      </li>
-
-      <li class="nav-item cell" id="power-sector">
-          <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
-            <div class="circular circular-power-sector"></div>
-            <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_5 : constants.Nav_txt_5 }}</span>
+    <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarCollapse" [isAnimated]="true">
+      <ul class="navbar-nav mr-auto mx-auto">
+        
+        <li class="nav-item cell" id="mini-grid">
+          <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
+            <div class="circular circular-mini-grid"></div> 
+              <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_4 : constants.Nav_txt_4 }}</span>
           </a>
-      </li>
+        </li>
 
-      <li class="nav-item cell" id="solar-home-systems">
-          <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
-            <div class="circular circular-solar-home-systems"></div>
-            <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_6 : constants.Nav_txt_6 }}</span>
-          </a>
-      </li>
+        <li class="nav-item cell" id="power-sector">
+            <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
+              <div class="circular circular-power-sector"></div>
+              <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_5 : constants.Nav_txt_5 }}</span>
+            </a>
+        </li>
 
-      <li class="nav-item cell" id="about">
-          <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
-            <img src="assets/i_info.svg" alt="info icon" class="nav-icon">
-            <span>{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
-          </a>
-      </li>
+        <li class="nav-item cell" id="solar-home-systems">
+            <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
+              <div class="circular circular-solar-home-systems"></div>
+              <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_6 : constants.Nav_txt_6 }}</span>
+            </a>
+        </li>
 
-    </ul>
-  </div>
+        <li class="nav-item cell" id="about">
+            <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
+              <img src="assets/i_info.svg" alt="info icon" class="nav-icon">
+              <span>{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
+            </a>
+        </li>
 
-  <div class="nav-logo-nigeria" id="header-logo-nigeria-2">
-    <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
-      <img src="assets/logo-2-crest.png" alt="FMP Logo">
-    </a>
-  </div>
+      </ul>
+    </div>
 
-</nav>
+    <div class="nav-logo-nigeria" id="header-logo-nigeria-2">
+      <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
+        <img src="assets/logo-2-crest.png" alt="FMP Logo">
+      </a>
+    </div>
+
+  </nav>
 
 </div>
-

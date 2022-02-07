@@ -1,6 +1,6 @@
 <div *ngFor="let dynamicBlogData of dynamicData">
 
-    <main>
+    <main @homeAnimation>
 
         <section class="section-1">
 
@@ -39,7 +39,7 @@
         </section>
 
         <section class="section-2 pt-5">
-            <div class="container col-md-9 p-lg-4 mx-auto text-center">
+            <div class="container col-md-9 p-lg-4 mx-auto text-center" id="section-2">
                 <h1 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.home_section2_hero :
                     constants.home_section2_hero }}</h1>
                 <p class="lead fw-normal">{{ dynamicBlogData ? dynamicBlogData.home_section2_subtitle1 :
@@ -47,6 +47,7 @@
             </div>
         </section>
 
+        <!-- Cards -->
         <section class="section-3 pb-5">
             <div class="container x-row">
 
@@ -57,8 +58,8 @@
                     <div class="card my-5 mx-4 shadow-lg home-card">
                         <a routerLink="{{ section3Data.card_url }}" class="text-reset">
 
-                            <img src="{{ section3Data.card_img[0].url }}" class="card-img-top p-3 mt-3" alt="{{ section3Data.card_img_alt }}">
-                            <div class="card-body mt-3 color-1">
+                            <img src="{{ section3Data.card_img[0].url }}" class="card-img-top" alt="{{ section3Data.card_img_alt }}">
+                            <div class="card-body color-1">
                                 <h5 class="card-title fw-bold mb-4">
                                     {{ section3Data.card_title }}
                                 </h5>
@@ -75,6 +76,7 @@
             </div>
         </section>
 
+        <!-- Apps -->
         <section class="section-4 py-5">
 
             <div class="container col-md-9 p-lg-4 mx-auto mt-5 mb-1 text-center section-4-title">

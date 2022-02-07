@@ -1,11 +1,14 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
+import { navbarAnimation } from '../animation/animation';
 
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [ navbarAnimation ]
 })
 export class NavbarComponent implements OnInit {
 

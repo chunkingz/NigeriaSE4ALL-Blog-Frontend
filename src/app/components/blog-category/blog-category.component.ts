@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
-import { blogAnimation } from '../animation/blog.component.animation';
+import { blogAnimation } from '../animation/animation';
 import { Constants } from 'src/app/constants/constants';
 
 @Component({

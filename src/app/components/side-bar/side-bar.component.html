@@ -1,7 +1,7 @@
-<div *ngFor="let dynamicBlogData of dynamicData" class="position-sticky" style="top: 2rem;">
+<main *ngFor="let dynamicBlogData of dynamicData" class="position-sticky" style="top: 7rem;">
 
 
-    <!-- <div class="p-4 mb-3 bg-light rounded">
+    <!-- <div class="p-4 mb-3 bg-light rounded" id="archives">
         <h4 class="fst-italic">Archives</h4>
 
         <a class="btn btn-se4all archive-btn mb-2">
@@ -10,7 +10,7 @@
     </div> -->
 
 
-    <div class="p-4 mb-3 bg-light rounded">
+    <section class="p-4 mb-3 bg-light rounded" id="tags">
         <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.tag_txt : constants.tag_txt }}</h4>
 
         <span *ngFor="let category of categoriesData">
@@ -26,9 +26,9 @@
             </a>&nbsp;
 
         </span>
-    </div>
+    </section>
 
-    <div class="p-4 mb-3 bg-light rounded">
+    <section class="p-4 mb-3 bg-light rounded" id="social-networks">
         <h4 class="fst-italic">{{ dynamicBlogData ? dynamicBlogData.social_txt : constants.social_txt }}</h4>
 
         <!-- LinkedIn, Facebook, and Email -->
@@ -54,6 +54,6 @@
                     d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
             </svg>
         </a>
-    </div>
+    </section>
 
-</div>
+</main>
