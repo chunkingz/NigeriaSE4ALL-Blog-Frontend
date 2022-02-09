@@ -65,7 +65,7 @@ $home-hr-color: #93939f;
     cursor: pointer;
 }
 
-.x-row {
+.section-2 .x-row, .section-3-market .x-row, .section-4 .x-row, .section-5 .x-row {
     display: flex;
     flex-wrap: wrap;
 }
@@ -110,21 +110,23 @@ $home-hr-color: #93939f;
 
 
 /* Style the video: 100% width and height to cover the entire window */
+
 .section-1 {
-    margin-top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    padding-top: 15rem;
-    padding-bottom: 5rem;
+    background-image: url("/assets/pexels1.jpg");
+    background-color: #cccccc;
+    width: 100% !important;
+    height: 40rem;
 }
 
 .section-1 #hero-section {
-    padding: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 /* Add some content at the bottom of the video/page */
 .content {
     position: relative;
-    top: -5rem;
+    top: 10rem;
     color: #fff;
 }
 
@@ -174,18 +176,12 @@ td svg {
         object-fit: cover;
     }
     // Make section 1 responsive
-    .section-1 {
-        padding-top: 0;
-        padding-bottom: 1rem;
-    }
+
     .section-1 #hero-section {
         padding: 5rem 5rem 0 5rem;
     }
     .section-1 .home_section1_hero {
         font-size: 2.5rem;
-    }
-    .section-1 .home_section1_subtitle {
-        font-size: 1rem;
     }
     .home-card {
         width: 100%;
@@ -229,17 +225,15 @@ td svg {
     }
     // Make section 1 responsive
 
-    .content {
-        top: 2rem;
-    }
-    .section-1 .home_section1_hero {
-        font-size: 2rem;
-    }
     .section-1 #hero-section {
-        padding: 0 5rem 1rem 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .section-1 {
-        padding-bottom: 5rem;
+        height: 35rem;
+    }
+    .content {
+        top: 1rem;
     }
 
 }
@@ -274,14 +268,17 @@ td svg {
     .section-1 #hero-section {
         padding: 1rem;
     }
-    .section-1 .home_section1_hero {
+    .section-1 .home_section1_subtitle {
         font-size: 1rem;
     }
-    .section-1 {
-        padding-bottom: 5rem;
-    }
+    // .section-1 {
+    //     height: 20rem;
+    // }
     .content br {
         display: none;
+    }
+    .content {
+        top: 3rem;
     }
 }
 
@@ -311,6 +308,9 @@ td svg {
     }
     .text-wrap {
         width: 16rem;
+    }
+    .section-1 .home_section1_hero {
+        font-size: 2rem;
     }
 
 

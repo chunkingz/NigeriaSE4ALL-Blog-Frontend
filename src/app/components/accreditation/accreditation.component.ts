@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
@@ -12,9 +13,10 @@ export class AccreditationComponent implements OnInit {
   dynamicData: any;
   constants = Constants;
 
-  constructor(private _data: DataService) { }
+  constructor(private _data: DataService, private _title: Title) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._title.setTitle('Nigeria-SE4ALL | Accreditation');
     this.getDynamicContent();
   }
 

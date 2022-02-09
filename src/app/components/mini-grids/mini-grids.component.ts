@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
@@ -17,9 +18,10 @@ export class MiniGridsComponent implements OnInit {
   blogData: any;
   constants = Constants;
 
-  constructor(private _data: DataService) { }
+  constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
+    this._title.setTitle('Nigeria-SE4ALL | Mini-Grids');
     this.getDynamicContent("dynamic-blog-content");
     this.getApps("subpage-webmap-cards");
     this.getDownloadData("download-section-minigrids");

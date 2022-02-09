@@ -21,6 +21,7 @@ export class BlogPostComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
+    this._title.setTitle('Nigeria-SE4ALL');
     this.fetchBlogPost();
     this.getDynamicContent();
   }

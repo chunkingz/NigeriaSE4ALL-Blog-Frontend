@@ -31,28 +31,28 @@
       <ul class="navbar-nav mr-auto mx-auto">
         
         <li class="nav-item cell" id="mini-grid">
-          <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
+          <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
             <div class="circular circular-mini-grid"></div> 
               <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_4 : constants.Nav_txt_4 }}</span>
           </a>
         </li>
 
         <li class="nav-item cell" id="power-sector">
-            <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
+            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
               <div class="circular circular-power-sector"></div>
               <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_5 : constants.Nav_txt_5 }}</span>
             </a>
         </li>
 
         <li class="nav-item cell" id="solar-home-systems">
-            <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
+            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
               <div class="circular circular-solar-home-systems"></div>
               <span>{{ dynamicBlogData ? dynamicBlogData.Nav_txt_6 : constants.Nav_txt_6 }}</span>
             </a>
         </li>
 
         <li class="nav-item cell" id="about">
-            <a class="nav-link" routerLinkActive="active" (click)="isCollapsed = !isCollapsed" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
+            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
               <img src="assets/i_info.svg" alt="info icon" class="nav-icon">
               <span>{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
             </a>

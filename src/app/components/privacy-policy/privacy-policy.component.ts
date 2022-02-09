@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { PrivacyPolicyConstants } from 'src/app/constants/privacy-policy-constants';
 import { DataService } from 'src/app/services/data.service';
 
@@ -12,9 +13,10 @@ export class PrivacyPolicyComponent implements OnInit {
   dynamicData: any;
   constants = PrivacyPolicyConstants;
 
-  constructor(private _data: DataService) { }
+  constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
+    this._title.setTitle('Nigeria-SE4ALL | Privacy Policy');
     this.getDynamicContent("dynamic-privacy-policy-content");
   }
 

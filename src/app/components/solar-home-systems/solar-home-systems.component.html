@@ -153,28 +153,50 @@
         </section>
 
         <!-- Blog Section -->
-        <section class="section-4 pt-1 pb-5">
+        <section class="section-4-blog pt-1 pb-5">
             <div class="container x-row">
+
                 <div *ngFor="let blog of blogData">
-                    <a routerLink="../blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
-                        <div class="card mt-5 mb-5" style="max-width: 1440px;">
+
+                    <div class="card my-5">
+                        <a class="text-reset"
+                                routerLink="../blog-post/{{ blog.published_date | date:'yyyy' }}/{{ blog.published_date | date:'MM' }}/{{ blog.published_date | date:'dd' }}/{{ blog.url }}">
+
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="{{blog.image.url}}" class="img-fluid" alt="...">
+                                    <img src="{{blog.image.url}}" class="img-fluid" alt="{{ blog.title }}">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title fw-bold py-4"> {{ blog.title }}</h5>
-                                        <p class="card-text">{{ blog.summary}}</p>
-                                        <div class="card-text-badge pt-5 fw-lighter"><em>By {{ blog.user.username }} - {{ blog.published_date | date:'longDate' }}</em>                                    
+                                        <h5 class="card-title fw-bold py-4" id="blog-title">{{ blog.title }}</h5>
+                                        <p class="card-text" id="blog-summary">{{ blog.summary | summary: 200}}</p>
+                                        <div class="card-text-badge pt-5 fw-lighter">
+
+                                            <div id="author-and-date">
+                                                <em>By {{ blog.user.username }} - {{ blog.published_date | date:'longDate' }}</em>
+                                            </div>
+                                            
+                                            <div class="card-text-badge-2" id="blog-categories">
+                                                <div *ngFor="let blogCategory of blog.categories">
+                                                    <a type="button" class="text-reset" routerLink="../blog-category/{{blogCategory.name}}">
+                                                        <div class="rounded-pill text-white px-4 py-1 rounded-pill-mini-grid {{ blogCategory.class_style_1 }}">
+                                                            {{ blogCategory.name }}
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </a> 
-                </div>                                         
+                        </a>
+                    </div>
+
+                </div>
+
             </div>
+           
         </section>
 
         <section class="section-6 pt-5">

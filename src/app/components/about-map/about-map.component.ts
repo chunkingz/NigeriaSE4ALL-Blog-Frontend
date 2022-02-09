@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'about-map',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _title: Title) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._title.setTitle('Nigeria-SE4ALL | About Map');
   }
 
 }

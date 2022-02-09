@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 import { homeAnimation } from '../animation/animation';
@@ -18,9 +19,10 @@ export class HomeComponent implements OnInit {
   blogData: any;
   constants = Constants;
 
-  constructor(private _data: DataService) { }
+  constructor(private _data: DataService, private _title: Title) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._title.setTitle('Nigeria-SE4ALL');
     this.getHomeDynamicContent("dynamic-blog-content");
     this.getSection3DynamicContent("home-section-3-cards");
     this.getSection4DynamicContent("home-section-4-cards");
