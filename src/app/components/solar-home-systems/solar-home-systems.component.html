@@ -30,10 +30,10 @@
                 <div *ngFor="let app of appCardsData">
                     <div class="section-4-card mb-5 mx-5">
                         <img src="{{app.image.url}}" class="section4-card-img mt-3 shadow-lg" alt="...">
-                        <p class="main-title fw-bold fs-5">
+                        <p class="main-title fw-bold fs-5" id="app-title">
                             {{ app.title }}
                         </p>
-                        <p class="main-title fw-normal fs-5 text-wrap">
+                        <p class="main-title fw-normal fs-5 text-wrap" id="app-subtitle">
                         {{app.subtitle}}
                         </p>
                         <p>

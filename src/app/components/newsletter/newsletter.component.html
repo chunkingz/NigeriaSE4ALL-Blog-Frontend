@@ -1,0 +1,31 @@
+<div *ngFor="let dynamicBlogData of dynamicData">
+
+  <div class="site-newsletter bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="h4 mb-2">{{ dynamicBlogData ? dynamicBlogData.subscribe_hero_title : constants.subscribe_hero_title }}</h3>
+        <p class="text-muted">{{ dynamicBlogData ? dynamicBlogData.subscribe_hero_subtitle_1 : constants.subscribe_hero_subtitle_1 }}</p>
+
+        <form #formData="ngForm" (ngSubmit)="sendEmail($event, formData)">
+          <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-7 col-lg-5 ms-auto me-auto">
+              <div class="input-group mb-3 mt-3">
+                <input type="email" ngModel #email="ngModel" class="form-control" 
+                placeholder="{{ dynamicBlogData ? dynamicBlogData.subscribe_hero_txt_1 : constants.subscribe_hero_txt_1 }}"
+                  aria-label="Email address" name="email">
+                <span class="input-group-btn">
+                  <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                  <button class="btn btn-lg" id="subscribe" type="submit" [disabled]="!formData.valid">
+                    {{ dynamicBlogData ? dynamicBlogData.btn6 : constants.btn6 }}
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+      </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -43,6 +43,8 @@ $se4all-v3-color: #fcbc0c;
 .section-3 .card img{
     height: 50%;
     object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .section-4 img{
@@ -116,13 +118,13 @@ $se4all-v3-color: #fcbc0c;
     background-color: $home-color2;
 }
 
-.color-1 {
+#mini-grids {
     border-top: 10px solid $home-color1;
 }
-.color-2 {
+#power-sector {
     border-top: 10px solid $home-color2;
 }
-.color-3 {
+#solar-home-systems {
     border-top: 10px solid $home-color3;
 }
 

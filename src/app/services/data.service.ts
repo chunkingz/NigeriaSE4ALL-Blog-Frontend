@@ -16,10 +16,16 @@ export class DataService {
 
   /**
    * Get the dynamic content from the strapi CMS
+   * @param {string} apiEndPoint - the API end point
+   * @param {string} sortQuery - the sort query
    * @returns all the dynamic content from the db
    */
-   getDynamicContent(apiEndPoint: string){
-    return this._http.get(`${this._url}/${apiEndPoint}`)
+   getDynamicContent(apiEndPoint: string, sortQuery?: string){
+     if(sortQuery){
+      return this._http.get(`${this._url}/${apiEndPoint}?_sort=${sortQuery}`)
+     } else {
+       return this._http.get(`${this._url}/${apiEndPoint}`)
+     }
   }
 
 
@@ -61,10 +67,17 @@ export class DataService {
   }
   
    /**
-   * Get the dynamic content from the strapi CMS via enpoint and filter input
+   * Get the dynamic content from the strapi CMS via end point and filter input
+   * @param {string} apiEndPoint - the API end point
+   * @param {string} filter - the filter query
+   * @param {string} sortQuery - the sort query
    * @returns one or many entries given the filter statement
    */
-  getDynamicContentWithFilter(apiEndPoint: string, filter: string){
-    return this._http.get(`${this._url}/${apiEndPoint}?${filter}`)
+  getDynamicContentWithFilter(apiEndPoint: string, filter: string, sortQuery?: string){
+    if(sortQuery){
+      return this._http.get(`${this._url}/${apiEndPoint}?${filter}&_sort=${sortQuery}`)
+     } else {
+       return this._http.get(`${this._url}/${apiEndPoint}?${filter}`)
+     }
   }
 }

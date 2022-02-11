@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
    * Fetches Section 3 dynamic data from the db
    */
    getSection3DynamicContent(apiEndPoint: string) {
-    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
+    this._data.getDynamicContent(apiEndPoint, "card_title:ASC").subscribe(res => {
       this.section3DynamicData = res;      
     }, error => {
       console.log('An unexpected error occurred');
@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
    * Fetches Section 4 dynamic data from the db
    */
    getSection4DynamicContent(apiEndPoint: string) {
-    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
+    this._data.getDynamicContent(apiEndPoint, "card_tag_title:ASC").subscribe(res => {
       this.section4DynamicData = res;      
     }, error => {
       console.log('An unexpected error occurred');
@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
    * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
    */
    getAllBlogArticles(apiEndPoint: string) {
-    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
+    this._data.getDynamicContent(apiEndPoint, "published_date:ASC").subscribe(res => {
       this.blogData = res;
     }, error => {
       console.log('An unexpected error occurred');

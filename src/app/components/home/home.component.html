@@ -56,10 +56,10 @@
                 <div *ngFor="let section3Data of section3DynamicData">
 
                     <div class="card my-5 mx-4 shadow-lg home-card">
-                        <a routerLink="{{ section3Data.card_url }}" class="text-reset">
+                        <a href="{{ section3Data.card_url }}" target="blank" class="text-reset">
 
                             <img src="{{ section3Data.card_img[0].url }}" class="card-img-top" alt="{{ section3Data.card_img_alt }}">
-                            <div class="card-body color-1">
+                            <div class="card-body" id="{{ section3Data.color }}">
                                 <h5 class="card-title fw-bold mb-4">
                                     {{ section3Data.card_title }}
                                 </h5>
@@ -107,7 +107,7 @@
                             {{ section4Data.card_subtitle }}
                         </p>
                         <p>
-                            <a type="button" routerLink="{{ section4Data.card_url }}" 
+                            <a type="button" href="{{ section4Data.card_url }}" target="blank"
                             class="btn btn-lg fw-bold btn-mini-grid cta {{section4Data.class_style_1}}">
                                 {{ section4Data.card_btn_txt }}
                             </a>

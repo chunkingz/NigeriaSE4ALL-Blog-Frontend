@@ -30,10 +30,6 @@ export const homeAnimation = trigger('homeAnimation', [
           style({ transform: 'translateY(-50px)'}),
           animate("2s")
         ]),
-        query('.section-3', [
-          style({ transform: 'translateX(50px)'}),
-          animate("2s")
-        ]),
         query('.home_section1_hero', [
           style({ transform: 'translateX(-50px)'}),
           animate("2s")

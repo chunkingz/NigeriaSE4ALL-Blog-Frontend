@@ -27,7 +27,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-import { SubscribeComponent } from './components/subscribe/subscribe.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
 import { HomeComponent } from './components/home/home.component';
 import { MiniGridsComponent } from './components/mini-grids/mini-grids.component';
@@ -51,7 +51,7 @@ import { AboutMapComponent } from './components/about-map/about-map.component';
     BlogPostComponent,
     ContactFormComponent,
     FormSuccessComponent,
-    SubscribeComponent,
+    NewsletterComponent,
     BlogCategoryComponent,
     HomeComponent,
     MiniGridsComponent,

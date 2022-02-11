@@ -58,7 +58,7 @@ export class MiniGridsComponent implements OnInit {
    * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
    */
    getApps(apiEndPoint: string) {
-    this._data.getDynamicContentWithFilter(apiEndPoint, 'category.name=Minigrid%20Sector').subscribe(res => {
+    this._data.getDynamicContentWithFilter(apiEndPoint, 'category.name=Minigrid%20Sector', 'title:ASC').subscribe(res => {
       this.appCardsData = res;
     }, error => {
       console.log('An unexpected error occurred');
@@ -71,7 +71,7 @@ export class MiniGridsComponent implements OnInit {
    * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
    */
     getRessources(apiEndPoint: string) {
-      this._data.getDynamicContentWithFilter(apiEndPoint, 'category.name=Minigrid%20Sector').subscribe(res => {
+      this._data.getDynamicContentWithFilter(apiEndPoint, 'category.name=Minigrid%20Sector', 'title:ASC').subscribe(res => {
         this.ressourcesCardsData = res;
       }, error => {
         console.log('An unexpected error occurred');
@@ -84,7 +84,7 @@ export class MiniGridsComponent implements OnInit {
    * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
    */
       getAllArticles(apiEndPoint: string) {
-        this._data.getDynamicContentWithFilter(apiEndPoint, 'categories.name=Minigrid%20Sector').subscribe(res => {
+        this._data.getDynamicContentWithFilter(apiEndPoint, 'categories.name=Minigrid%20Sector', "published_date:ASC").subscribe(res => {
           this.blogData = res;
         }, error => {
           console.log('An unexpected error occurred');

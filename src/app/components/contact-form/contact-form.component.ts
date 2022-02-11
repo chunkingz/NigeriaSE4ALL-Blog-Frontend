@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 
@@ -53,22 +53,24 @@ export class ContactFormComponent implements OnInit {
 
 /**
  * Function to send the form values as an email.
- * @param {e} Event - the form event 
- * @param {formValues} - the form data 
+ * @param {Event} e - the form event 
+ * @param {any} formValues - the form data 
  */
   public sendEmail(e: Event, formValues: any) {
     if (formValues.value.email == '' || formValues.value.username == '' || formValues.value.question == '') {
-      console.log('form is invalid');
+      // console.log('form is invalid');
       this.formErrorNotification();
     } else {
-      console.log(formValues.value);
+      // console.log(formValues.value);
 
-      emailjs.sendForm('blog-contact-form', 'blog-contact-form', e.target as HTMLFormElement, 'user_j1gyGaPSg0i5lXKJapPHZ')
-        .then((result: EmailJSResponseStatus) => {
-          console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
-        });
+      // https://www.npmjs.com/package/@emailjs/browser
+      // 
+      // emailjs.sendForm('se4all', 'blog-contact-form', e.target as HTMLFormElement, 'user_j1gyGaPSg0i5lXKJapPHZ')
+      //   .then((response) => {
+      //     console.log('SUCCESS!', response.status, response.text);
+      //   }, (error) => {
+      //     console.log('FAILED...', error);
+      //   });
 
       this.formSubmissionNotification();
       this._router.navigate(['form-success']);
