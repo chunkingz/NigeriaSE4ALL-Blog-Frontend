@@ -1,4 +1,3 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';

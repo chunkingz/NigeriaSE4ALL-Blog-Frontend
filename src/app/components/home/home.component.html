@@ -107,8 +107,8 @@
                             {{ section4Data.card_subtitle }}
                         </p>
                         <p>
-                            <a type="button" href="{{ section4Data.card_url }}" target="blank"
-                            class="btn btn-lg fw-bold btn-mini-grid cta {{section4Data.class_style_1}}">
+                            <a type="button" id="view-app-btn" href="{{ section4Data.card_url }}" target="blank"
+                            class="btn btn-lg fw-bold cta {{section4Data.class_style_1}}">
                                 {{ section4Data.card_btn_txt }}
                             </a>
                         </p>
@@ -156,7 +156,7 @@
                                             <div class="card-text-badge-2" id="blog-categories">
                                                 <div *ngFor="let blogCategory of blog.categories">
                                                     <a type="button" class="text-reset" routerLink="../blog-category/{{blogCategory.name}}">
-                                                        <div class="rounded-pill text-white px-4 py-1 rounded-pill-mini-grid {{ blogCategory.class_style_1 }}">
+                                                        <div class="rounded-pill text-white px-4 py-1 {{ blogCategory.class_style_1 }}">
                                                             {{ blogCategory.name }}
                                                         </div>
                                                     </a>

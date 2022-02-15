@@ -12,6 +12,12 @@ a {
     color: inherit;
 }
 
+.navbar{
+    background-color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    // border-bottom: 15px solid $home-color1;
+}
 
 .navbar img{
     margin-right: 1rem;
@@ -86,12 +92,6 @@ a {
 
 .outer-div {
     margin-bottom: 7rem !important;
-}
-
-.navbar{
-    background-color: white;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 #about img {

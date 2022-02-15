@@ -15,7 +15,9 @@ $se4all-btn-txt-color: #fff;
 $se4all-url-active: #6c757d;
 $se4all-url-hover: #212529;
 $se4all-v3-color: #fcbc0c;
-
+$home-color1: #58c495;
+$home-color2: #085064;
+$home-color3: #f76904;
 
 a {
     text-decoration: none !important;
@@ -62,6 +64,18 @@ img.blog-preview-img {
     transition-timing-function: ease-in;
     transition-delay: 0s;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.452);
+}
+
+.circular-mini-grid, .rounded-pill-mini-grid {
+    background-color: $home-color1 !important;
+}
+
+.circular-shs, .rounded-pill-mini-shs {
+    background-color: $home-color3 !important;
+}
+
+.circular-power-sector, .rounded-pill-power-sector {
+    background-color: $home-color2 !important;
 }
 
 @media (min-width: 1024) {
