@@ -81,6 +81,18 @@ a {
     background-color: $home-color3;
 }
 
+.mini-grid {
+    border-bottom: 15px solid $home-color1;
+}
+
+.power-sector {
+    border-bottom: 15px solid $home-color2;
+}
+
+.solar-home-systems {
+    border-bottom: 15px solid $home-color3;
+}
+
 .tag-title {
     display: flex;
     font-size: 1.2rem;
@@ -91,7 +103,7 @@ a {
 }
 
 .outer-div {
-    margin-bottom: 7rem !important;
+    margin-bottom: 5rem !important;
 }
 
 #about img {
@@ -100,14 +112,6 @@ a {
 
 .cell {
     margin-right: 1rem;
-}
-
-.active {
-    border-bottom: 3px solid $y-color;
-}
-
-.active:hover {
-    border-bottom: 3px solid $gr-color;
 }
 
 ul span:hover {

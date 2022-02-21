@@ -1,7 +1,11 @@
 
 <div *ngFor="let dynamicBlogData of dynamicData" class="outer-div" @navbarAnimation>
 
-  <nav class="navbar navbar-expand-md fixed-top px-3">
+  <nav class="navbar navbar-expand-md fixed-top px-3" [ngClass]="{
+    'mini-grid': minigrids,
+    'power-sector': powersector,
+    'solar-home-systems': shs
+  }">
 
     <a class="navbar-brand" routerLink="/">
       

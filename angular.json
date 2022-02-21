@@ -34,6 +34,9 @@
 						],
 						"scripts": [
 							"node_modules/marked/lib/marked.js"
+						],
+						"allowedCommonJsDependencies": [
+							"clone-deep"
 						]
 					},
 					"configurations": {

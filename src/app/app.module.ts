@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ShareButtonModule } from 'ngx-sharebuttons/button';
 import {GoTopButtonModule} from 'ng-go-top-button';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
 
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -80,7 +81,8 @@ import { AboutMapComponent } from './components/about-map/about-map.component';
     ShareButtonModule,
     ShareButtonsModule,
     SweetAlert2Module.forRoot(),
-    GoTopButtonModule
+    GoTopButtonModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
