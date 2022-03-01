@@ -33,7 +33,7 @@ export class PowerSectorComponent implements OnInit {
   }
 
   // charts config
-  view: [number, number] = [500,300];
+  view: [number, number] = [600,300];
   barchart0CustomColors: any[] | undefined;
   barchart0: any[] | undefined;
   barchart1CustomColors: any[] | undefined;
