@@ -45,7 +45,7 @@ export class Constants {
     static nav_site_title = "Nigeria Se4All";
     static nav_txt_1 = "BLOG";
     static nav_txt_2 = "MAP";
-    static nav_txt_3 = "ABOUT";
+    static nav_txt_3 = "About";
     static nav_txt_url_1 = "blog";
     static nav_txt_url_2 = "https://nigeriase4all.gov.ng/map";
     static nav_txt_url_3 = "about";
@@ -92,9 +92,9 @@ export class Constants {
 
     static footer_section1_title1 = "OFFICE";
     static footer_section1_subtitle1_1 = "Federal Ministry of Power";
-    static footer_section1_subtitle1_2 = "POWER HOUSE 14, Zambezi Crescent";
-    static footer_section1_subtitle1_3 = "Maitama, Abuja";
-    static footer_section1_subtitle1_4 = "Nigeria";
+    static footer_section1_subtitle1_2 = "POWER HOUSE 14";
+    static footer_section1_subtitle1_3 = "Zambezi Crescent Maitama";
+    static footer_section1_subtitle1_4 = "Abuja, Nigeria";
     static footer_section1_title2 = "EMAIL";
     static footer_section1_subtitle2 = "info@pwh.gov.ng";
     static footer_section1_title3 = "WEBSITE";
@@ -105,14 +105,15 @@ export class Constants {
     static footer_section2_bmz_url = "http://www.bmz.de/en/index.html";
     static footer_section2_giz_url = "https://www.giz.de/en/html/index.html";
     static footer_section3_title1 = "Terms and conditions of service"
-    static footer_section3_title2 = "2022 All Rights Reserved by nigeriase4all.gov.ng";
+    static footer_section3_title2 = "2022 All Rights Reserved by ";
+    static footer_section3_title2_2 = "nigeriase4all.gov.ng";
     static footer_section3_title3 = "Accreditation";
     static footer_section3_url1 = "terms-of-service";
     static footer_section3_url2 = "accreditation";
 
-    static Nav_txt_4 = "MINI-GRIDS";
-    static Nav_txt_5 = "POWER SECTOR";
-    static Nav_txt_6 = "SOLAR HOME SYSTEMS";
+    static Nav_txt_4 = "Mini-grids";
+    static Nav_txt_5 = "Power Sector";
+    static Nav_txt_6 = "Solar Home Systems";
     static Nav_txt_url_4 = "mini-grids";
     static Nav_txt_url_5 = "power-sector";
     static Nav_txt_url_6 = "solar-home-systems";

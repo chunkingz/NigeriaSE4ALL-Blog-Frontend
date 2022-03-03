@@ -1,6 +1,6 @@
 <div *ngFor="let dynamicBlogData of dynamicData">
 
-    <main>
+    <main id="shs">
 
         <section class="section-1" style="background-image: url('{{ dynamicBlogData.shs_hero_image.url }}')">
 
@@ -108,7 +108,6 @@
             </div>
             <!-- Dynamic Download Data from the API-->                                         
             <div class="container p-lg-4 mx-auto text-center">
-                <div *ngFor="let data of shsDownloadData">
                     <table class="table table-hover table-responsive-sm">
                         <thead>
                         <tr>
@@ -119,7 +118,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr *ngFor="let data of shsDownloadData">
                             <td scope="row">{{data.Dataset}}</td>
                             <td>{{data.Last_update}}</td>
                             <td>
@@ -141,7 +140,6 @@
                         </tr>                        
                         </tbody>
                     </table>
-                </div>
                 <!-- <p class="mt-5">{{ constants.minigrids_section4_more }}</p> -->
             </div>
         </section>

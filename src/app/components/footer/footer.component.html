@@ -23,13 +23,14 @@
             </div>
 
             <div class="row" id="footer-info">
-                <div class="mt-5 col-lg-6 contact-info">
+                <div class="mt-5 col-lg-5 contact-info">
                     <div class="me-3">
                         <img src="/assets/i_info.svg" alt="...">
                     </div>
                     <div class="text-break">
-                        <p class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.footer_section1_title1 :
-                            constants.footer_section1_title1 }}</p>
+                        <p class="fw-bold">
+                            {{ dynamicBlogData ? dynamicBlogData.footer_section1_title1 : constants.footer_section1_title1 }}
+                        </p>
                         <p class="lead fw-normal">
                             {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle1_1 : constants.footer_section1_subtitle1_1 }} <br>
                             {{ dynamicBlogData ? dynamicBlogData.footer_section1_subtitle1_2 : constants.footer_section1_subtitle1_2 }} <br>
@@ -39,7 +40,7 @@
                     </div>
                 </div>
 
-                <div class="mt-5 col-lg-3 contact-info">
+                <div class="mt-5 col-lg-4 contact-info">
                     <div class="me-3">
                         <img src="/assets/i_mail.svg" alt="...">
                     </div>
@@ -104,17 +105,18 @@
 
     <section class="section-3 py-4" id="footer-copyrights">
         <div class="container-fluid row mx-auto text-center footer-items">
-            <div class="col">
+            <div class="col" id="terms-of-service">
                 <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section3_url1 : constants.footer_section3_url1 }}"
                     target="_blank" class="text-reset">
                     {{ dynamicBlogData ? dynamicBlogData.footer_section3_title1 : constants.footer_section3_title1 }}
                 </a>
             </div>
-            <div class="col">&copy;
-                {{ dynamicBlogData ? dynamicBlogData.footer_section3_title2 : constants.footer_section3_title2 }}
+            <div class="col" id="copyright">
+                <span class="me-1">&copy; {{ dynamicBlogData ? dynamicBlogData.footer_section3_title2 : constants.footer_section3_title2 }}</span>
+                <span class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.footer_section3_title2_2 : constants.footer_section3_title2_2 }}</span>
 
             </div>
-            <div class="col accred">
+            <div class="col" id="accreditation">
                 <div class="col">
                     <a href="{{ dynamicBlogData ? dynamicBlogData.footer_section3_url2 : constants.footer_section3_url2 }}"
                         target="_blank" class="text-reset">

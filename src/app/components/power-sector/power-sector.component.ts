@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { LegendPosition } from '@swimlane/ngx-charts';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
-import { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors } from '../../helpers/chart-data';
 
 
 @Component({
@@ -29,31 +27,7 @@ export class PowerSectorComponent implements OnInit {
     this.getDownloadData("download-section-power-sectors");
     this.getAllArticles("articles");
     this.getRessources("subpage-ressource-cards");
-    Object.assign(this, { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors });
   }
-
-  // charts config
-  view: [number, number] = [600,300];
-  barchart0CustomColors: any[] | undefined;
-  barchart0: any[] | undefined;
-  barchart1CustomColors: any[] | undefined;
-  barchart1: any[] | undefined;
-  barchart2CustomColors: any[] | undefined;
-  barchart2: any[] | undefined;
-  pieChartData: any[] | undefined;
-  pieChartCustomColors: any[] | undefined;
-  showGridLines = true
-  isDoughnut = true
-  below = LegendPosition.Below
-  showXAxis = true;
-  showYAxis = true;
-  gradient = true;
-  showLegend = true;
-  showXAxisLabel = true;
-  showYAxisLabel = true;
-  showLabels = true;
-  showTimeline = true;
-
 
   /**
    * Fetches all dynamic data from the db

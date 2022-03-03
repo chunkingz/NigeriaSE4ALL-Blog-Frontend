@@ -1,6 +1,6 @@
 <div *ngFor="let dynamicBlogData of dynamicData">
 
-    <main>
+    <main id="power-sector">
 
         <section class="section-1" style="background-image: url('{{ dynamicBlogData.power_sector_hero_image.url }}')">
 
@@ -52,72 +52,49 @@
                 <br>
                 <p class="lead fw-normal">{{ constants.minigrids_section3_subtitle }}</p>
             </div>
-            <div class="container-fluid x-row">
+            <div class="container x-row">
                 <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">Number of Connections</p>
-                    <div class="py-5">
-                        <ngx-charts-line-chart
-                        [customColors]="barchart0CustomColors"
-                        [view]="view"
-                        [results]="barchart0"
-                        [legend]="showLegend"
-                        [legendPosition]="below"
-                        [showXAxisLabel]="showXAxisLabel"
-                        [showYAxisLabel]="showYAxisLabel"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis"
-                        [timeline]="showTimeline"
-                        >
-                      </ngx-charts-line-chart>
+                    <p>Total off-grid sites</p>
+                    <div class="card-body text-center py-5">
+                        <h5 class="card-title fw-bold mb-4">
+                            19,345
+                        </h5>
+                        <p class="card-text mb-5">
+                            2021
+                        </p>
                     </div>
                 </div>
                 <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">New services available</p>
-                    <div class="py-5">
-                        <ngx-charts-bar-vertical-stacked
-                        [customColors]="barchart1CustomColors"
-                        [view]="view"
-                        [results]="barchart1"
-                        [gradient]="gradient"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis"
-                        [legend]="showLegend"
-                        [legendPosition]="below"
-                        [showXAxisLabel]="showXAxisLabel"
-                        [showYAxisLabel]="showYAxisLabel"
-                        >
-                      </ngx-charts-bar-vertical-stacked>
+                    <p>Total off-grid sites</p>
+                    <div class="card-body text-center py-5">
+                        <h5 class="card-title fw-bold mb-4">
+                            19,345
+                        </h5>
+                        <p class="card-text mb-5">
+                            2021
+                        </p>
                     </div>
                 </div>
                 <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">Employments created</p>
-                    <div class="py-5">
-                        <ngx-charts-bar-vertical 
-                        [customColors]="barchart2CustomColors"
-                        [view]="view"
-                        [results]="barchart2"
-                        [legend]="showLegend"
-                        [legendPosition]="below"
-                        [showGridLines]="showGridLines"
-                        [showXAxisLabel]="showXAxisLabel"
-                        [showYAxisLabel]="showYAxisLabel"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis">
-                      </ngx-charts-bar-vertical>
+                    <p>Total off-grid sites</p>
+                    <div class="card-body text-center py-5">
+                        <h5 class="card-title fw-bold mb-4">
+                            19,345
+                        </h5>
+                        <p class="card-text mb-5">
+                            2021
+                        </p>
                     </div>
                 </div>
                 <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">Customer satisfaction</p>
-                    <div class="py-5">
-                        <ngx-charts-pie-chart 
-                            [customColors]="pieChartCustomColors"
-                            [results]="pieChartData"
-                            [legend]="showLegend"
-                            [legendPosition]="below"
-                            [view]="view"
-                            [doughnut]="isDoughnut"
-                            [labels]="showLabels" >
-                        </ngx-charts-pie-chart>
+                    <p>Total off-grid sites</p>
+                    <div class="card-body text-center py-5">
+                        <h5 class="card-title fw-bold mb-4">
+                            19,345
+                        </h5>
+                        <p class="card-text mb-5">
+                            2021
+                        </p>
                     </div>
                 </div>
             </div>
@@ -131,7 +108,6 @@
             </div>
             <!-- Dynamic Download Data from the API-->                                         
             <div class="container p-lg-4 mx-auto text-center">
-                <div *ngFor="let data of poweSectorDownloadData">
                     <table class="table table-hover table-responsive-sm">
                         <thead>
                         <tr>
@@ -142,7 +118,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr *ngFor="let data of poweSectorDownloadData">
                             <td scope="row">{{data.Dataset}}</td>
                             <td>{{data.Last_update}}</td>
                             <td>
@@ -164,7 +140,6 @@
                         </tr>                        
                         </tbody>
                     </table>
-                </div>
                 <!-- <p class="mt-5">{{ constants.minigrids_section4_more }}</p> -->
             </div>
         </section>

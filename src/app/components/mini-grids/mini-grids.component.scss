@@ -134,9 +134,14 @@ $home-hr-color: #93939f;
     font-size: 1.3rem;
 }
 
-.home-card {
+#power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
     padding: 1rem;
     width: 45%;
+}
+
+#mini-grids .section-3-market .home-card {
+    padding: 1rem;
+    width: 47%;
 }
 
 td svg {
@@ -309,5 +314,23 @@ td svg {
     }
 
 
+}
+
+// styling for chart legend
+::ng-deep{
+    .legend-title, .legend-labels{
+        background: none !important;
+        display: flex;
+        // flex-direction: column; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media (max-width: 425px) {
+        .legend-title, .legend-labels{
+            flex-direction: column; 
+        }
+
+    }
+    
 }
 
