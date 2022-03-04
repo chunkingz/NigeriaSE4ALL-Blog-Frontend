@@ -179,4 +179,11 @@ export class Constants {
     static accreditation_pt5_txt5 = "Shutterstock.com"
     static accreditation_pt5_txt6 = "About, Federal Ministry of Power (FMP), our mandate: Agbebiyi Adekunle Sunday / "
 
+
+    static power_sector_section4_subtitle = "Download a range of Power Sector datasets"
+    static power_sector_section3_subtitle = "Read about our recent Power Sector activities"
+
+    static shs_section4_subtitle = "Download a range of Solar Home Systems datasets"
+    static shs_section3_subtitle = "Read about our recent Solar Home Systems activities"
+
 }
