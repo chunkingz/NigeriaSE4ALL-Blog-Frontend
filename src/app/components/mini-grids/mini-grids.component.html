@@ -54,75 +54,76 @@
                 <br>
                 <p class="lead fw-normal">{{ constants.minigrids_section3_subtitle }}</p>
             </div>
-            <!-- <div class="container-fluid x-row">
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">Number of Connections</p>
-                    <div class="py-5">
-                        <ngx-charts-line-chart
-                        [customColors]="barchart0CustomColors"
-                        [view]="view"
-                        [results]="barchart0"
-                        [legend]="showLegend"
-                        [legendPosition]="below"
-                        [showXAxisLabel]="showXAxisLabel"
-                        [showYAxisLabel]="showYAxisLabel"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis"
-                        [timeline]="showTimeline"
-                        >
-                      </ngx-charts-line-chart>
+            <div class="container-fluid row">
+
+                <div class="card my-5 mx-4 p-5 col">
+                    <div class="row-x">
+                        <span class="fw-bold">
+                            Number of connections
+                        </span>
+                        <span>
+                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                        </span>
                     </div>
+                    
+                    <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
+                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">New services available</p>
-                    <div class="py-5">
-                        <ngx-charts-bar-vertical-stacked
-                        [customColors]="barchart1CustomColors"
-                        [view]="view"
-                        [results]="barchart1"
-                        [gradient]="gradient"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis"
-                        [legend]="showLegend"
-                        [legendPosition]="below"
-                        [showXAxisLabel]="showXAxisLabel"
-                        [showYAxisLabel]="showYAxisLabel"
-                        >
-                      </ngx-charts-bar-vertical-stacked>
+        
+                <div class="card my-5 mx-4 p-5 col">
+                    <div class="row-x">
+                        <span class="fw-bold">
+                            New services available
+                        </span>
+                        <span>
+                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                        </span>
                     </div>
+        
+                    <p-chart type="bar" [data]="stackedData" [options]="stackedOptions"></p-chart>
+                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">Employments created</p>
-                    <div class="py-5">
-                        <ngx-charts-bar-vertical 
-                        [customColors]="barchart2CustomColors"
-                        [view]="view"
-                        [results]="barchart2"
-                        [legend]="showLegend"
-                        [legendPosition]="below"
-                        [showGridLines]="showGridLines"
-                        [showXAxisLabel]="showXAxisLabel"
-                        [showYAxisLabel]="showYAxisLabel"
-                        [xAxis]="showXAxis"
-                        [yAxis]="showYAxis">
-                      </ngx-charts-bar-vertical>
+        
+            </div>
+        
+            <div class="container-fluid row">
+        
+                <div class="card my-5 mx-4 p-5 col">
+                    <div class="row-x">
+                        <span class="fw-bold">
+                            Employment created
+                        </span>
+                        <span>
+                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                        </span>
                     </div>
+        
+                    <p-chart type="bar" [data]="stackedData2" [options]="stackedOptions"></p-chart>
+                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p class="fw-bold">Customer satisfaction</p>
-                    <div class="py-5">
-                        <ngx-charts-pie-chart 
-                            [customColors]="pieChartCustomColors"
-                            [results]="pieChartData"
-                            [legend]="showLegend"
-                            [legendPosition]="below"
-                            [view]="view"
-                            [doughnut]="isDoughnut"
-                            [labels]="showLabels" >
-                        </ngx-charts-pie-chart>
+        
+                <div class="card my-5 mx-4 p-5 col">
+                    <div class="row-x">
+                        <span class="fw-bold">
+                            Customer satisfaction
+                        </span>
+                        <span>
+                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                        </span>
                     </div>
+                    
+                    <div id="doughnutChart">
+                        <div id="doughnutTxt">
+                            42<Br />
+                            Complaints
+                        </div>
+                        <p-chart type="doughnut" [data]="doughnutData" [options]="doughnutOptions"></p-chart>
+        
+                    </div>
+                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
+        
                 </div>
-            </div> -->
+            </div>
 
         </section>
 

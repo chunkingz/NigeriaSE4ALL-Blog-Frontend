@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
-import { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors } from '../../helpers/chart-data';
-import { LegendPosition } from '@swimlane/ngx-charts';
+// import { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors } from '../../helpers/chart-data';
+// import { LegendPosition } from '@swimlane/ngx-charts';
+import { Subscription } from 'rxjs';
+import { AppConfig } from '../../interfaces/IAppConfig';
+import { AppconfigService } from '../../services/appconfig.service';
 
 
 @Component({
@@ -13,6 +16,16 @@ import { LegendPosition } from '@swimlane/ngx-charts';
 })
 export class MiniGridsComponent implements OnInit {
 
+  doughnutData: any;
+  doughnutOptions: any;
+  basicData: any;
+  basicOptions: any;
+  stackedData: any;
+  stackedData2: any;
+  stackedOptions: any;
+  subscription!: Subscription;
+  config!: AppConfig;
+
   dynamicData: any;
   minigridDownloadData: any;
   appCardsData: any;
@@ -20,7 +33,7 @@ export class MiniGridsComponent implements OnInit {
   blogData: any;
   constants = Constants;
 
-  constructor(private _data: DataService, private _title: Title) { }
+  constructor(private _data: DataService, private _title: Title, private configService: AppconfigService) { }
 
   ngOnInit() {
     this._title.setTitle('Nigeria-SE4ALL | Mini-Grids');
@@ -29,31 +42,13 @@ export class MiniGridsComponent implements OnInit {
     this.getDownloadData("download-section-minigrids");
     this.getAllArticles("articles");
     this.getRessources("subpage-ressource-cards");
-    Object.assign(this, { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors });
+    this.getChartData();
+    // Object.assign(this, { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors });
   }
 
 
   // charts config
-  view: [number, number] = [600,300];
-  barchart0CustomColors: any[] | undefined;
-  barchart0: any[] | undefined;
-  barchart1CustomColors: any[] | undefined;
-  barchart1: any[] | undefined;
-  barchart2CustomColors: any[] | undefined;
-  barchart2: any[] | undefined;
-  pieChartData: any[] | undefined;
-  pieChartCustomColors: any[] | undefined;
-  showGridLines = true
-  isDoughnut = true
-  below = LegendPosition.Below
-  showXAxis = true;
-  showYAxis = true;
-  gradient = true;
-  showLegend = true;
-  showXAxisLabel = true;
-  showYAxisLabel = true;
-  showLabels = true;
-  showTimeline = true;
+
 
   /**
    * Fetches all dynamic data from the db
@@ -118,4 +113,186 @@ export class MiniGridsComponent implements OnInit {
         });
       }
 
+
+getChartData() {
+
+  this.basicData = {
+    labels: [2016, 2017, 2018, 2019, 2020, 2021],
+    datasets: [
+        {
+            label: 'Commercial',
+            backgroundColor: '#1dd068',
+            borderColor: '#1dd068',
+            data: [0, 9, 24, 257, 420, 1289]
+        },
+        {
+            label: 'Residential',
+            backgroundColor: '#ffbb00',
+            borderColor: '#ffbb00',
+            data: [0, 165, 189, 1573, 3089, 11575]
+        },
+        {
+          label: 'Productive',
+          backgroundColor: '#e0e2e9',
+          borderColor: '#e0e2e9',
+          data: [0, 0, 0, 42, 61, 239]
+        },
+        {
+          label: 'Public',
+          backgroundColor: '#b91108',
+          borderColor: '#b91108',
+          data: [0, 2, 7, 7, 22, 130]
+        },
+    ]
+  };
+
+  this.stackedData = {
+    labels: [2019, 2020, 2021],
+    datasets: [{
+        type: 'bar',
+        label: 'Commercial',
+        backgroundColor: '#1dd068',
+        data: [
+            30,
+            60,
+            96
+        ]
+    }, {
+        type: 'bar',
+        label: 'Productive',
+        backgroundColor: '#ffbb00',
+        data: [
+            2,
+            4,
+            12
+        ]
+    }]
+  };
+
+  this.stackedData2 = {
+    labels: [2019, 2020, 2021],
+    datasets: [{
+        type: 'bar',
+        label: 'Direct',
+        backgroundColor: '#1dd068',
+        data: [
+            10,
+            11,
+            16
+        ]
+    }, {
+        type: 'bar',
+        label: 'Indirect',
+        backgroundColor: '#ffbb00',
+        data: [
+            2,
+            37,
+            22
+        ]
+    }]
+  };
+
+  this.doughnutData = {
+  labels: ['Neither satisfied or unsatisfied','Somehow satisfied','Somehow unsatisfied','Very satisfied','Very unsatisfied'],
+  datasets: [
+      {
+          data: ['6', '50', '8', '36', '1'],
+          backgroundColor: [
+              "#1dd068",
+              "#ffbb00",
+              "#e0e2e9",
+              "#b91108",
+              "#000",
+          ],
+          hoverBackgroundColor: [
+              "#1dd068",
+              "#ffbb00",
+              "#e0e2e9",
+              "#b91108",
+              "#000"
+          ]
+      }
+  ]
+  };
+
+  this.applyLightTheme();
+  this.config = this.configService.config;
+  this.subscription = this.configService.configUpdate$.subscribe(config => {
+      this.config = config;
+  });
+  }
+
+  applyLightTheme() {
+
+    this.basicOptions = {
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#495057'
+                }
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#495057'
+                },
+                grid: {
+                    color: '#fff'
+                }
+            },
+            y: {
+                ticks: {
+                    color: '#495057'
+                },
+                grid: {
+                    color: '#fff'
+                }
+            }
+        }
+    };
+
+    this.stackedOptions = {
+        plugins: {
+            tooltips: {
+                mode: 'index',
+                intersect: false
+            },
+            legend: {
+                labels: {
+                    color: '#495057'
+                }
+            }
+        },
+        scales: {
+            x: {
+                stacked: true,
+                ticks: {
+                    color: '#495057'
+                },
+                grid: {
+                    color: '#fff'
+                }
+            },
+            y: {
+                stacked: true,
+                ticks: {
+                    color: '#495057'
+                },
+                grid: {
+                    color: '#fff'
+                }
+            }
+        }
+    };
+
+    this.doughnutOptions = {
+        plugins: {
+            legend: {
+                display: true,
+                position: 'right'
+            }
+        }
+    };
+  }
 }
