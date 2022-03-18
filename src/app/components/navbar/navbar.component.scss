@@ -8,6 +8,10 @@ $gr-color: #6c757d;
 
 /* Navigation Bar */
 
+.bi.bi-list{
+    fill: black;
+}
+
 a {
     color: inherit;
 }
@@ -200,12 +204,25 @@ ul span:hover {
         height: 1rem;
         margin-top: 1rem;
     }
-    #header-logo-nigeria {
+    #header-logo-nigeria, #header-blitz-div {
         display: inline;
-        margin-top: 0 !important;
+        margin-top: -1rem !important;
     }
     .padLR{
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+    }
+    .nav-link {
+        display: flex;
+        justify-content: center;
+    }
+    .nav-item{
+        padding: 0.5rem;
+    }
+    .nav-item#about {
+        padding-bottom: 1rem;
+    }
+    .navbar-toggler{
+        padding: 0rem !important;
     }
   }
