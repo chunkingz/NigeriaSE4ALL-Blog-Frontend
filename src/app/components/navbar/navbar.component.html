@@ -7,17 +7,14 @@
     'solar-home-systems': shs
   }">
 
-    <a class="navbar-brand" routerLink="/">
-      
-      <div id="header-blitz-div">
-        <a href="/">
-          <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
-          <div class="h2-alternative">
-            {{ dynamicBlogData ? dynamicBlogData.nav_site_title : constants.nav_site_title }}
-          </div>
-        </a>
-      </div>
-    </a>
+    <div id="header-blitz-div">
+      <a class="navbar-brand" routerLink="/">
+        <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
+        <div class="h2-alternative">
+          {{ dynamicBlogData ? dynamicBlogData.nav_site_title : constants.nav_site_title }}
+        </div>
+      </a>
+    </div>
 
     <div class="nav-logo-nigeria" id="header-logo-nigeria">
       <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
@@ -26,7 +23,7 @@
     </div>
 
     <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarCollapse">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
     </button>
@@ -58,7 +55,7 @@
         <li class="nav-item cell" id="about">
             <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
               <!-- <img src="assets/i_info.svg" alt="info icon" class="nav-icon"> -->
-              <span>{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
+              <span class="about-txt">{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
             </a>
         </li>
 
