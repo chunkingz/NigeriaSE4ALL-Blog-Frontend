@@ -39,7 +39,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-.angular/cache/
+.angular/
+
 
 # misc - remove the video subdirectory as they are quite heavy
 /src/assets/videos
