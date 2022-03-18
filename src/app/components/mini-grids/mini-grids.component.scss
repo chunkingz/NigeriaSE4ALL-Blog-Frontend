@@ -40,7 +40,7 @@ $home-hr-color: #93939f;
     color: $se4all-btn-txt-color !important;
 }
 
-.section-5 .card-shadow{
+.section-5 .card-shadow, .section-3-market .card{
     box-shadow: 0px 10px 20px #b9b9b9 !important;
 }
 
@@ -184,8 +184,45 @@ $home-hr-color: #93939f;
     border-color: $home-color1 !important;
 }
 
+// styling for charts
 
-// Responsive Web Design Section
+#doughnutChart{
+    position: relative;
+    top: -6rem;
+    max-width: 550px; 
+    max-height: 350px;
+}
+
+#doughnutTxt{
+    position: absolute; 
+    top: 78%; 
+    left: 21.5%; 
+    margin-top: -20px; 
+    line-height:19px; 
+    text-align: center; 
+    z-index: 99;
+}
+
+#download-chart-ellipses {
+    width: 5rem;
+    position: absolute;
+    right: 0;
+    bottom: 1.8rem;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+
+#info-tooltip{
+    max-height: 1.2rem;
+    max-width: 1.5rem;
+    cursor: pointer;
+}
+
+.row-x{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media (max-width: 1024px) {
     #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
@@ -217,6 +254,9 @@ $home-hr-color: #93939f;
     }
     .section-1 .home_section1_hero {
         font-size: 2.5rem;
+    }
+    .home-card {
+        width: 100%;
     }
     .home-card {
         width: 100%;
@@ -258,8 +298,6 @@ $home-hr-color: #93939f;
         height: 23rem;
         object-fit: cover;
     }
-    // Make section 1 responsive
-
     .section-1 #hero-section {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -269,6 +307,13 @@ $home-hr-color: #93939f;
     }
     .content {
         top: 5rem;
+    }
+    .section-3-market .row{
+        display: block !important;
+        flex-wrap: nowrap !important;
+    }
+    .section-3-market .card{
+        margin-left: 1rem !important;
     }
 
 }
@@ -322,6 +367,14 @@ $home-hr-color: #93939f;
     #power-sector .content, #shs .content {
         top: 8rem;
     }
+    #doughnutChart{
+        top: -3rem;
+    }
+    #doughnutTxt{
+        top: 48%;
+        left: 15%;
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -346,6 +399,9 @@ $home-hr-color: #93939f;
         width: 10rem;
         margin-bottom: .5rem;
     }
+    #doughnutTxt{
+        left: 13%;
+    }
 }
 
 @media (max-width: 320px) {
@@ -358,25 +414,12 @@ $home-hr-color: #93939f;
     .section-1 .home_section1_hero {
         font-size: 2rem;
     }
+    #doughnutChart{
+        top: -1rem;
+    }
+    #doughnutTxt{
+        left: 10%;
+    }
 
 
 }
-
-// styling for chart legend
-::ng-deep{
-    .legend-title, .legend-labels{
-        background: none !important;
-        display: flex;
-        // flex-direction: column; 
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    @media (max-width: 425px) {
-        .legend-title, .legend-labels{
-            flex-direction: column; 
-        }
-
-    }
-    
-}
-
