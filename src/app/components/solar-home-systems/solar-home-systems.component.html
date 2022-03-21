@@ -111,24 +111,24 @@
                     <table class="table table-hover table-responsive-sm">
                         <thead>
                         <tr>
-                            <th scope="col">{{ constants.minigrids_section4_col1 }}</th>
-                            <th scope="col">{{ constants.minigrids_section4_col2 }}</th>
-                            <th class="text-center" scope="col">{{ constants.minigrids_section4_col3 }}</th>
-                            <th class="text-center" scope="col">{{ constants.minigrids_section4_col4 }}</th>
+                            <th id="dataset_name" scope="col">{{ constants.minigrids_section4_col1 }}</th>
+                            <th id="dataset_date" scope="col">{{ constants.minigrids_section4_col2 }}</th>
+                            <th id="dataset_license" class="text-center" scope="col">{{ constants.minigrids_section4_col3 }}</th>
+                            <th id="dataset_download" class="text-center" scope="col">{{ constants.minigrids_section4_col4 }}</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr *ngFor="let data of shsDownloadData">
-                            <td scope="row">{{data.Dataset}}</td>
-                            <td>{{data.Last_update}}</td>
-                            <td class="text-center">
+                            <td id="dataset_name" scope="row">{{data.Dataset}}</td>
+                            <td id="dataset_date">{{data.Last_update}}</td>
+                            <td id="dataset_license" class="text-center">
                                 <span tooltip="{{data.License}}" placement="auto" id="creative-commons">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                                         <path d="M245.83 214.87l-33.22 17.28c-9.43-19.58-25.24-19.93-27.46-19.93-22.13 0-33.22 14.61-33.22 43.84 0 23.57 9.21 43.84 33.22 43.84 14.47 0 24.65-7.09 30.57-21.26l30.55 15.5c-6.17 11.51-25.69 38.98-65.1 38.98-22.6 0-73.96-10.32-73.96-77.05 0-58.69 43-77.06 72.63-77.06 30.72-.01 52.7 11.95 65.99 35.86zm143.05 0l-32.78 17.28c-9.5-19.77-25.72-19.93-27.9-19.93-22.14 0-33.22 14.61-33.22 43.84 0 23.55 9.23 43.84 33.22 43.84 14.45 0 24.65-7.09 30.54-21.26l31 15.5c-2.1 3.75-21.39 38.98-65.09 38.98-22.69 0-73.96-9.87-73.96-77.05 0-58.67 42.97-77.06 72.63-77.06 30.71-.01 52.58 11.95 65.56 35.86zM247.56 8.05C104.74 8.05 0 123.11 0 256.05c0 138.49 113.6 248 247.56 248 129.93 0 248.44-100.87 248.44-248 0-137.87-106.62-248-248.44-248zm.87 450.81c-112.54 0-203.7-93.04-203.7-202.81 0-105.42 85.43-203.27 203.72-203.27 112.53 0 202.82 89.46 202.82 203.26-.01 121.69-99.68 202.82-202.84 202.82z"/>
                                     </svg>
                                 </span>
                             </td>
-                            <td class="text-center">
+                            <td id="dataset_download" class="text-center">
                                 <a href="{{ data.download_url }}" target="_blank">
                                     <button type="button" class="btn btn-success cta" id="data-download">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -211,7 +211,7 @@
         <section class="section-5">
             <div class="container x-row">
                 <div *ngFor="let ressource of ressourcesCardsData">
-                    <div class="card my-5 mx-4 shadow-lg home-card">
+                    <div class="card my-5 mx-4 home-card">
                         <a href="{{ressource.url}}" target="_blank" >
                             <img src="{{ressource.image.url}}" class="card-img-top p-3 mt-3" alt="...">
                             <div class="card-body mt-3">

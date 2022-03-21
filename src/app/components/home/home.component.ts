@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
-    this._title.setTitle('Nigeria-SE4ALL');
+    this._title.setTitle(`${Constants.website_title}`);
     this.getHomeDynamicContent("dynamic-blog-content");
     this.getSection3DynamicContent("home-section-3-cards");
     this.getSection4DynamicContent("home-section-4-cards");

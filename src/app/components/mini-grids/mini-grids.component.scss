@@ -255,19 +255,34 @@ $home-hr-color: #93939f;
     .section-1 .home_section1_hero {
         font-size: 2.5rem;
     }
-    .home-card {
-        width: 100%;
-    }
-    .home-card {
-        width: 100%;
-    }
 
 }
 
-@media (max-width: 768px) {
-    #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
-        width: 95%;
+@media (max-width: 991px) {
+    #doughnutChart{
+        top: -4rem;
     }
+    #doughnutTxt{
+        left: 12.5%;
+        top: 42%;
+        margin-top: 0px;
+    }
+    .text-wrap {
+        width: 90%;
+    }
+    #shs .section-4-blog, .section-4, .section-5{
+        padding-top: 4rem !important;
+        margin-top: -2rem !important;
+    }
+
+    #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
+        width: 90% !important;
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+}
+
+@media (max-width: 768px) {
     .section-2 img {
         width: 40rem;
         height: 20rem;
@@ -279,9 +294,6 @@ $home-hr-color: #93939f;
     }
     .section-2-title, .section-2-card {
         padding-bottom: 3rem;
-    }
-    .text-wrap {
-        width: 38rem;
     }
     p.lead {
         margin-bottom: 0px;
@@ -320,7 +332,7 @@ $home-hr-color: #93939f;
 
 @media (max-width: 425px) {
     #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
-        width: 90%;
+        height: 80%;
     }
     .section-4-download td #data-download-btn-txt {
         display: none;
@@ -423,6 +435,4 @@ $home-hr-color: #93939f;
     .section-4-download #dataset_date{
         display: none;
     }
-
-
 }

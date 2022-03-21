@@ -20,7 +20,7 @@ export class SolarHomeSystemsComponent implements OnInit {
   constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
-    this._title.setTitle('Nigeria-SE4ALL | Solar Home Systems');
+    this._title.setTitle(`${Constants.website_title} | Solar Home Systems`);
     this.getDynamicContent();
     this.getApps("subpage-webmap-cards");
     this.getDownloadData("download-section-shs");

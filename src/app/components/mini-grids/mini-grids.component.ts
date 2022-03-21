@@ -36,7 +36,7 @@ export class MiniGridsComponent implements OnInit {
   constructor(private _data: DataService, private _title: Title, private configService: AppconfigService) { }
 
   ngOnInit() {
-    this._title.setTitle('Nigeria-SE4ALL | Mini-Grids');
+    this._title.setTitle(`${Constants.website_title} | Mini-Grids`);
     this.getDynamicContent("dynamic-blog-content");
     this.getApps("subpage-webmap-cards");
     this.getDownloadData("download-section-minigrids");

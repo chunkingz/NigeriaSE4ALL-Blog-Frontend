@@ -21,7 +21,7 @@ export class PowerSectorComponent implements OnInit {
   constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
-    this._title.setTitle('Nigeria-SE4ALL | Power Sector');
+    this._title.setTitle(`${Constants.website_title} | Power Sector`);
     this.getDynamicContent();
     this.getApps("subpage-webmap-cards");
     this.getDownloadData("download-section-power-sectors");

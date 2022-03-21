@@ -1,5 +1,5 @@
 
-$se4all-home-bg-color: #777;
+$se4all-home-bg-color: #93939F;
 $se4all-btn-txt-color: #fff;
 $se4all-section4-bg: #ffe293;
 $se4all-gray-bg: #eeeff1;
@@ -21,6 +21,15 @@ ng-go-top-button fa-icon {
 ::ng-deep{
     svg.svg-inline--fa.fa-arrow-up.fa-w-14{
         margin-top: .6rem;
+    }
+    .go-top-button{
+        background-color: #fb0 !important;
+    }
+    @media (max-width: 425px) {
+        .go-top-button{
+            width: 3rem !important;
+            height: 3rem !important;
+        }
     }
 }
 
@@ -74,10 +83,16 @@ ng-go-top-button fa-icon {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .section-2 .part-1, .section-2 .part-2 {
         justify-content: center;
     }
+}
+
+@media (max-width: 768px) {
+    // .section-2 .part-1, .section-2 .part-2 {
+    //     justify-content: center;
+    // }
 }
 
 @media (max-width: 425px) {

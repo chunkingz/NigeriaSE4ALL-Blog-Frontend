@@ -186,4 +186,5 @@ export class Constants {
     static shs_section4_subtitle = "Download a range of Solar Home Systems datasets"
     static shs_section3_subtitle = "Read about our recent Solar Home Systems activities"
 
+    static website_title = "Nigeria SE4ALL"
 }

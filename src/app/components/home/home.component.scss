@@ -168,8 +168,8 @@ $se4all-v3-color: #fcbc0c;
 #myVideo {
     position: relative;
     width: 100%; 
-    height: 55rem; 
-    top: -6rem; 
+    height: 54rem; 
+    top: -5.1rem; 
     z-index: -1; 
     margin-bottom: -44rem;
 }
@@ -192,6 +192,14 @@ $se4all-v3-color: #fcbc0c;
     font-size: 1.3rem;
 }
 
+.btn-v3 {
+    background-color: $se4all-v3-color !important;
+    color: $se4all-btn-txt-color !important;
+    border-radius: 10px !important;
+    padding: 1rem !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+}
 
 // Responsive Web Design Section
 @media (max-width: 1440px) {
@@ -204,6 +212,11 @@ $se4all-v3-color: #fcbc0c;
 }
 
 @media (max-width: 1024px) {
+    .btn-v3 {
+        padding: 0.5rem 1rem !important;
+        font-size: 1.2rem !important;
+        font-weight: bold !important;
+    }
     .section-3 .card {
         width: 26rem;
     }
@@ -247,16 +260,38 @@ $se4all-v3-color: #fcbc0c;
     }
     .bi.bi-play-circle {
         position: absolute;
-        top: 20em;
-        right: 5.5rem;
+        top: 22rem;
+        right: 6rem;
     }
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+    .content {
+        top: 1rem;
+    }
+    .section-2 {
+        margin-top: -17rem;
+        margin-bottom: -1rem;
+    }
+    .section-3 {
+        padding-top: 3rem;
+    }
     .section-3 .card {
         width: 95%;
+        height: 80% !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
+}
+
+@media (max-width: 850px) {
+    .section-1 #hero-section {
+        padding-right: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
     .section-4-card {
         margin-left: 34px !important;
         margin-right: 34px !important;
@@ -300,9 +335,17 @@ $se4all-v3-color: #fcbc0c;
 
 }
 
+@media (max-width: 640px) {
+    .padLR{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
 @media (max-width: 425px) {
     .section-3 .card {
-        width: 90%;
+        width: 90% !important;
+        height: 90% !important;
     }
     .section-4-card {
         margin-left: 24px !important;

@@ -16,7 +16,7 @@ export class AccreditationComponent implements OnInit {
   constructor(private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
-    this._title.setTitle('Nigeria-SE4ALL | Accreditation');
+    this._title.setTitle(`${this.constants.website_title} | Accreditation`);
     this.getDynamicContent();
   }
 

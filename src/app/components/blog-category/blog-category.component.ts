@@ -25,7 +25,7 @@ export class BlogCategoryComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _data: DataService, private _title: Title) { }
 
   ngOnInit() {
-    this._title.setTitle('Nigeria-SE4ALL');
+    this._title.setTitle(`${Constants.website_title}`);
     this.fetchBlogPosts();
     this.getAllCategories("categories");
     this.getDynamicContent("dynamic-blog-content");

@@ -136,6 +136,12 @@ ul span:hover {
 
 
 /* Responsive layout - makes a one column layout */
+@media (max-width: 1440px) {
+    .navbar .h2-alternative, .navbar a{
+        font-size: 12pt;
+    }
+}
+
 @media (max-width: 1024px) {
     .tag-title{
         font-size: 10pt;
@@ -147,70 +153,31 @@ ul span:hover {
         margin-right: 0.5rem;
         margin-top: 0.1rem;
     }
-    .navbar .h2-alternative, .navbar a{
-        font-size: 12pt;
-    }
     .cell {
         margin-right: 0;
     }
 }
 
-@media (max-width: 768px) {
-    .flex-container {
-        margin: 0px 20px 1px 20px;
-    }
+
+@media (max-width: 918px) {
     div.h2-alternative, #header-logo-nigeria-2   {
         display: none !important;
     }
-    .navbar {
-        margin-bottom: 2rem;
-    }
-    
 }
-  @media (max-width: 640px) {
-    .flex-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 5rem;
-    }
-    
-    #header-blitz-div img, #header-logo-nigeria img, #header-logo-nigeria-2 img #hamburger {
-        height: 3rem;
-        margin-top: 1.5rem;
-    }
 
-    #header-logo-nigeria img{
-        padding-bottom: 1rem;
-    }
-
-    #hamburger{
-        display: inline;
-    }
-  }
-
-  @media (max-width: 425px) {
-    .flex-container{
-        margin: 0px 20px 1px 20px;
-        padding-top: 2rem;
-        padding-bottom: 3rem;
-    }
-    #header-blitz-div img {
-        height: 2rem;
-        margin-bottom: 1rem;
-    }
-    #hamburger img{
-        height: 1rem;
-        margin-top: 1rem;
-    }
+@media (max-width: 767px) {
     #header-logo-nigeria, #header-blitz-div {
         display: inline;
         margin-top: -1rem !important;
     }
-    .padLR{
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+    #header-logo-nigeria img {
+        height: 3rem;
+        margin-top: 1.5rem;
+    }
+    #header-blitz-div img {
+        height: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
     }
     .nav-link {
         display: flex;
@@ -225,4 +192,16 @@ ul span:hover {
     .navbar-toggler{
         padding: 0rem !important;
     }
+}
+
+  @media (max-width: 640px) {
+    #header-logo-nigeria img{
+        padding-bottom: 0.5rem;
+    }
+    .padLR{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
   }
+
+//  @media (max-width: 425px) {}
