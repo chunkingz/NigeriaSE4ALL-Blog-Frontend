@@ -62,12 +62,12 @@ export const footerAnimation = trigger('footerAnimation', [
   ])
 
 export const navbarAnimation = trigger('navbarAnimation', [
-    transition(':enter', [
-      group([
-        query('.navbar', [
-          style({ transform: 'translateY(-20px)'}),
-          animate("2s")
-        ])
-      ])
-    ])
+    // transition(':enter', [
+    //   group([
+    //     query('.navbar', [
+    //       style({ transform: 'translateY(-20px)'}),
+    //       animate("2s")
+    //     ])
+    //   ])
+    // ])
   ])

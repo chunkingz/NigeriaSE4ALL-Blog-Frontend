@@ -1,7 +1,7 @@
 
 <div *ngFor="let dynamicBlogData of dynamicData" class="outer-div" @navbarAnimation>
 
-  <nav class="navbar navbar-expand-md fixed-top padLR" [ngClass]="{
+  <nav class="navbar navbar-expand-lg fixed-top padLR" [ngClass]="{
     'mini-grid': minigrids,
     'power-sector': powersector,
     'solar-home-systems': shs
@@ -28,44 +28,37 @@
       </svg>
     </button>
 
-    <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarCollapse" [isAnimated]="true">
-      <ul class="navbar-nav mr-auto mx-auto">
-        
-        <li class="nav-item cell" id="mini-grid">
-          <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
-            <div class="circular circular-mini-grid"></div> 
-              <span class="mini-grid-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_4 : constants.Nav_txt_4 }}</span>
-          </a>
-        </li>
+    <div id="right-side-nav">
 
-        <li class="nav-item cell" id="power-sector">
-            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
-              <div class="circular circular-power-sector"></div>
-              <span class="power-sector-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_5 : constants.Nav_txt_5 }}</span>
+      <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarCollapse" [isAnimated]="true">
+          
+            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
+              <div class="circular circular-mini-grid"></div> 
+                <span class="mini-grid-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_4 : constants.Nav_txt_4 }}</span>
             </a>
-        </li>
 
-        <li class="nav-item cell" id="solar-home-systems">
-            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
-              <div class="circular circular-solar-home-systems"></div>
-              <span class="solar-home-systems-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_6 : constants.Nav_txt_6 }}</span>
-            </a>
-        </li>
+              <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
+                <div class="circular circular-power-sector"></div>
+                <span class="power-sector-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_5 : constants.Nav_txt_5 }}</span>
+              </a>
 
-        <li class="nav-item cell" id="about">
-            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
-              <!-- <img src="assets/i_info.svg" alt="info icon" class="nav-icon"> -->
-              <span class="about-txt">{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
-            </a>
-        </li>
+              <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
+                <div class="circular circular-solar-home-systems"></div>
+                <span class="solar-home-systems-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_6 : constants.Nav_txt_6 }}</span>
+              </a>
 
-      </ul>
-    </div>
+              <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
+                <span class="about-txt">{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
+              </a>
 
-    <div class="nav-logo-nigeria" id="header-logo-nigeria-2">
-      <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
-        <img src="assets/logo-2-crest.png" alt="FMP Logo">
-      </a>
+      </div>
+
+      <div class="nav-logo-nigeria" id="header-logo-nigeria-2">
+        <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
+          <img src="assets/logo-2-crest.png" alt="FMP Logo">
+        </a>
+      </div>
+
     </div>
 
   </nav>

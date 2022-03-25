@@ -354,7 +354,7 @@ $home-hr-color: #93939f;
         padding-bottom: 3rem;
     }
     .text-wrap {
-        width: 22rem;
+        width: 100%;
     }
     .section-4 .card img {
         border-radius: 20px 20px 0px 0px;
@@ -392,7 +392,7 @@ $home-hr-color: #93939f;
 @media (max-width: 375px) {
     #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
         width: 85%;
-        height: 80%;
+        height: 90%;
     }
     .btn-lg{
         padding: 0.5rem;
@@ -400,9 +400,6 @@ $home-hr-color: #93939f;
     }
     .section-2 img {
         width: 19rem;
-    }
-    .text-wrap {
-        width: 20rem;
     }
     .card-text-badge-2{
         flex-direction: column;
@@ -419,9 +416,6 @@ $home-hr-color: #93939f;
 @media (max-width: 320px) {
     .section-2 img {
         width: 15rem;
-    }
-    .text-wrap {
-        width: 16rem;
     }
     .section-1 .home_section1_hero {
         font-size: 2rem;

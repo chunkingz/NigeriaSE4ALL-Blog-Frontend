@@ -1,12 +1,10 @@
 
-$home-color1: #58c495;
+
+$home-color1: #57c494;
 $home-color2: #085064;
 $home-color3: #f76904;
 $y-color: #fb0;
 $gr-color: #6c757d;
-
-
-/* Navigation Bar */
 
 .bi.bi-list{
     fill: black;
@@ -16,28 +14,39 @@ a {
     color: inherit;
 }
 
-.navbar{
-    background-color: white;
-    padding-top: 0;
-    padding-bottom: 0;
-    // border-bottom: 15px solid $home-color1;
+#header-blitz-div {
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 
-.navbar img{
-    margin-right: 1rem;
+#right-side-nav{
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.navbar-collapse{
+    padding-right: 10px;
+}
+
+.navbar{
+    background-color: white;
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.4rem !important;
+    justify-content: space-between;
 }
 
 .navbar .h2-alternative{
     color: $y-color;
-    font-size: 16pt;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    padding-top: .4rem;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    margin: 10px;
 }
 
 .padLR{
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
+    padding-left: 6.25rem !important;
+    padding-right: 6.25rem !important;
 }
 
 #header-blitz-div img{
@@ -45,8 +54,7 @@ a {
 }
 
 #header-logo-nigeria img, #header-logo-nigeria-2 img {
-    height: 2.5rem;
-    // margin: 1rem;
+    height: 60px;
 }
 
 #header-blitz-div a {
@@ -60,8 +68,8 @@ a {
 
 .navbar a{
     color: #464646;
-    font-size: 16pt;
-    font-weight: normal;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 #new-icon {
@@ -70,11 +78,13 @@ a {
 
 
 .circular {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
-    margin-right: 0.6rem;
-    margin-top: 0.3rem;
+}
+
+.mini-grid-txt, .power-sector-txt, .solar-home-systems-txt {
+    padding-left: 10px;
 }
 
 .mini-grid-txt {
@@ -89,28 +99,16 @@ a {
     color: $home-color3;
 }
 
-.circular-mini-grid {
-    background-color: $home-color1;
-}
-
-.circular-power-sector {
-    background-color: $home-color2;
-}
-
-.circular-solar-home-systems {
-    background-color: $home-color3;
-}
-
 .mini-grid {
-    border-bottom: 5px solid $home-color1;
+    border-bottom: 14px solid $home-color1;
 }
 
 .power-sector {
-    border-bottom: 5px solid $home-color2;
+    border-bottom: 14px solid $home-color2;
 }
 
 .solar-home-systems {
-    border-bottom: 5px solid $home-color3;
+    border-bottom: 14px solid $home-color3;
 }
 
 .tag-title {
@@ -120,25 +118,32 @@ a {
 
 .nav-link {
     display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
 }
-
-#about img {
-    margin-right: 0.3rem;
-}
-
-.cell {
-    margin-right: 1rem;
-}
-
-ul span:hover {
-    color: $y-color;
-}
-
 
 /* Responsive layout - makes a one column layout */
 @media (max-width: 1440px) {
     .navbar .h2-alternative, .navbar a{
         font-size: 12pt;
+    }
+}
+
+@media (max-width: 1107px) {
+    .padLR {
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+        transition: padding-left 1s, padding-right 1s;
+    }
+}
+
+@media (max-width: 1040px) {
+    .nav-link {
+        margin-right: 1px;
+        margin-left: 1px;
+        transition: margin-left 1s, margin-right 1s;
     }
 }
 
@@ -153,55 +158,58 @@ ul span:hover {
         margin-right: 0.5rem;
         margin-top: 0.1rem;
     }
-    .cell {
-        margin-right: 0;
-    }
 }
 
-
-@media (max-width: 918px) {
-    div.h2-alternative, #header-logo-nigeria-2   {
+@media (max-width: 991px) {
+    .navbar-toggler{
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+    }
+    #header-logo-nigeria {
+        display: inline;
+        position: absolute;
+        right: 45%;
+        top: 0.2rem;
+    }
+    #header-logo-nigeria img{
+        height: 50px;
+    }
+    #header-logo-nigeria-2   {
         display: none !important;
     }
-}
-
-@media (max-width: 767px) {
-    #header-logo-nigeria, #header-blitz-div {
-        display: inline;
-        margin-top: -1rem !important;
-    }
-    #header-logo-nigeria img {
-        height: 3rem;
-        margin-top: 1.5rem;
-    }
-    #header-blitz-div img {
-        height: 2rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+    #right-side-nav{
+        width: 100%;
     }
     .nav-link {
         display: flex;
         justify-content: center;
     }
-    .nav-item{
-        padding: 0.5rem;
-    }
-    .nav-item#about {
-        padding-bottom: 1rem;
-    }
-    .navbar-toggler{
-        padding: 0rem !important;
-    }
 }
 
-  @media (max-width: 640px) {
-    #header-logo-nigeria img{
-        padding-bottom: 0.5rem;
-    }
+@media (max-width: 640px) {
     .padLR{
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+        transition: padding-left 1s, padding-right 1s;
     }
-  }
+}
 
-//  @media (max-width: 425px) {}
+@media (max-width: 500px) {
+    #header-logo-nigeria {
+        right: 35%;
+        transition: right 1s;
+    }
+}
+@media (max-width: 425px) {
+    .navbar-toggler{
+        right: 0.1rem;
+        transition: right 1s;
+    }
+}
+
+@media (max-width: 375px) {
+    #header-logo-nigeria {
+        display: none;
+    }
+}

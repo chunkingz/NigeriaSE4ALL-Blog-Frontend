@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~ngx-sharebuttons/themes/outline';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;0,900;1,400&display=swap');
+
 
 /* Theme imports for share buttons */
 // @import '~ngx-sharebuttons/themes/material';
@@ -22,7 +24,7 @@ a {
     text-decoration: none !important;
 }
 
-* {
+body {
     font-family: 'Poppins Bold', 'Source Sans Pro', Arial, sans-serif !important;
 }
 
@@ -64,7 +66,7 @@ img.blog-preview-img {
     background-color: $home-color1 !important;
 }
 
-.circular-shs, .rounded-pill-mini-shs {
+.circular-shs, .rounded-pill-mini-shs, .circular-solar-home-systems {
     background-color: $home-color3 !important;
 }
 

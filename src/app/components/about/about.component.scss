@@ -129,16 +129,19 @@ h3 {
 
 // Responsive Web Design Section
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .section-1 .card {
-        width: 26rem;
+        width: 44%;
+    }
+}
+
+@media (max-width: 991px) {
+    .section-1 .card {
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .section-1 .card {
-        width: 18rem;
-    }
     #sustainable-img {
         width: 100%;
     }
@@ -148,9 +151,6 @@ h3 {
 }
 
 @media (max-width: 425px) {
-    .section-1 .card {
-        width: 22rem;
-    }
     #sdg7-logo {
         width: 70%;
         margin-left: auto;
