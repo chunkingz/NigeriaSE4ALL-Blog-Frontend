@@ -48,67 +48,92 @@
             </div>
         </section>
 
-        <section class="section-3-market">
+        <section class="section-3-market py-5">
             <div class="container p-lg-4 mx-auto text-center">
-                <h2 class="fw-bold">{{ constants.minigrids_section3_hero }}</h2>
+                <h1 class="fw-bold">Market intelligence</h1>
                 <br>
-                <p class="lead fw-normal">{{ constants.minigrids_section3_subtitle }}</p>
-            </div>
-            <div class="container-fluid row">
-
-                <div class="card my-5 mx-4 p-5 col">
-                    <div class="row-x">
-                        <span class="fw-bold">
-                            Number of connections
-                        </span>
-                        <span>
-                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
-                        </span>
-                    </div>
-                    
-                    <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
-                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
-                </div>
-        
-                <div class="card my-5 mx-4 p-5 col">
-                    <div class="row-x">
-                        <span class="fw-bold">
-                            New services available
-                        </span>
-                        <span>
-                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
-                        </span>
-                    </div>
-        
-                    <p-chart type="bar" [data]="stackedData" [options]="stackedOptions"></p-chart>
-                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
-                </div>
-        
+                <p class="lead fw-normal">Real time market-driven insights</p>
             </div>
         
             <div class="container-fluid row">
         
-                <div class="card my-5 mx-4 p-5 col">
-                    <div class="row-x">
-                        <span class="fw-bold">
-                            Employment created
-                        </span>
-                        <span>
-                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
-                        </span>
-                    </div>
+                <div class="card my-5 mx-4 p-5 shadow-lg home-card col">
+                    <span *ngFor="let installedCapacity of installedCapacityData">
+                        <div class="row-x">
+                            <span class="fw-bold">
+                                {{ installedCapacity.installedCapacity.title }}
+                            </span>
+                            <span>
+                                <img placement="bottom" ngbTooltip="{{ installedCapacity.installedCapacity.tooltip }}" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                            </span>
+                        </div>
         
-                    <p-chart type="bar" [data]="stackedData2" [options]="stackedOptions"></p-chart>
-                    <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
+                        <p-chart class="col-10" type="bar" [data]="stackedData" [options]="stackedOptions"></p-chart>
+        
+                        <img id="download-chart-ellipses" aria-haspopup="true" class="pr-5" src="https://minigridmonitor-api.azurewebsites.net/icons/ribbon.png">
+                    </span>
                 </div>
         
-                <div class="card my-5 mx-4 p-5 col">
+                <div class="card my-5 mx-4 p-5 shadow-lg home-card col">
+                    <span *ngFor="let peopleConnected of peopleConnectedData">
+                        <div>
+                            <span class="trend-icon">
+                                <img class="icon" src="https://minigridmonitor-api.azurewebsites.net/icons/arrowGreenUp.png">
+                            </span>
+                            <span class="trend-value">
+                                {{ peopleConnected.peopleConnected.trendValue }}%
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <span class="chart-title">
+                                {{ peopleConnected.peopleConnected.value }}
+                            </span>
+                            <br>
+                            <span class="chart-subtitle">
+                                {{ peopleConnected.peopleConnected.title }}
+                            </span>
+                        </div>
+                        
+                        <p-chart type="line" [data]="basicData" [options]="basicOptions"></p-chart>
+                    </span>
+                </div>
+        
+        
+            </div>
+        
+            <div class="container-fluid row">
+                
+                <div class="card my-5 mx-4 p-5 shadow-lg home-card col">
+                    <span *ngFor="let communitiesConnected of communitiesConnectedData">
+                        <div>
+                            <span class="trend-icon">
+                                <img class="icon" src="https://minigridmonitor-api.azurewebsites.net/icons/arrowGreenUp.png">
+                            </span>
+                            <span class="trend-value">
+                                {{ communitiesConnected.communitiesConnected.trendValue }}%
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <span class="chart-title">
+                                {{ communitiesConnected.communitiesConnected.value }}
+                            </span>
+                            <br>
+                            <span class="chart-subtitle">
+                                {{ communitiesConnected.communitiesConnected.title }}
+                            </span>
+                        </div>
+                        
+                        <p-chart type="line" [data]="basicData2" [options]="basicOptions"></p-chart>
+                    </span>
+                </div>
+        
+                <div class="card my-5 mx-4 p-5 shadow-lg home-card col">
                     <div class="row-x">
                         <span class="fw-bold">
                             Customer satisfaction
                         </span>
                         <span>
-                            <img placement="bottom" ngbTooltip="Tooltip on bottom" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                            <img placement="bottom" ngbTooltip="Number of connections per customer group" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
                         </span>
                     </div>
                     
@@ -124,9 +149,9 @@
         
                 </div>
             </div>
-
+        
         </section>
-
+        
         <section class="section-4-download">
             <div class="container p-lg-4 mx-auto text-center">
                 <h2 class="fw-bold">{{ constants.minigrids_section4_hero }}</h2>

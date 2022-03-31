@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
-// import { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors } from '../../helpers/chart-data';
-// import { LegendPosition } from '@swimlane/ngx-charts';
 import { Subscription } from 'rxjs';
 import { AppConfig } from '../../interfaces/IAppConfig';
 import { AppconfigService } from '../../services/appconfig.service';
+import { ChartsApiService } from 'src/app/services/charts-api.service';
 
 
 @Component({
@@ -19,10 +18,23 @@ export class MiniGridsComponent implements OnInit {
   doughnutData: any;
   doughnutOptions: any;
   basicData: any;
+  basicData2: any;
   basicOptions: any;
   stackedData: any;
-  stackedData2: any;
   stackedOptions: any;
+
+  installedCapacityData: any;
+  installedCapacity: any;
+
+  peopleConnectedData: any;
+  peopleConnected: any;
+
+  communitiesConnectedData: any;
+  communitiesConnected: any;
+
+  doughnutAnalyticsData: any;
+  doughnutAnalytics: any;
+
   subscription!: Subscription;
   config!: AppConfig;
 
@@ -33,7 +45,7 @@ export class MiniGridsComponent implements OnInit {
   blogData: any;
   constants = Constants;
 
-  constructor(private _data: DataService, private _title: Title, private configService: AppconfigService) { }
+  constructor(private _data: DataService, private _title: Title, private configService: AppconfigService, private _charts: ChartsApiService) { }
 
   ngOnInit() {
     this._title.setTitle(`${Constants.website_title} | Mini-Grids`);
@@ -42,12 +54,13 @@ export class MiniGridsComponent implements OnInit {
     this.getDownloadData("download-section-minigrids");
     this.getAllArticles("articles");
     this.getRessources("subpage-ressource-cards");
-    this.getChartData();
-    // Object.assign(this, { barchart0, barchart0CustomColors, barchart1, barchart1CustomColors, barchart2CustomColors, barchart2, pieChartData, pieChartCustomColors });
+
+    // charts
+    this.getInstalledCapacity();
+    this.getPeopleConnected();
+    this.getCommunitiesConnected();
+    this.getDoughnutAnalytics();
   }
-
-
-  // charts config
 
 
   /**
@@ -58,7 +71,7 @@ export class MiniGridsComponent implements OnInit {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 
@@ -70,7 +83,7 @@ export class MiniGridsComponent implements OnInit {
       this.minigridDownloadData = res;            
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 
@@ -83,7 +96,7 @@ export class MiniGridsComponent implements OnInit {
       this.appCardsData = res;
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 
@@ -96,7 +109,7 @@ export class MiniGridsComponent implements OnInit {
         this.ressourcesCardsData = res;
       }, error => {
         console.log('An unexpected error occurred');
-        console.log(error);
+        console.log(error.message);
       });
     }
 
@@ -109,190 +122,306 @@ export class MiniGridsComponent implements OnInit {
           this.blogData = res;
         }, error => {
           console.log('An unexpected error occurred');
-          console.log(error);
+          console.log(error.message);
         });
       }
 
+/***************** CHARTS CONFIG *************************/
 
-getChartData() {
-
-  this.basicData = {
-    labels: [2016, 2017, 2018, 2019, 2020, 2021],
-    datasets: [
-        {
-            label: 'Commercial',
-            backgroundColor: '#1dd068',
-            borderColor: '#1dd068',
-            data: [0, 9, 24, 257, 420, 1289]
-        },
-        {
-            label: 'Residential',
-            backgroundColor: '#ffbb00',
-            borderColor: '#ffbb00',
-            data: [0, 165, 189, 1573, 3089, 11575]
-        },
-        {
-          label: 'Productive',
-          backgroundColor: '#e0e2e9',
-          borderColor: '#e0e2e9',
-          data: [0, 0, 0, 42, 61, 239]
-        },
-        {
-          label: 'Public',
-          backgroundColor: '#b91108',
-          borderColor: '#b91108',
-          data: [0, 2, 7, 7, 22, 130]
-        },
-    ]
-  };
-
-  this.stackedData = {
-    labels: [2019, 2020, 2021],
-    datasets: [{
-        type: 'bar',
-        label: 'Commercial',
-        backgroundColor: '#1dd068',
-        data: [
-            30,
-            60,
-            96
-        ]
-    }, {
-        type: 'bar',
-        label: 'Productive',
-        backgroundColor: '#ffbb00',
-        data: [
-            2,
-            4,
-            12
-        ]
-    }]
-  };
-
-  this.stackedData2 = {
-    labels: [2019, 2020, 2021],
-    datasets: [{
-        type: 'bar',
-        label: 'Direct',
-        backgroundColor: '#1dd068',
-        data: [
-            10,
-            11,
-            16
-        ]
-    }, {
-        type: 'bar',
-        label: 'Indirect',
-        backgroundColor: '#ffbb00',
-        data: [
-            2,
-            37,
-            22
-        ]
-    }]
-  };
-
-  this.doughnutData = {
-  labels: ['Neither satisfied or unsatisfied','Somehow satisfied','Somehow unsatisfied','Very satisfied','Very unsatisfied'],
-  datasets: [
-      {
-          data: ['6', '50', '8', '36', '1'],
-          backgroundColor: [
-              "#1dd068",
-              "#ffbb00",
-              "#e0e2e9",
-              "#b91108",
-              "#000",
-          ],
-          hoverBackgroundColor: [
-              "#1dd068",
-              "#ffbb00",
-              "#e0e2e9",
-              "#b91108",
-              "#000"
-          ]
+    /** Fetch Chart API data */
+    getInstalledCapacity() {
+      this._charts.getInstalledCapacity().subscribe( (res:any) => {
+          this.installedCapacityData = [res];
+          this.installedCapacity = res;
+  
+          this.getStackedData();
+      }, error => {
+          console.log(error);
+      });
       }
-  ]
-  };
-
-  this.applyLightTheme();
-  this.config = this.configService.config;
-  this.subscription = this.configService.configUpdate$.subscribe(config => {
-      this.config = config;
-  });
-  }
-
-  applyLightTheme() {
-
-    this.basicOptions = {
-        plugins: {
-            legend: {
-                labels: {
-                    color: '#495057'
-                }
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#495057'
-                },
-                grid: {
-                    color: '#fff'
-                }
-            },
-            y: {
-                ticks: {
-                    color: '#495057'
-                },
-                grid: {
-                    color: '#fff'
-                }
-            }
-        }
-    };
-
-    this.stackedOptions = {
-        plugins: {
-            tooltips: {
-                mode: 'index',
-                intersect: false
-            },
-            legend: {
-                labels: {
-                    color: '#495057'
-                }
-            }
-        },
-        scales: {
-            x: {
-                stacked: true,
-                ticks: {
-                    color: '#495057'
-                },
-                grid: {
-                    color: '#fff'
-                }
-            },
-            y: {
-                stacked: true,
-                ticks: {
-                    color: '#495057'
-                },
-                grid: {
-                    color: '#fff'
-                }
-            }
-        }
-    };
-
-    this.doughnutOptions = {
-        plugins: {
-            legend: {
-                display: true,
-                position: 'right'
-            }
-        }
-    };
-  }
+  
+      getPeopleConnected() {
+      this._charts.getPeopleAndCommunitiesConnected().subscribe( (res:any) => {
+          this.peopleConnectedData = [res];        
+          this.peopleConnected = res;
+  
+          this.getBasicData1();
+      }, error => {
+          console.log(error);
+      });
+      }
+      
+      getCommunitiesConnected() {
+      this._charts.getPeopleAndCommunitiesConnected().subscribe( (res:any) => {
+          this.communitiesConnectedData = [res];        
+          this.communitiesConnected = res;
+  
+          this.getBasicData2();
+      }, error => {
+          console.log(error);
+      });
+      }
+  
+      getDoughnutAnalytics() {
+      this._charts.getDoughnutAnalytics().subscribe( (res:any) => {
+          this.doughnutAnalyticsData = [res];        
+          this.doughnutAnalytics = res;
+  
+          this.getDoughnutData();
+      }, error => {
+          console.log(error);
+      });
+      }
+  
+      /** Set Chart Data */
+  
+      getStackedData() {
+  
+          const stackedDataChartType = 'bar';
+          const stackedDataColorScheme = ['#1dd068', '#ffbb00', '#e0e2e9', '#b91108', '#000'];
+          const stackedDataCapData = this.installedCapacity.installedCapacity.series;
+          const stackedDataLegendName: any[] = [];
+          const stackedDataPoints: any[] = [];
+          
+  
+          for(let i=0; i < stackedDataCapData.length ; i++) {
+              stackedDataLegendName.push(stackedDataCapData[i].name);
+              stackedDataPoints.push(stackedDataCapData[i].points);
+          }
+  
+          this.stackedData = {
+              labels: [],
+              datasets: [
+              {
+                  type: stackedDataChartType,
+                  label: '',
+                  backgroundColor: '',
+                  data: []
+              },
+              {
+                  type: stackedDataChartType,
+                  label: '',
+                  backgroundColor: '',
+                  data: []
+              },
+              {
+                  type: stackedDataChartType,
+                  label: '',
+                  backgroundColor: '',
+                  data: []
+              },
+              {
+                  type: stackedDataChartType,
+                  label: '',
+                  backgroundColor: '',
+                  data: []
+              },
+              {
+                  type: stackedDataChartType,
+                  label: '',
+                  backgroundColor: '',
+                  data: []
+              },
+              ]
+          };
+  
+          // set the legend titles
+          stackedDataLegendName.forEach( (a:any, i:any) => {
+              this.stackedData.datasets[i].label = a;   
+          });
+  
+          // set the color scheme 
+          stackedDataColorScheme.forEach( (a:any, i:any) => {
+              this.stackedData.datasets[i].backgroundColor = a;
+          });
+  
+          // set the values
+          stackedDataPoints.forEach( (a:any, i:any) => {
+              // console.log(a);
+              a.forEach( (b:any, j:any) => {
+                  this.stackedData.datasets[i].data.push(b.value);            
+              })
+          });
+  
+          // set the year on the x axis
+          for(let i=0; i<1 ; i++){
+              for(let j=0; j<stackedDataPoints[i].length ; j++){
+                  this.stackedData.labels.push(new Date(stackedDataPoints[i][j].key).getFullYear());
+              }
+          }
+  
+  
+          this.applyChartOptions();
+      }
+  
+      getBasicData1(){
+  
+          const basicDataLabel = 'Commercial';
+          const basicDataBackgroundColor = '#93939f';
+          const basicDataBorderColor = '#93939f';
+          const basicData1Points = this.peopleConnected.peopleConnected.points;
+  
+          this.basicData = {
+          labels: [],
+          datasets: [
+              {
+                  label: basicDataLabel,
+                  backgroundColor: basicDataBackgroundColor,
+                  borderColor: basicDataBorderColor,
+                  data: []
+              },
+          ]
+          };
+  
+          // set the values
+          basicData1Points.forEach( (a:any, i:any) => {
+              this.basicData.datasets[0].data.push(a.value);
+          });
+  
+          // set the year on the x axis
+          for(let i=0; i<basicData1Points.length ; i++){                
+              this.basicData.labels.push(basicData1Points[i].key);
+          }
+  
+          this.applyChartOptions();
+      }
+  
+      getBasicData2(){
+  
+          const basicDataLabel = 'Commercial';
+          const basicDataBackgroundColor = '#93939f';
+          const basicDataBorderColor = '#93939f';
+          const basicData2Points = this.communitiesConnected.communitiesConnected.points;        
+  
+          this.basicData2 = {
+              labels: [],
+              datasets: [
+                  {
+                      label: basicDataLabel,
+                      backgroundColor: basicDataBackgroundColor,
+                      borderColor: basicDataBorderColor,
+                      data: []
+                  },
+              ]
+          };
+  
+          // set the values
+          basicData2Points.forEach( (a:any, i:any) => {
+              this.basicData2.datasets[0].data.push(a.value);
+          });
+  
+          // set the year on the x axis
+          for(let i=0; i<basicData2Points.length ; i++){                
+              this.basicData2.labels.push(basicData2Points[i].key);
+          }
+  
+          this.applyChartOptions();
+      }
+  
+      getDoughnutData(){
+  
+          const doughnutBackgroundColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000",];
+          const doughnutHoverColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000",];
+          
+          this.doughnutData = {
+              labels: [],
+              datasets: [
+                  {
+                      data: [],
+                      backgroundColor: doughnutBackgroundColor,
+                      hoverBackgroundColor: doughnutHoverColor
+                  }
+              ]
+          };
+  
+          // set the values
+          this.doughnutAnalytics.forEach( (a:any, i:any) => {
+              this.doughnutData.datasets[0].data.push(a.item2);
+          });
+  
+          // set the doughnut legend
+          for(let i=0; i<this.doughnutAnalytics.length ; i++){                
+              this.doughnutData.labels.push(this.doughnutAnalytics[i].item1);
+          }
+          
+          this.applyChartOptions();
+      }
+  
+      /** Set Chart Options */
+      applyChartOptions() {
+  
+          this.basicOptions = {
+              plugins: {
+                  legend: {
+                      display: false,
+                      labels: {
+                          color: '#495057'
+                      }
+                  }
+              },
+              scales: {
+                  x: {
+                      ticks: {
+                          color: '#495057'
+                      },
+                      grid: {
+                          color: '#fff'
+                      }
+                  },
+                  y: {
+                      display: false,
+                      ticks: {
+                          color: '#495057'
+                      },
+                      grid: {
+                          color: '#fff'
+                      }
+                  }
+              }
+          };
+  
+          this.stackedOptions = {
+              plugins: {
+                  tooltips: {
+                      mode: 'index',
+                      intersect: false
+                  },
+                  legend: {
+                      labels: {
+                          color: '#495057'
+                      }
+                  }
+              },
+              scales: {
+                  x: {
+                      stacked: true,
+                      ticks: {
+                          color: '#495057'
+                      },
+                      grid: {
+                          color: '#fff'
+                      }
+                  },
+                  y: {
+                      stacked: true,
+                      ticks: {
+                          color: '#495057'
+                      },
+                      grid: {
+                          color: '#fff'
+                      }
+                  },
+              }
+          };
+  
+          this.doughnutOptions = {
+              plugins: {
+                  legend: {
+                      display: true,
+                      position: 'right'
+                  }
+              }
+          };
+      }
+  
 }

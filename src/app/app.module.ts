@@ -21,9 +21,10 @@ import { ShareModule } from 'ngx-sharebuttons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ShareButtonModule } from 'ngx-sharebuttons/button';
-import {GoTopButtonModule} from 'ng-go-top-button';
+import { GoTopButtonModule } from 'ng-go-top-button';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { ChartModule } from 'primeng/chart';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -64,7 +65,8 @@ import { AboutMapComponent } from './components/about-map/about-map.component';
     AboutComponent,
     TermsOfServiceComponent,
     PrivacyPolicyComponent,
-    AboutMapComponent
+    AboutMapComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ import { AboutMapComponent } from './components/about-map/about-map.component';
     SweetAlert2Module.forRoot(),
     GoTopButtonModule,
     NgxChartsModule,
-    ChartModule
+    ChartModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

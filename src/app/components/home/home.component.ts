@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
       this.dynamicData = [res];      
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
       this.section3DynamicData = res;      
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
       this.section4DynamicData = res;      
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 
@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
       this.blogData = res;
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
 

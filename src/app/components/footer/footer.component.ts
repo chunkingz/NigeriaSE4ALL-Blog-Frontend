@@ -32,7 +32,7 @@ export class FooterComponent implements OnInit {
       this.dynamicData = [res];
     }, error => {
       console.log('An unexpected error occurred');
-      console.log(error);
+      console.log(error.message);
     });
   }
   
