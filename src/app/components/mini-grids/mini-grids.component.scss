@@ -163,7 +163,6 @@ $home-hr-color: #93939f;
 
 #mini-grids .section-3-market .home-card {
     padding: 1rem;
-    width: 47%;
     border-radius: 10px !important;
 }
 
@@ -187,10 +186,10 @@ $home-hr-color: #93939f;
 // styling for charts
 
 #doughnutChart{
-    position: relative;
     top: -2rem;
-    max-width: 550px; 
-    max-height: 450px;
+    width: 25rem; 
+    height: 25rem;
+    align-self: center;
 }
 
 #doughnutTxt{
@@ -216,30 +215,36 @@ $home-hr-color: #93939f;
     max-height: 1.2rem;
     max-width: 1.5rem;
     cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .icon {
-    max-height: 1.5rem;
-    max-width: 1.5rem;
+    max-height: 2rem;
+    max-width: 2rem;
     position: absolute;
-    right: 3rem;
+    right: 1rem;
+    top: 1rem;
 }
 
 .trend-value {
     position: absolute;
-    right: 3rem;
-    top: 5rem;
+    right: 1rem;
+    top: 3rem;
+    font-weight: bold;
 }
 
 .chart-title {
-    font-size: 1.875rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #464646;
 }
 
 .chart-subtitle {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #93939f;
+    text-align: center;
 }
 
 ::ng-deep{
@@ -251,6 +256,7 @@ $home-hr-color: #93939f;
 .row-x{
     display: flex;
     justify-content: space-between;
+    font-size: x-large;
 }
 
 @media (max-width: 1024px) {
@@ -293,6 +299,9 @@ $home-hr-color: #93939f;
         top: 50%; 
         left: 22%; 
     }
+    .trend-value {
+        top: 2.6rem;
+    }
 
 }
 
@@ -317,6 +326,9 @@ $home-hr-color: #93939f;
         width: 90% !important;
         margin-top: 0rem !important;
         margin-bottom: 0rem !important;
+    }
+    .trend-value {
+        top: 2.6rem;
     }
 }
 
@@ -365,6 +377,9 @@ $home-hr-color: #93939f;
     #doughnutTxt{
         top: 60%; 
         left: 32%; 
+    }
+    .trend-value {
+        top: 2.6rem;
     }
 
 }
@@ -420,11 +435,16 @@ $home-hr-color: #93939f;
     }
     #doughnutChart{
         top: -3rem;
+        width: 20rem; 
+        height: 20rem;
     }
     #doughnutTxt{
         top: 48%;
         left: 21%;
         font-size: 10px;
+    }
+    .trend-value {
+        top: 2.6rem;
     }
 }
 
@@ -450,6 +470,13 @@ $home-hr-color: #93939f;
     #doughnutTxt{
         left: 15%;
     }
+    #doughnutChart{
+        width: 20rem; 
+        height: 20rem;
+    }
+    .trend-value {
+        top: 2.6rem;
+    }
 }
 
 @media (max-width: 320px) {
@@ -464,8 +491,13 @@ $home-hr-color: #93939f;
     }
     #doughnutTxt{
         left: 10%;
+        width: 20rem; 
+        height: 20rem;
     }
     .section-4-download #dataset_date{
         display: none;
+    }
+    .trend-value {
+        top: 2.6rem;
     }
 }

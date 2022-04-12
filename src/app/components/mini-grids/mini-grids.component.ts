@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
@@ -14,6 +14,18 @@ import { ChartsApiService } from 'src/app/services/charts-api.service';
   styleUrls: ['./mini-grids.component.scss']
 })
 export class MiniGridsComponent implements OnInit {
+
+    chartsLoaded = false;
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent(){
+    if(window.scrollY > 1000 && this.chartsLoaded == false){
+        this.getInstalledCapacity();
+        this.getPeopleConnected();
+        this.getCommunitiesConnected();
+        this.getDoughnutAnalytics();
+        this.chartsLoaded = true;
+        }        
+    } 
 
   doughnutData: any;
   doughnutOptions: any;
@@ -56,12 +68,11 @@ export class MiniGridsComponent implements OnInit {
     this.getRessources("subpage-ressource-cards");
 
     // charts
-    this.getInstalledCapacity();
-    this.getPeopleConnected();
-    this.getCommunitiesConnected();
-    this.getDoughnutAnalytics();
+    // this.getInstalledCapacity();
+    // this.getPeopleConnected();
+    // this.getCommunitiesConnected();
+    // this.getDoughnutAnalytics();
   }
-
 
   /**
    * Fetches all dynamic data from the db
@@ -178,7 +189,7 @@ export class MiniGridsComponent implements OnInit {
       getStackedData() {
   
           const stackedDataChartType = 'bar';
-          const stackedDataColorScheme = ['#1dd068', '#ffbb00', '#e0e2e9', '#b91108', '#000'];
+          const stackedDataColorScheme = ['#1dd068', '#ffbb00'];
           const stackedDataCapData = this.installedCapacity.installedCapacity.series;
           const stackedDataLegendName: any[] = [];
           const stackedDataPoints: any[] = [];
@@ -203,25 +214,7 @@ export class MiniGridsComponent implements OnInit {
                   label: '',
                   backgroundColor: '',
                   data: []
-              },
-              {
-                  type: stackedDataChartType,
-                  label: '',
-                  backgroundColor: '',
-                  data: []
-              },
-              {
-                  type: stackedDataChartType,
-                  label: '',
-                  backgroundColor: '',
-                  data: []
-              },
-              {
-                  type: stackedDataChartType,
-                  label: '',
-                  backgroundColor: '',
-                  data: []
-              },
+              }
               ]
           };
   
@@ -256,7 +249,7 @@ export class MiniGridsComponent implements OnInit {
   
       getBasicData1(){
   
-          const basicDataLabel = 'Commercial';
+          const basicDataLabel = 'People Connected';
           const basicDataBackgroundColor = '#93939f';
           const basicDataBorderColor = '#93939f';
           const basicData1Points = this.peopleConnected.peopleConnected.points;
@@ -288,7 +281,7 @@ export class MiniGridsComponent implements OnInit {
   
       getBasicData2(){
   
-          const basicDataLabel = 'Commercial';
+          const basicDataLabel = 'Communities Connected';
           const basicDataBackgroundColor = '#93939f';
           const basicDataBorderColor = '#93939f';
           const basicData2Points = this.communitiesConnected.communitiesConnected.points;        
@@ -320,8 +313,8 @@ export class MiniGridsComponent implements OnInit {
   
       getDoughnutData(){
   
-          const doughnutBackgroundColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000",];
-          const doughnutHoverColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000",];
+          const doughnutBackgroundColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000","#3734eb","#eb34dc"];
+          const doughnutHoverColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000","#3734eb","#eb34dc"];
           
           this.doughnutData = {
               labels: [],
@@ -377,6 +370,9 @@ export class MiniGridsComponent implements OnInit {
                           color: '#fff'
                       }
                   }
+              },
+              animation: {
+                duration: 5000
               }
           };
   
@@ -388,7 +384,15 @@ export class MiniGridsComponent implements OnInit {
                   },
                   legend: {
                       labels: {
-                          color: '#495057'
+                          color: '#495057',                          
+                      },
+                      position: 'bottom'
+                  },
+                  title:{
+                      display: false,
+                      padding: {
+                          top: 10,
+                          bottom: 40
                       }
                   }
               },
@@ -409,8 +413,15 @@ export class MiniGridsComponent implements OnInit {
                       },
                       grid: {
                           color: '#fff'
+                      },
+                      title: {
+                          display: true,
+                          text: "MW"
                       }
                   },
+              },
+              animation: {
+                duration: 5000
               }
           };
   
@@ -418,8 +429,18 @@ export class MiniGridsComponent implements OnInit {
               plugins: {
                   legend: {
                       display: true,
-                      position: 'right'
-                  }
+                      position: 'bottom'
+                  },
+                  title:{
+                    display: true,
+                    padding: {
+                        top: 10,
+                        bottom: 40
+                    }
+                }
+              },
+              animation: {
+                duration: 5000
               }
           };
       }
