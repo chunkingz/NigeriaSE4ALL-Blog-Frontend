@@ -216,7 +216,7 @@ $home-hr-color: #93939f;
     max-width: 1.5rem;
     cursor: pointer;
     position: absolute;
-    right: 1rem;
+    left: 1rem;
     top: 1rem;
 }
 
@@ -245,6 +245,7 @@ $home-hr-color: #93939f;
     font-size: 1.25rem;
     color: #93939f;
     text-align: center;
+    padding: 1rem;
 }
 
 ::ng-deep{
