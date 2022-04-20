@@ -132,9 +132,6 @@ $se4all-v3-color: #fcbc0c;
     margin-top: 0;
     background: rgba(0, 0, 0, 0.5);
 }
-.section-2 {
-    margin-top: -8rem;
-}
 
 /* <Set General padding> */
 .section-2, .section-4, .section-5 {
@@ -146,12 +143,14 @@ $se4all-v3-color: #fcbc0c;
 }
 /* </Set General padding> */
 
-.section-1 #hero-section {
+.section-hero #hero-section {
     position: relative;
     padding-left: 5rem;
     padding-right: 15rem;
     padding-bottom: 6rem;
     padding-top: 2rem;
+    margin-top: 7rem;
+    z-index: 1;
 }
 
 .bi.bi-play-circle {
@@ -184,12 +183,12 @@ $se4all-v3-color: #fcbc0c;
     color: #fff;
 }
 
-.section-1 .home_section1_hero {
+.section-hero .home_section1_hero {
     font-size: 3.2rem;
     font-weight: bolder;
 }
 
-.section-1 .home_section1_subtitle {
+.section-hero .home_section1_subtitle {
     font-size: 1.3rem;
 }
 
@@ -204,23 +203,10 @@ $se4all-v3-color: #fcbc0c;
 
 // Responsive Web Design Section
 @media (max-width: 1440px) {
-    // .section-1 {
-    //     margin-top: -3rem;
-    // }
-    .section-2 {
-        margin-top: -11rem;
-    }
+
 }
 
-@media (max-width: 1024px) {
-    .section-1{        
-        background: url('http://test.nigeriase4all.gov.ng:1337/uploads/hero_image_landing_5ce5f75ec2.PNG') black no-repeat center center scroll;
-        background-color: #0005;
-        background-blend-mode: darken;
-    }
-    .section-1 video {
-        display: none;
-    }
+@media (max-width: 1024px) {   
     .btn-v3 {
         padding: 0.5rem 1rem !important;
         font-size: 1.2rem !important;
@@ -251,20 +237,19 @@ $se4all-v3-color: #fcbc0c;
     .section-1 {
         margin-top: -7rem;
     }
-    .section-2 {
-        margin-top: -18rem;
-    }
-    .section-1 #hero-section {
+
+    .section-hero #hero-section {
         height: 42rem;
+        margin-top: 7rem;
     }
     .content {
         top: -4rem;
     }
-    .section-1 .home_section1_hero {
+    .section-hero .home_section1_hero {
         font-size: 2rem;
         padding-top: 1rem;
     }
-    .section-1 .home_section1_subtitle {
+    .section-hero .home_section1_subtitle {
         font-size: 1rem;
     }
     .bi.bi-play-circle {
@@ -275,12 +260,67 @@ $se4all-v3-color: #fcbc0c;
 
 }
 
+.section-hero {
+    position: relative;
+    background-color: black;
+    width: 100vw;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .section-hero  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+  }
+  
+  .section-hero .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .section-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .section-hero iframe {
+      /* height = 100 * (9 / 16) = 56.25 */
+      height: 56.25vw;
+    }
+  }
+      
+  @media (max-aspect-ratio: 16/9) {
+    .section-hero iframe {
+      /* width = 100 / (9 / 16) = 177.777777 */
+      width: 177.78vh;
+    }
+  }
+
 @media (max-width: 991px) {
+    // .section-1{        
+    //     background: url('http://test.nigeriase4all.gov.ng:1337/uploads/hero_image_landing_5ce5f75ec2.PNG') black no-repeat center center scroll;
+    //     background-color: #0005;
+    //     background-blend-mode: darken;
+    // }
+    #myVideo {
+        display: none;
+    }
     .content {
         top: 1rem;
     }
     .section-2 {
-        margin-top: -17rem;
         margin-bottom: -1rem;
     }
     .section-3 {
@@ -295,8 +335,9 @@ $se4all-v3-color: #fcbc0c;
 }
 
 @media (max-width: 850px) {
-    .section-1 #hero-section {
+    .section-hero #hero-section {
         padding-right: 4rem;
+        
     }
 }
 
@@ -331,15 +372,18 @@ $se4all-v3-color: #fcbc0c;
     .content {
         top: 3rem;
     }
-    .section-1 .home_section1_hero {
+    .section-hero .home_section1_hero {
         font-size: 2rem;
     }
-    .section-1 .home_section1_subtitle {
+    .section-hero .home_section1_subtitle {
         display: none;
     }
     .bi.bi-play-circle {
         top: 17rem;
         right: 7rem;
+    }
+    #hero-section{
+        padding-top: 0rem;
     }
 
 }
@@ -372,7 +416,7 @@ $se4all-v3-color: #fcbc0c;
     .section-6 .img-fluid {
         height: 18rem;
     }
-    .section-1 #hero-section {
+    .section-hero #hero-section {
         padding: 1rem;
     }
     .content br {
@@ -418,7 +462,7 @@ $se4all-v3-color: #fcbc0c;
     .text-wrap {
         width: 16rem;
     }
-    .section-1 .home_section1_subtitle, .bi.bi-play-circle {
+    .section-hero .home_section1_subtitle, .bi.bi-play-circle {
         display: none;
     }
 
