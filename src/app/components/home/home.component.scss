@@ -309,12 +309,12 @@ $se4all-v3-color: #fcbc0c;
   }
 
 @media (max-width: 991px) {
-    // .section-1{        
-    //     background: url('http://test.nigeriase4all.gov.ng:1337/uploads/hero_image_landing_5ce5f75ec2.PNG') black no-repeat center center scroll;
-    //     background-color: #0005;
-    //     background-blend-mode: darken;
-    // }
-    #myVideo {
+    .section-hero{        
+        background: url('http://test.nigeriase4all.gov.ng:1337/uploads/hero_image_landing_5ce5f75ec2.PNG') black no-repeat center center scroll;
+        background-color: #0005;
+        background-blend-mode: darken;
+    }
+    .section-hero iframe {
         display: none;
     }
     .content {
