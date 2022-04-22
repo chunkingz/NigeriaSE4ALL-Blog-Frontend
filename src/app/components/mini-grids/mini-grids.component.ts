@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { AppConfig } from '../../interfaces/IAppConfig';
 import { AppconfigService } from '../../services/appconfig.service';
 import { ChartsApiService } from 'src/app/services/charts-api.service';
+import { HttpHeaders } from '@angular/common/http';
 
 
 @Component({
@@ -17,15 +18,15 @@ export class MiniGridsComponent implements OnInit {
 
     chartsLoaded = false;
 
-  @HostListener('window:scroll', ['$event']) onScrollEvent(){
-    if(window.scrollY > 1000 && this.chartsLoaded == false){
-        this.getInstalledCapacity();
-        this.getPeopleConnected();
-        this.getCommunitiesConnected();
-        this.getDoughnutAnalytics();
-        this.chartsLoaded = true;
-        }        
-    } 
+//   @HostListener('window:scroll', ['$event']) onScrollEvent(){
+//     if(window.scrollY > 1000 && this.chartsLoaded == false){
+//         this.getInstalledCapacity();
+//         this.getPeopleConnected();
+//         this.getCommunitiesConnected();
+//         this.getDoughnutAnalytics();
+//         this.chartsLoaded = true;
+//         }        
+//     } 
 
   doughnutData: any;
   doughnutOptions: any;
@@ -67,11 +68,19 @@ export class MiniGridsComponent implements OnInit {
     this.getAllArticles("articles");
     this.getRessources("subpage-ressource-cards");
 
-    // charts
-    // this.getInstalledCapacity();
-    // this.getPeopleConnected();
-    // this.getCommunitiesConnected();
-    // this.getDoughnutAnalytics();
+    // charts    
+    setTimeout(()=>{                         
+        this.getInstalledCapacity();
+    }, 1000);
+   setTimeout(()=>{                         
+    this.getPeopleConnected();
+    }, 1000);
+    setTimeout(()=>{                         
+        this.getCommunitiesConnected();
+    }, 1000);
+    setTimeout(()=>{                         
+        this.getDoughnutAnalytics();
+    }, 1000);
   }
 
   /**
@@ -141,7 +150,10 @@ export class MiniGridsComponent implements OnInit {
 
     /** Fetch Chart API data */
     getInstalledCapacity() {
-      this._charts.getInstalledCapacity().subscribe( (res:any) => {
+    let getterOptions = {
+        headers: new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`).set('Content-Type', 'application/json')
+    };
+      this._charts.getInstalledCapacity(getterOptions).subscribe( (res:any) => {
           this.installedCapacityData = [res];
           this.installedCapacity = res;
   
@@ -152,7 +164,10 @@ export class MiniGridsComponent implements OnInit {
       }
   
       getPeopleConnected() {
-      this._charts.getPeopleAndCommunitiesConnected().subscribe( (res:any) => {
+        let getterOptions = {
+            headers: new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`).set('Content-Type', 'application/json')
+        };
+      this._charts.getPeopleAndCommunitiesConnected(getterOptions).subscribe( (res:any) => {
           this.peopleConnectedData = [res];        
           this.peopleConnected = res;
   
@@ -163,7 +178,10 @@ export class MiniGridsComponent implements OnInit {
       }
       
       getCommunitiesConnected() {
-      this._charts.getPeopleAndCommunitiesConnected().subscribe( (res:any) => {
+        let getterOptions = {
+            headers: new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`).set('Content-Type', 'application/json')
+        };
+      this._charts.getPeopleAndCommunitiesConnected(getterOptions).subscribe( (res:any) => {
           this.communitiesConnectedData = [res];        
           this.communitiesConnected = res;
   
@@ -174,7 +192,10 @@ export class MiniGridsComponent implements OnInit {
       }
   
       getDoughnutAnalytics() {
-      this._charts.getDoughnutAnalytics().subscribe( (res:any) => {
+        let getterOptions = {
+            headers: new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('token')}`).set('Content-Type', 'application/json')
+        };
+      this._charts.getDoughnutAnalytics(getterOptions).subscribe( (res:any) => {
           this.doughnutAnalyticsData = [res];        
           this.doughnutAnalytics = res;
   

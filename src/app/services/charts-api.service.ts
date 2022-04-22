@@ -10,7 +10,6 @@ export class ChartsApiService {
   private _baseURL = ChartsApiSec._baseURL;
   private _bearerTokenURL = ChartsApiSec._bearerTokenURL;
   private _accessToken!: string;
-  private getterOptions = {}
 
   constructor(private _http: HttpClient) {
     this.checkToken();
@@ -26,9 +25,6 @@ export class ChartsApiService {
       // token valid
     }
 
-    this.getterOptions = {
-      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
-    };
     return token;
   }
 
@@ -49,16 +45,16 @@ export class ChartsApiService {
     })
   }
 
-  getInstalledCapacity(){
-    return this._http.get(`${this._baseURL}se4allwebsite/installedcap`, this.getterOptions)
+  getInstalledCapacity(getterOptions :any){
+    return this._http.get(`${this._baseURL}se4allwebsite/installedcap`, getterOptions)
   }
 
-  getPeopleAndCommunitiesConnected(){
-    return this._http.get(`${this._baseURL}se4allwebsite/portfolio`, this.getterOptions)
+  getPeopleAndCommunitiesConnected(getterOptions :any){
+    return this._http.get(`${this._baseURL}se4allwebsite/portfolio`, getterOptions)
   }
 
-  getDoughnutAnalytics(){
-    return this._http.get(`${this._baseURL}se4allwebsite/minigridsbyprogramme`, this.getterOptions)
+  getDoughnutAnalytics(getterOptions :any){
+    return this._http.get(`${this._baseURL}se4allwebsite/minigridsbyprogramme`, getterOptions)
   }
 
 }
