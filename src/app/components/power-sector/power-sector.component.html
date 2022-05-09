@@ -45,60 +45,45 @@
                 </div>
             </div>
         </section>
-<!-- 
-        <section class="section-3-market">
+        <section class="section-3-market">           
             <div class="container p-lg-4 mx-auto text-center">
                 <h2 class="fw-bold">{{ constants.minigrids_section3_hero }}</h2>
                 <br>
                 <p class="lead fw-normal">{{ constants.minigrids_section3_subtitle }}</p>
             </div>
-            <div class="container x-row">
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
+            <div class="container-fluid row">
+                <div class="col">
+                    <ngx-charts-gauge              
+                    [results]="single"
+                    [legend]="false"
+                    [max] ="30000"
+                    [valueFormatting] = "format"
+                    [bigSegments]= "1"
+                    [view]="[400,400]"
+                    (select)="onSelect($event)"
+                    (activate)="onActivate($event)"
+                    (deactivate)="onDeactivate($event)"
+                    [showAxis]= false 
+                    >
+                    </ngx-charts-gauge>
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
+                <div class="col">
+                    <ngx-charts-gauge              
+                    [results]="single"
+                    [showAxis]= false 
+                    [legend]="false"
+                    [max] ="30000"
+                    [valueFormatting] = "format"
+                    [bigSegments]= "1"
+                    [view]="[400,400]"
+                    (select)="onSelect($event)"
+                    (activate)="onActivate($event)"
+                    (deactivate)="onDeactivate($event)"
+                    >
+                    </ngx-charts-gauge>
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
-                </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+            </div>                             
+        </section>
 
         <section class="section-4-download">
             <div class="container p-lg-4 mx-auto text-center">

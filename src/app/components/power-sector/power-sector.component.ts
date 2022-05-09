@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
-
+import { single } from './data';
 
 @Component({
   selector: 'power-sector',
@@ -18,7 +18,14 @@ export class PowerSectorComponent implements OnInit {
   blogData: any;
   constants = Constants;
 
-  constructor(private _data: DataService, private _title: Title) { }
+  single: any;
+   colorScheme = {
+    domain: '#5AA454'
+  };
+
+  constructor(private _data: DataService, private _title: Title) {
+    Object.assign(this, { single });
+   }
 
   ngOnInit() {
     this._title.setTitle(`${Constants.website_title} | Power Sector`);
@@ -27,6 +34,23 @@ export class PowerSectorComponent implements OnInit {
     this.getDownloadData("download-section-power-sectors");
     this.getAllArticles("articles");
     this.getRessources("subpage-ressource-cards");
+  }
+
+  format(data: any){
+    var currentYear = new Date().getFullYear().toString();
+    return data + ' MW projected to ' + currentYear
+  }
+
+  onSelect(data: any): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data: any): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data: any): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
   /**
