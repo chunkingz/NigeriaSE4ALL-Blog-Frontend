@@ -46,41 +46,50 @@
             </div>
         </section>
         <section class="section-3-market">           
-            <div class="container p-lg-4 mx-auto text-center">
+            <!-- <div class="container p-lg-4 mx-auto text-center">
                 <h2 class="fw-bold">{{ constants.minigrids_section3_hero }}</h2>
                 <br>
                 <p class="lead fw-normal">{{ constants.minigrids_section3_subtitle }}</p>
+            </div> -->
+            <div class="container p-lg-4 mx-auto text-center">
+                <h2 class="fw-bold">30:30:30 Tracker</h2>
+                <br>
+                <p class="lead fw-normal">The 30:30:30 tracker allows you to explore the progress towards key targets to be achieved by the year <b>2030</b></p>
             </div>
-            <div class="container-fluid row">
-                <div class="col">
-                    <ngx-charts-gauge              
-                    [results]="single"
-                    [legend]="false"
-                    [max] ="30000"
-                    [valueFormatting] = "format"
-                    [bigSegments]= "1"
-                    [view]="[400,400]"
-                    (select)="onSelect($event)"
-                    (activate)="onActivate($event)"
-                    (deactivate)="onDeactivate($event)"
-                    [showAxis]= false 
-                    >
-                    </ngx-charts-gauge>
-                </div>
-                <div class="col">
-                    <ngx-charts-gauge              
-                    [results]="single"
-                    [showAxis]= false 
-                    [legend]="false"
-                    [max] ="30000"
-                    [valueFormatting] = "format"
-                    [bigSegments]= "1"
-                    [view]="[400,400]"
-                    (select)="onSelect($event)"
-                    (activate)="onActivate($event)"
-                    (deactivate)="onDeactivate($event)"
-                    >
-                    </ngx-charts-gauge>
+            <div class="container p-lg-4 mx-auto">
+                <div class="row justify-content-center">
+                    <div class="col"> 
+                        <p class="lead fw-normal">Increase electricity generation to <b>30,000MW</b></p>
+                        <ngx-charts-gauge                              
+                        [results]="single"
+                        [legend]="false"
+                        [max] ="30000"
+                        [valueFormatting] = "format"                        
+                        [view]="[400,400]"
+                        (select)="onSelect($event)"
+                        (activate)="onActivate($event)"
+                        (deactivate)="onDeactivate($event)"
+                        [showAxis]= false
+                        [scheme]="colorScheme"
+                        >
+                        </ngx-charts-gauge>
+                    </div>                    
+                    <div class="col">
+                    <p class="lead fw-normal">Increase renewable energy share to <b>30%</b></p>   
+                        <ngx-charts-gauge              
+                        [results]="single"
+                        [showAxis]= false 
+                        [legend]="false"
+                        [max] ="30000"
+                        [valueFormatting] = "format"
+                        [bigSegments]= "1"
+                        [view]="[400,400]"
+                        (select)="onSelect($event)"
+                        (activate)="onActivate($event)"
+                        (deactivate)="onDeactivate($event)"
+                        >
+                        </ngx-charts-gauge>
+                    </div>
                 </div>
             </div>                             
         </section>

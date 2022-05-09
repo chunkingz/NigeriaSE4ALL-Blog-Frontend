@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Color, ScaleType } from '@swimlane/ngx-charts';
 import { Constants } from 'src/app/constants/constants';
 import { DataService } from 'src/app/services/data.service';
 import { single } from './data';
@@ -19,8 +20,11 @@ export class PowerSectorComponent implements OnInit {
   constants = Constants;
 
   single: any;
-   colorScheme = {
-    domain: '#5AA454'
+  colorScheme: Color = {
+    name: 'powerSectorScheme',
+    selectable: true,
+    group: ScaleType.Ordinal,
+    domain: ['#085064'],
   };
 
   constructor(private _data: DataService, private _title: Title) {
