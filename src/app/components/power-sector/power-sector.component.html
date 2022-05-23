@@ -51,8 +51,8 @@
                 <p class="lead fw-normal">The 30:30:30 tracker allows you to explore the progress towards key targets to be achieved by the year <b>2030</b></p>
             </div>
             <div class="container-fluid text-center row">
-                <div class="col-md-6">
-                        <p class="lead fw-normal">Increase electricity generation to <b>30,000 MW</b>by the year <b>2030</b></p>
+                <div class="col-md-6" style="height: 40vh">
+                        <p class="lead fw-normal">Increase electricity generation to <b>30,000 MW</b> by the year <b>2030</b></p>
                         <ngx-charts-gauge                               
                         [results]="gaugeData1"
                         [legend]="false"
@@ -68,7 +68,7 @@
                         >
                         </ngx-charts-gauge>   
                     </div>                    
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="height: 40vh">
                         <p class="lead fw-normal">Increase renewable energy share to <b>30%</b> by the year <b>2030</b></p>   
                         <ngx-charts-gauge                              
                             [results]="gaugeData2"
@@ -87,7 +87,7 @@
                     </div>    
                 </div>
             <div class="container-fluid row">        
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                         <div class="row-x">
                             <span class="chart-subtitle">
                                 Total generation capacity installed and planned
@@ -100,7 +100,7 @@
                         </div>        
                         <p-chart class="col-10" type="bar" [data]="capPlot" [options]="optionsPlot1"></p-chart>        
                 </div>
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <div class="row-x">
                         <span class="chart-subtitle">
                             Percentage renewables installed and planned
@@ -113,7 +113,7 @@
                     </div>        
                     <p-chart class="col-10" type="bar" [data]="regenPlot" [options]="optionsPlot2"></p-chart>        
                 </div>
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <div class="row-x">
                         <span class="chart-subtitle">
                             Renewables installed by technology type

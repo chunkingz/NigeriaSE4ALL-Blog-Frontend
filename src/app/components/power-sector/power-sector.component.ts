@@ -157,7 +157,7 @@ export class PowerSectorComponent implements OnInit {
          //this.gaugeLabel1 = "<b class='gauge-number'>" + this.gaugeData1.value.toString() + " MW </b> projected to "  + new Date().getFullYear().toString();  
 
           this.capPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Capacity}], 1);
-          this.regenPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Renewable}], 1);
+          this.regenPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Renewable}], 2);
           this.capCategoryPlot = this.getStackedData([
             {name: 'PV', points:this.plotData.series.PV},
             {name: 'Hydro', points:this.plotData.series.Hydro},
@@ -171,12 +171,15 @@ export class PowerSectorComponent implements OnInit {
             });    
         }
 
-        getStackedData(data: any, number_of_series: any,) {
+        getStackedData(data: any, plotNumber: any,) {
           
           const stackedDataChartType = 'bar';          
           var stackedDataColorScheme;
-          if(number_of_series == 1){
+          if(plotNumber == 1){
             stackedDataColorScheme = ['#1dd068'];
+          }
+          else if(plotNumber == 2){
+            stackedDataColorScheme = ['#ffbb00'];
           }
           else{
             stackedDataColorScheme = ['#1dd068', '#ffbb00','black'];
@@ -192,7 +195,7 @@ export class PowerSectorComponent implements OnInit {
           }
 
           var stackedData: any;
-          if(number_of_series == 1){
+          if(plotNumber == 1 || plotNumber == 2){
             stackedData = {
               labels: [],
               datasets: [
