@@ -65,7 +65,7 @@
                             </span>
                             <span>
                                 <img placement="bottom" tooltip="Installed Capacity by all Minigrids in Nigeria over the years sperated by Technology. Based on FMP registered Minigrids" 
-                                id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                                id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
                             </span>
                         </div>
         
@@ -78,7 +78,7 @@
                     <span *ngFor="let peopleConnected of peopleConnectedData">
                         <div>
                             <span class="trend-icon">
-                                <img class="icon" src="https://minigridmonitor-api.azurewebsites.net/icons/arrowGreenUp.png">
+                                <img class="icon" src="../../../assets/arrowGreenUp.png">
                             </span>
                             <span class="trend-value">
                                 {{ peopleConnected.peopleConnected.trendValue }}%
@@ -107,7 +107,7 @@
                     <span *ngFor="let communitiesConnected of communitiesConnectedData">
                         <div>
                             <span class="trend-icon">
-                                <img class="icon" src="https://minigridmonitor-api.azurewebsites.net/icons/arrowGreenUp.png">
+                                <img class="icon" src="../../../assets/arrowGreenUp.png">
                             </span>
                             <span class="trend-value">
                                 {{ communitiesConnected.communitiesConnected.trendValue }}%
@@ -132,7 +132,7 @@
                         Number of Minigrids by registered Programme
                     </span>
                     <span>
-                        <img placement="bottom" tooltip="Number of Minigrids by registered Programme. Based on FMP registered Minigrids" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                        <img placement="bottom" tooltip="Number of Minigrids by registered Programme. Based on FMP registered Minigrids" id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
                     </span>
                     <div id="doughnutChart">
                         <p-chart type="pie" [data]="doughnutData" [options]="doughnutOptions"></p-chart>     
