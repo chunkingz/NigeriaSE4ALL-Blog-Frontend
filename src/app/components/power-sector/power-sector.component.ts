@@ -25,7 +25,6 @@ export class PowerSectorComponent implements OnInit {
   gaugeData2: any;
   gaugeLabel1: any;
   gaugeLabel2: any;
-  basicOptions: any;
   capPlot: any;
   regenPlot: any;
   capCategoryPlot: any;
@@ -47,6 +46,7 @@ export class PowerSectorComponent implements OnInit {
    }
 
   ngOnInit() {
+    //Annotation plugin needs to be registered to make use of it 
     Chart.register(ChartAnnotation);
     this._title.setTitle(`${Constants.website_title} | Power Sector`);
     this.getDynamicContent();
@@ -54,12 +54,11 @@ export class PowerSectorComponent implements OnInit {
     this.getDownloadData("download-section-power-sectors");
     this.getAllArticles("articles");
     this.getRessources("subpage-ressource-cards");
-    this.getPlotData();      
-    console.log(this.capPlot);
-    
-    
+    //fetch all the 303030 plot data from the API and prepare for the gauges and plots
+    this.getPlotData();    
   }
 
+  //formating the gauges units  
   formatgauge1(data: any){
     var currentYear = new Date().getFullYear().toString();    
     return data.toLocaleString()  + ' MW in ' + currentYear;
@@ -70,6 +69,7 @@ export class PowerSectorComponent implements OnInit {
     return data.toLocaleString()  + ' % in ' + currentYear;
   }
 
+  //Gauge interactive methods - what happens on Select etc. 
   onSelect(data: any): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
@@ -154,8 +154,8 @@ export class PowerSectorComponent implements OnInit {
           this.plotData = res;
           this.gaugeData1 =  [this.plotData.current_generation];
           this.gaugeData2 =  [this.plotData.current_ren_share];
-         //this.gaugeLabel1 = "<b class='gauge-number'>" + this.gaugeData1.value.toString() + " MW </b> projected to "  + new Date().getFullYear().toString();  
 
+          //create options and rearange data to insert into the plots
           this.capPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Capacity}], 1);
           this.regenPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Renewable}], 2);
           this.capCategoryPlot = this.getStackedData([
@@ -163,7 +163,6 @@ export class PowerSectorComponent implements OnInit {
             {name: 'Hydro', points:this.plotData.series.Hydro},
             {name: 'Wind', points:this.plotData.series.Wind},
           ], 3);
-
           }
           , error => {
               console.log('An unexpected error occurred');
@@ -186,8 +185,7 @@ export class PowerSectorComponent implements OnInit {
           }
 
           const stackedDataLegendName: any[] = [];
-          const stackedDataPoints: any[] = [];
-          
+          const stackedDataPoints: any[] = [];          
   
           for(let i=0; i < data.length ; i++) {
               stackedDataLegendName.push(data[i].name);
@@ -232,8 +230,7 @@ export class PowerSectorComponent implements OnInit {
               }
               ]
           };
-          }
-         
+          }         
   
           // set the legend titles
           stackedDataLegendName.forEach( (a:any, i:any) => {
@@ -325,7 +322,7 @@ export class PowerSectorComponent implements OnInit {
                 },
             },
             animation: {
-              duration: 1000
+              duration: 5000
             }
         };
              
@@ -386,7 +383,7 @@ export class PowerSectorComponent implements OnInit {
             },
         },
         animation: {
-          duration: 1000
+          duration: 5000
         }
     }; 
 
@@ -435,7 +432,7 @@ export class PowerSectorComponent implements OnInit {
           },
       },
       animation: {
-        duration: 1000
+        duration: 5000
       }
     }; 
   }
