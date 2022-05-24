@@ -8,7 +8,7 @@
   }">
 
     <div id="header-blitz-div">
-      <a class="navbar-brand" routerLink="/">
+      <a class="navbar-brand" (click)="toggleOffBurgerMenu()" routerLink="/">
         <img src="assets/logo-5-blitz.png" alt="SE4ALL Logo">
         <div class="h2-alternative">
           {{ dynamicBlogData ? dynamicBlogData.nav_site_title : constants.nav_site_title }}
@@ -18,7 +18,7 @@
 
     <div class="nav-logo-nigeria" id="header-logo-nigeria">
       <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
-        <img src="assets/logo-2-crest.png" alt="FMP Logo">
+        <img [src]="fmpLogo" alt="FMP Logo">
       </a>
     </div>
 
@@ -32,22 +32,22 @@
 
       <div [collapse]="isCollapsed" class="collapse navbar-collapse" id="navbarCollapse" [isAnimated]="true">
           
-            <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
+            <a class="nav-link" (click)="toggleOffBurgerMenu()" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_4 : constants.Nav_txt_url_4 }}">
               <div class="circular circular-mini-grid"></div> 
                 <span class="mini-grid-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_4 : constants.Nav_txt_4 }}</span>
             </a>
 
-              <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
+              <a class="nav-link" (click)="toggleOffBurgerMenu()" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_5 : constants.Nav_txt_url_5 }}">
                 <div class="circular circular-power-sector"></div>
                 <span class="power-sector-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_5 : constants.Nav_txt_5 }}</span>
               </a>
 
-              <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
+              <a class="nav-link" (click)="toggleOffBurgerMenu()" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.Nav_txt_url_6 : constants.Nav_txt_url_6 }}">
                 <div class="circular circular-solar-home-systems"></div>
                 <span class="solar-home-systems-txt">{{ dynamicBlogData ? dynamicBlogData.Nav_txt_6 : constants.Nav_txt_6 }}</span>
               </a>
 
-              <a class="nav-link" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
+              <a class="nav-link" (click)="toggleOffBurgerMenu()" routerLinkActive="active" routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_3 : constants.nav_txt_url_3 }}">
                 <span class="about-txt">{{ dynamicBlogData ? dynamicBlogData.nav_txt_3 : constants.nav_txt_3 }}</span>
               </a>
 
@@ -55,7 +55,7 @@
 
       <div class="nav-logo-nigeria" id="header-logo-nigeria-2">
         <a href="{{ dynamicBlogData ? dynamicBlogData.nav_logo_url : constants.nav_logo_url }}" target="_blank">
-          <img src="assets/logo-2-crest.png" alt="FMP Logo">
+          <img [src]="fmpLogo" alt="FMP Logo">
         </a>
       </div>
 

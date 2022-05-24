@@ -79,5 +79,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
+  scroll(target: any) {
+    document.querySelector(target).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 }

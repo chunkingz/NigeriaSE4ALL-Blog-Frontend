@@ -29,10 +29,9 @@
                             </p>
                             <br>
                             <p>
-                                <a type="button" class="btn btn-lg btn-v3 cta" 
-                                routerLink="{{ dynamicBlogData ? dynamicBlogData.home_hero_btn_url : constants.home_hero_btn_url }}">
-                                    {{ dynamicBlogData ? dynamicBlogData.btn7 : constants.btn7 }}
-                                </a>
+                                <button (click)="scroll('.section-3')" class="btn btn-lg btn-v3 cta">
+                                    Learn More
+                                </button>
                             </p>
                         </div>                        
                     </div>
@@ -51,31 +50,31 @@
 
         <!-- Cards -->
         <section class="section-3">
-            <div class="container x-row">
+                <div class="container x-row">
 
-                <!-- Card link to mini-grids/power-sector/solar-home-systems components -->
+                    <!-- Card link to mini-grids/power-sector/solar-home-systems components -->
 
-                <div *ngFor="let section3Data of section3DynamicData">
+                    <div *ngFor="let section3Data of section3DynamicData">
 
-                    <div class="card my-5 mx-4 card-shadow home-card">
-                        <a href="{{ section3Data.card_url }}" target="blank" class="text-reset">
+                        <div class="card my-5 mx-4 card-shadow home-card">
+                            <a href="{{ section3Data.card_url }}" target="blank" class="text-reset">
 
-                            <img src="{{ section3Data.card_img[0].url }}" class="card-img-top" alt="{{ section3Data.card_img_alt }}">
-                            <div class="card-body" id="{{ section3Data.color }}">
-                                <h5 class="card-title fw-bold mb-4">
-                                    {{ section3Data.card_title }}
-                                </h5>
-                                <p class="card-text mb-5">
-                                    {{ section3Data.card_subtitle }}
-                                </p>
-                            </div>
+                                <img src="{{ section3Data.card_img[0].url }}" class="card-img-top" alt="{{ section3Data.card_img_alt }}">
+                                <div class="card-body" id="{{ section3Data.color }}">
+                                    <h5 class="card-title fw-bold mb-4">
+                                        {{ section3Data.card_title }}
+                                    </h5>
+                                    <p class="card-text mb-5">
+                                        {{ section3Data.card_subtitle }}
+                                    </p>
+                                </div>
 
-                        </a>
+                            </a>
+                        </div>
+
                     </div>
 
                 </div>
-
-            </div>
         </section>
 
         <!-- Apps -->

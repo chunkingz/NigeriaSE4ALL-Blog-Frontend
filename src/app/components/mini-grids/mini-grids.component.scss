@@ -58,9 +58,12 @@ $home-hr-color: #93939f;
 }
 
 .section-2 img{
-    width: 34rem;
+    width: 100%;
     border-radius: 10px;
-    object-fit: cover;
+}
+
+.section-2-card{
+    width: 34rem;
 }
 
 .section-2 #app-title {
@@ -132,6 +135,7 @@ $home-hr-color: #93939f;
     height: 53rem;
     background-size: cover;
 }
+
 
 .section-1 #hero-section {
     padding-left: 15rem;
@@ -267,11 +271,6 @@ $home-hr-color: #93939f;
     .text-wrap {
         width: 26rem;
     }
-    .section-2 img {
-        width: 26rem;
-        height: 15rem;
-        object-fit: cover;
-    }
     .section-2-card {
         margin-left: 24px !important;
         margin-right: 24px !important;
@@ -334,10 +333,8 @@ $home-hr-color: #93939f;
 }
 
 @media (max-width: 768px) {
-    .section-2 img {
-        width: 40rem;
-        height: 20rem;
-        object-fit: cover;
+    .section-2-card  {
+        width: 20rem;    
     }
     .section-2-card {
         margin-left: 34px !important;
@@ -396,10 +393,8 @@ $home-hr-color: #93939f;
         padding-left: 5px !important;
         padding-right: 5px !important;
     }
-    .section-2 img {
+    .section-2-card {
         width: 22rem;
-        height: 10rem;
-        object-fit: cover;
     }
     .section-2-card {
         margin-left: 24px !important;
@@ -458,7 +453,7 @@ $home-hr-color: #93939f;
         padding: 0.5rem;
         font-size: 1rem;
     }
-    .section-2 img {
+    .section-2-card {
         width: 19rem;
     }
     .card-text-badge-2{

@@ -220,7 +220,6 @@ $se4all-v3-color: #fcbc0c;
     }
     .section-4 img {
         width: 100%;
-        height: 15rem;
         object-fit: cover;
     }
     .section-4-card {
@@ -401,8 +400,8 @@ $se4all-v3-color: #fcbc0c;
         height: 90% !important;
     }
     .section-4-card {
-        margin-left: 24px !important;
-        margin-right: 24px !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
     }
     .section-4-title, .section-4-card {
         padding-bottom: 3rem;
@@ -456,6 +455,10 @@ $se4all-v3-color: #fcbc0c;
     .section-3 .card img{
         height: 40%;
     }
+    .section-4-card {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
 }
 
 @media (max-width: 320px) {
@@ -464,6 +467,10 @@ $se4all-v3-color: #fcbc0c;
     }
     .section-hero .home_section1_subtitle, .bi.bi-play-circle {
         display: none;
+    }
+    .section-4-card {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
     }
 
 }

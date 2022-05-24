@@ -19,12 +19,14 @@ export class NavbarComponent implements OnInit {
   minigrids = false;
   powersector = false;
   shs = false;
+  fmpLogo: any;
 
   constructor(private _data: DataService, private _router: Router) { }
 
   ngOnInit() {
     this.getDynamicContent();
     this.getCurrentRoute();
+    this.getFMPLogo();
   }
 
   /**
@@ -51,6 +53,19 @@ export class NavbarComponent implements OnInit {
       console.log('An unexpected error occurred');
       console.log(error.message);
     });
+  }
+
+  getFMPLogo(){
+    if (window.innerWidth < 425) {
+      return this.fmpLogo = 'assets/fmp_logo_no_text.png';
+    }
+    else{
+      return this.fmpLogo = 'assets/logo-2-crest.png';
+    }
+  }
+
+  toggleOffBurgerMenu(){
+    this.isCollapsed = true;
   }
   
 }
