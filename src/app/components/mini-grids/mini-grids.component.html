@@ -57,7 +57,7 @@
         
             <div class="container-fluid row">
         
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <span *ngFor="let installedCapacity of installedCapacityData">
                         <div class="row-x">
                             <span class="chart-subtitle">
@@ -65,7 +65,7 @@
                             </span>
                             <span>
                                 <img placement="bottom" tooltip="Installed Capacity by all Minigrids in Nigeria over the years sperated by Technology. Based on FMP registered Minigrids" 
-                                id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                                id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
                             </span>
                         </div>
         
@@ -74,11 +74,11 @@
                     </span>
                 </div>
         
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <span *ngFor="let peopleConnected of peopleConnectedData">
                         <div>
                             <span class="trend-icon">
-                                <img class="icon" src="https://minigridmonitor-api.azurewebsites.net/icons/arrowGreenUp.png">
+                                <img class="icon" src="../../../assets/arrowGreenUp.png">
                             </span>
                             <span class="trend-value">
                                 {{ peopleConnected.peopleConnected.trendValue }}%
@@ -103,11 +103,11 @@
         
             <div class="container-fluid row">
                 
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <span *ngFor="let communitiesConnected of communitiesConnectedData">
                         <div>
                             <span class="trend-icon">
-                                <img class="icon" src="https://minigridmonitor-api.azurewebsites.net/icons/arrowGreenUp.png">
+                                <img class="icon" src="../../../assets/arrowGreenUp.png">
                             </span>
                             <span class="trend-value">
                                 {{ communitiesConnected.communitiesConnected.trendValue }}%
@@ -127,12 +127,12 @@
                     </span>
                 </div>
         
-                <div class="card my-5 mx-4 p-4 shadow-lg home-card col">
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <span class="chart-subtitle">
                         Number of Minigrids by registered Programme
                     </span>
                     <span>
-                        <img placement="bottom" tooltip="Number of Minigrids by registered Programme. Based on FMP registered Minigrids" id="info-tooltip" class="icon-medium" src="https://minigridmonitor-api.azurewebsites.net/icons/info.png">
+                        <img placement="bottom" tooltip="Number of Minigrids by registered Programme. Based on FMP registered Minigrids" id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
                     </span>
                     <div id="doughnutChart">
                         <p-chart type="pie" [data]="doughnutData" [options]="doughnutOptions"></p-chart>     

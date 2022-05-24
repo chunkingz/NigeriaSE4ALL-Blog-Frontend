@@ -154,14 +154,14 @@ $home-hr-color: #93939f;
     font-size: 1.3rem;
 }
 
-#power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
+#mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card{
     padding: 1rem;
     width: 24rem;
     height: 70%;
     border-radius: 10px !important;
 }
 
-#mini-grids .section-3-market .home-card {
+#mini-grids .section-3-market .home-card, #power-sector .section-3-market .home-card {
     padding: 1rem;
     border-radius: 10px !important;
 }
@@ -261,7 +261,7 @@ $home-hr-color: #93939f;
 }
 
 @media (max-width: 1024px) {
-    #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
+    #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
         width: 26rem;
     }
     .text-wrap {
@@ -323,7 +323,7 @@ $home-hr-color: #93939f;
         margin-top: -2rem !important;
     }
 
-    #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
+    #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card, #power-sector .section-5 .home-card {
         width: 90% !important;
         margin-top: 0rem !important;
         margin-bottom: 0rem !important;
@@ -386,7 +386,7 @@ $home-hr-color: #93939f;
 }
 
 @media (max-width: 425px) {
-    #power-sector .section-3-market .home-card, #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card {
+    #mini-grids .section-5 .home-card, #shs .section-3-market .home-card, #shs .section-5 .home-card, #power-sector .section-5 .home-card {
         height: 80%;
     }
     .section-4-download td #data-download-btn-txt {

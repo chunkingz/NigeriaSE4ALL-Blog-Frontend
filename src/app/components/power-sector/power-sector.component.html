@@ -18,7 +18,6 @@
         </section>
 
         <section class="section-2">
-
             <div class="container col-md-9 p-lg-4 mx-auto mt-5 mb-1 text-center section-2-title">
                 <h2 class="fw-bold">{{ dynamicBlogData ? dynamicBlogData.power_sector_section2_hero :
                     constants.minigrids_section2_hero }}</h2>
@@ -43,62 +42,92 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>           
         </section>
-<!-- 
-        <section class="section-3-market">
+        <section class="section-3-market">           
             <div class="container p-lg-4 mx-auto text-center">
-                <h2 class="fw-bold">{{ constants.minigrids_section3_hero }}</h2>
+                <h2 class="fw-bold">30:30:30 Tracker</h2>
                 <br>
-                <p class="lead fw-normal">{{ constants.minigrids_section3_subtitle }}</p>
+                <p class="lead fw-normal">The 30:30:30 tracker allows you to explore the progress towards key targets to be achieved by the year <b>2030</b></p>
             </div>
-            <div class="container x-row">
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
+            <div class="container-fluid text-center row">
+                <div class="col-md-6" style="height: 40vh">
+                        <p class="lead fw-normal">Increase electricity generation to <b>30,000 MW</b> by the year <b>2030</b></p>
+                        <ngx-charts-gauge                               
+                        [results]="gaugeData1"
+                        [legend]="false"
+                        [max] ="30000"
+                        [scheme] = "colorSchemeGauge"
+                        [valueFormatting] = "formatgauge1"                        
+                        (select)="onSelect($event)"
+                        (activate)="onActivate($event)"
+                        (deactivate)="onDeactivate($event)"
+                        [showAxis]= true
+                        [bigSegments]="3"
+                        [smallSegments]="0"
+                        >
+                        </ngx-charts-gauge>   
+                    </div>                    
+                    <div class="col-md-6" style="height: 40vh">
+                        <p class="lead fw-normal">Increase renewable energy share to <b>30%</b> by the year <b>2030</b></p>   
+                        <ngx-charts-gauge                              
+                            [results]="gaugeData2"
+                            [legend]="false"
+                            [max] ="30"
+                            [scheme] = "colorSchemeGauge"
+                            [valueFormatting] = "formatgauge2"                        
+                            (select)="onSelect($event)"
+                            (activate)="onActivate($event)"
+                            (deactivate)="onDeactivate($event)"
+                            [showAxis]= true
+                            [bigSegments]="3"
+                            [smallSegments]="0"
+                            >
+                            </ngx-charts-gauge>
+                    </div>    
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
+            <div class="container-fluid row">        
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
+                        <div class="row-x">
+                            <span class="chart-subtitle">
+                                Total generation capacity installed and planned
+                            </span>
+                            <span>
+                                <img placement="bottom" tooltip="Installed and planned generation capacity until 2030 based on power plants in the planning phase
+                                and sector projections" 
+                                id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
+                            </span>
+                        </div>        
+                        <p-chart class="col-10" type="bar" [data]="capPlot" [options]="optionsPlot1"></p-chart>        
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
+                    <div class="row-x">
+                        <span class="chart-subtitle">
+                            Percentage renewables installed and planned
+                        </span>
+                        <span>
+                            <img placement="bottom" tooltip="Installed and planned generation capacity as renewable share in %. Based on power plants 
+                            in the planning phase and sector projections" 
+                            id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
+                        </span>
+                    </div>        
+                    <p-chart class="col-10" type="bar" [data]="regenPlot" [options]="optionsPlot2"></p-chart>        
                 </div>
-                <div class="card my-5 mx-4 shadow-lg home-card">
-                    <p>Total off-grid sites</p>
-                    <div class="card-body text-center py-5">
-                        <h5 class="card-title fw-bold mb-4">
-                            19,345
-                        </h5>
-                        <p class="card-text mb-5">
-                            2021
-                        </p>
-                    </div>
+                <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
+                    <div class="row-x">
+                        <span class="chart-subtitle">
+                            Renewables installed by technology type
+                        </span>
+                        <span>
+                            <img placement="bottom" tooltip="Installed and planned generation capacities until 2030 seperated into technology types. Based 
+                            on power plants in the planning phase and sector projections" 
+                            id="info-tooltip" class="icon-medium" src="../../../assets/info.png">
+                        </span>
+                    </div>        
+                    <p-chart class="col-10" type="bar" [data]="capCategoryPlot" [options]="optionsPlot3"></p-chart>        
                 </div>
-            </div>
-        </section> -->
+            </div> 
+        </section>
 
         <section class="section-4-download">
             <div class="container p-lg-4 mx-auto text-center">
