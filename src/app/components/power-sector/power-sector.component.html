@@ -46,12 +46,16 @@
         </section>
         <section class="section-3-market">           
             <div class="container p-lg-4 mx-auto text-center">
-                <h2 class="fw-bold">30:30:30 Tracker</h2>
+                <h2 class="fw-bold">Explore the progress on the national electrification targets</h2>
                 <br>
-                <p class="lead fw-normal">The 30:30:30 tracker allows you to explore the progress towards key targets to be achieved by the year <b>2030</b></p>
+                <p class="lead fw-normal">Following the SE4ALL Global Action Agenda the Nigerian government commited to reach the following
+                    two target until <b>2030</b>. <a class= "about-link" href="/about" target="_blank"> Learn More.</a> 
+                    <br>The underlying data comes from an extensive market survey from 2020. <br> The projections are based on officially numbers on planned
+                    power assets. <a class="about-link" href="https://data.nigeriase4all.gov.ng/documents/357"> Source </a>   
+                </p>
             </div>
-            <div class="container-fluid text-center row">
-                <div class="col-md-6" style="height: 40vh">
+            <div class="container-fluid text-center row">               
+                <div class="col-md-6" style="height: 40vh">                    
                         <p class="lead fw-normal">Increase electricity generation to <b>30,000 MW</b> by the year <b>2030</b></p>
                         <ngx-charts-gauge                               
                         [results]="gaugeData1"
@@ -65,8 +69,8 @@
                         [showAxis]= true
                         [bigSegments]="3"
                         [smallSegments]="0"
-                        >
-                        </ngx-charts-gauge>   
+                        >                     
+                        </ngx-charts-gauge>
                     </div>                    
                     <div class="col-md-6" style="height: 40vh">
                         <p class="lead fw-normal">Increase renewable energy share to <b>30%</b> by the year <b>2030</b></p>   
@@ -90,7 +94,7 @@
                 <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                         <div class="row-x">
                             <span class="chart-subtitle">
-                                Total generation capacity installed and planned
+                                Total generation capacity installed and planned in [MW]
                             </span>
                             <span>
                                 <img placement="bottom" tooltip="Installed and planned generation capacity until 2030 based on power plants in the planning phase
@@ -103,7 +107,7 @@
                 <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <div class="row-x">
                         <span class="chart-subtitle">
-                            Percentage renewables installed and planned
+                            Percentage renewables installed and planned in [%]
                         </span>
                         <span>
                             <img placement="bottom" tooltip="Installed and planned generation capacity as renewable share in %. Based on power plants 
@@ -116,7 +120,7 @@
                 <div class="card my-5 mx-4 p-4 shadow-lg home-card col-md-5 mx-auto">
                     <div class="row-x">
                         <span class="chart-subtitle">
-                            Renewables installed by technology type
+                            Renewables installed by technology type in [MW]
                         </span>
                         <span>
                             <img placement="bottom" tooltip="Installed and planned generation capacities until 2030 seperated into technology types. Based 

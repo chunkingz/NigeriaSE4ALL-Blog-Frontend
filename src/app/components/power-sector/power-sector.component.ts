@@ -156,12 +156,21 @@ export class PowerSectorComponent implements OnInit {
           this.gaugeData2 =  [this.plotData.current_ren_share];
 
           //create options and rearange data to insert into the plots
-          this.capPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Capacity}], 1);
-          this.regenPlot = this.getStackedData([{name: 'capacity', points:this.plotData.series.Renewable}], 2);
+          this.capPlot = this.getStackedData([
+            {name: 'Capacity Realized [MW]', points:this.plotData.series.Capacity_Realized},
+            {name: 'Capacity Projected [MW]', points:this.plotData.series.Capacity_Projected}
+            ], 1);
+          this.regenPlot = this.getStackedData([
+            {name: '% renewable installed', points:this.plotData.series.Renewable_Realized},
+            {name: '% renewable planned', points:this.plotData.series.Renewable_Projected}
+          ], 2);
           this.capCategoryPlot = this.getStackedData([
-            {name: 'PV', points:this.plotData.series.PV},
-            {name: 'Hydro', points:this.plotData.series.Hydro},
-            {name: 'Wind', points:this.plotData.series.Wind},
+            {name: 'PV Realized', points:this.plotData.series.PV_Realized},
+            {name: 'Hydro Realized', points:this.plotData.series.Hydro_Realized},
+            {name: 'Wind Realized', points:this.plotData.series.Wind_Realized},
+            {name: 'PV Projected', points:this.plotData.series.PV_Projected},
+            {name: 'Hydro Projected', points:this.plotData.series.Hydro_Projected},
+            {name: 'Wind Projected', points:this.plotData.series.Wind_Projected},
           ], 3);
           }
           , error => {
@@ -175,13 +184,13 @@ export class PowerSectorComponent implements OnInit {
           const stackedDataChartType = 'bar';          
           var stackedDataColorScheme;
           if(plotNumber == 1){
-            stackedDataColorScheme = ['#1dd068'];
+            stackedDataColorScheme = ['#1dd068','#1dd068'];
           }
           else if(plotNumber == 2){
-            stackedDataColorScheme = ['#ffbb00'];
+            stackedDataColorScheme = ['#ffbb00','#ffbb00'];
           }
           else{
-            stackedDataColorScheme = ['#1dd068', '#ffbb00','black'];
+            stackedDataColorScheme = ['#1dd068', '#ffbb00','#00cbdb','#1dd068', '#ffbb00','#00cbdb'];
           }
 
           const stackedDataLegendName: any[] = [];
@@ -201,7 +210,17 @@ export class PowerSectorComponent implements OnInit {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: []
+                  data: [],
+                  borderWidth: 2,
+                  borderColor: '#0f0f0f',
+              },
+              {
+                  type: stackedDataChartType,
+                  label: '',
+                  backgroundColor: '',
+                  data: [],
+                  borderColor: '#e36d19',
+                  borderWidth: 2
               }
             ]
           };
@@ -214,19 +233,49 @@ export class PowerSectorComponent implements OnInit {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: []
+                  data: [],
+                  borderWidth: 2,
+                  borderColor: '#0f0f0f'
               },
               {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: []
+                  data: [],
+                  borderWidth: 2,
+                  borderColor: '#0f0f0f'
               },
               {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: []
+                  data: [],
+                  borderWidth: 2,
+                  borderColor: '#0f0f0f'
+              },
+              {
+                type: stackedDataChartType,
+                label: '',
+                backgroundColor: '',
+                data: [],
+                borderColor: '#e36d19',
+                borderWidth: 2
+              },
+              {
+                type: stackedDataChartType,
+                label: '',
+                backgroundColor: '',
+                data: [],
+                borderColor: '#e36d19',
+                borderWidth: 2
+              },
+              {
+                type: stackedDataChartType,
+                label: '',
+                backgroundColor: '',
+                data: [],
+                borderColor: '#e36d19',
+                borderWidth: 2
               }
               ]
           };
@@ -291,7 +340,7 @@ export class PowerSectorComponent implements OnInit {
                       type:'line',
                       yMin: 30000,
                       yMax: 30000,
-                      borderColor: 'rgb(255, 99, 132)',
+                      borderColor: 'black',
                       borderWidth: 3,
                     }
                   }
@@ -352,7 +401,7 @@ export class PowerSectorComponent implements OnInit {
                   type:'line',
                   yMin: 30,
                   yMax: 30,
-                  borderColor: 'rgb(255, 99, 132)',
+                  borderColor: 'black',
                   borderWidth: 3,
                 }
               }
