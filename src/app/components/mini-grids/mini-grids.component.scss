@@ -97,6 +97,7 @@ $home-hr-color: #93939f;
     justify-content: center;
 }
 
+
 .tag-title, .card-text-badge, .card-text-badge-2 {
     display: flex;
 }
@@ -497,4 +498,8 @@ $home-hr-color: #93939f;
     .trend-value {
         top: 2.6rem;
     }
+}
+
+.section-4 a{
+    color: inherit !important;
 }
