@@ -94,6 +94,7 @@ $home-hr-color: #93939f;
 .section-2 .x-row, .section-3-market .x-row, .section-4 .x-row, .section-5 .x-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tag-title, .card-text-badge, .card-text-badge-2 {
