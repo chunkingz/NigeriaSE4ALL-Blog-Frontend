@@ -184,13 +184,13 @@ export class PowerSectorComponent implements OnInit {
           const stackedDataChartType = 'bar';          
           var stackedDataColorScheme;
           if(plotNumber == 1){
-            stackedDataColorScheme = ['#1dd068','#1dd068'];
+            stackedDataColorScheme = ['#1dd068','#93939F'];
           }
           else if(plotNumber == 2){
-            stackedDataColorScheme = ['#ffbb00','#ffbb00'];
+            stackedDataColorScheme = ['#ffbb00','#93939F'];
           }
           else{
-            stackedDataColorScheme = ['#1dd068', '#ffbb00','#00cbdb','#1dd068', '#ffbb00','#00cbdb'];
+            stackedDataColorScheme = ['#1dd068', '#ffbb00','#00cbdb','#E0E2E9', '#C5C4CF','#93939F'];
           }
 
           const stackedDataLegendName: any[] = [];
@@ -210,17 +210,13 @@ export class PowerSectorComponent implements OnInit {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: [],
-                  borderWidth: 2,
-                  borderColor: '#0f0f0f',
+                  data: []
               },
               {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: [],
-                  borderColor: '#e36d19',
-                  borderWidth: 2
+                  data: []
               }
             ]
           };
@@ -233,49 +229,37 @@ export class PowerSectorComponent implements OnInit {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: [],
-                  borderWidth: 2,
-                  borderColor: '#0f0f0f'
+                  data: []
               },
               {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: [],
-                  borderWidth: 2,
-                  borderColor: '#0f0f0f'
+                  data: []
               },
               {
                   type: stackedDataChartType,
                   label: '',
                   backgroundColor: '',
-                  data: [],
-                  borderWidth: 2,
-                  borderColor: '#0f0f0f'
+                  data: []
               },
               {
                 type: stackedDataChartType,
                 label: '',
                 backgroundColor: '',
-                data: [],
-                borderColor: '#e36d19',
-                borderWidth: 2
+                data: []
               },
               {
                 type: stackedDataChartType,
                 label: '',
                 backgroundColor: '',
-                data: [],
-                borderColor: '#e36d19',
-                borderWidth: 2
+                data: []
               },
               {
                 type: stackedDataChartType,
                 label: '',
                 backgroundColor: '',
-                data: [],
-                borderColor: '#e36d19',
-                borderWidth: 2
+                data: []
               }
               ]
           };

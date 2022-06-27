@@ -334,8 +334,8 @@ export class MiniGridsComponent implements OnInit {
   
       getDoughnutData(){
   
-          const doughnutBackgroundColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000","#3734eb","#eb34dc"];
-          const doughnutHoverColor = ["#1dd068","#ffbb00","#e0e2e9","#b91108","#000","#3734eb","#eb34dc"];
+          const doughnutBackgroundColor = ["#84BFA4","#BB6764","#F8D059","#F59A8B","#225766","#FBF5B5","#5EC8D5"];
+          const doughnutHoverColor = ["#84BFA4","#BB6764","#F8D059","#F59A8B","#225766","#FBF5B5","#5EC8D5"];
           
           this.doughnutData = {
               labels: [],
