@@ -41,7 +41,7 @@
                         {{app.subtitle}}
                         </p>
                         <p>
-                            <a type="button" id="view-app-btn" class="btn btn-lg fw-bold btn-mini-grid cta" href="{{app.url}}">
+                            <a id="view-app-btn" class="btn btn-lg fw-bold btn-mini-grid cta" href="{{app.url}}">
                                 {{ dynamicBlogData ? dynamicBlogData.btn8 : constants.btn8 }}
                             </a>
                         </p>
@@ -175,7 +175,7 @@
                             </td>
                             <td id="dataset_download" class="text-center">
                                 <a href="{{ data.download_url }}" target="_blank">
-                                    <button type="button" class="btn btn-success cta" id="data-download">
+                                    <button class="btn btn-success cta" id="data-download">
                                         <img src="/assets/i_download_w.svg" alt="..." style="width: 1rem; height: 2rem; vertical-align: middle;padding-bottom:0.2rem">
                                         <span id="data-download-btn-txt"> Download</span>
                                     </button>

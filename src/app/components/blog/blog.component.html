@@ -82,7 +82,7 @@
 
                                             <!-- START OF BLOG READ MORE BUTTON -->
                                             <div class="mx-3">
-                                                <a type="button" class="btn btn-md btn-outline-secondary">
+                                                <a class="btn btn-md btn-outline-secondary">
                                                     {{ dynamicBlogData ? dynamicBlogData.btn1 : constants.btn1 }}
 
                                                 </a>
@@ -93,7 +93,7 @@
                                             <!-- START OF INDIVIDUAL BLOG POST TAGS -->
                                             <div class="d-flex flex-lg-row flex-sm-column flex-xs-column">
                                                 <div *ngFor="let blogCategory of blog.categories">
-                                                    <a type="button" class="btn btn-sm btn-se4all mb-2 mx-lg-1 mb-lg-0"
+                                                    <a class="btn btn-sm btn-se4all mb-2 mx-lg-1 mb-lg-0"
                                                         routerLink="../blog-category/{{blogCategory.name}}">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                             fill="currentColor" class="bi bi-tag-fill"

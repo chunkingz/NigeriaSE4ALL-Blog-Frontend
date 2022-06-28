@@ -163,7 +163,7 @@
                                             
                                             <div class="card-text-badge-2" id="blog-categories">
                                                 <div *ngFor="let blogCategory of blog.categories">
-                                                    <a type="button" class="text-reset" routerLink="../blog-category/{{blogCategory.name}}">
+                                                    <a class="text-reset" routerLink="../blog-category/{{blogCategory.name}}">
                                                         <div class="rounded-pill text-white px-4 py-1 {{ blogCategory.class_style_1 }}">
                                                             {{ blogCategory.alt_name }}
                                                         </div>
@@ -182,7 +182,7 @@
 
                 <div class="text-center py-5" id="all-blog-posts-btn">
                     <a routerLink="{{ dynamicBlogData ? dynamicBlogData.nav_txt_url_1 : constants.nav_txt_url_1 }}" 
-                    type="button" class="btn btn-lg btn-v3 cta mx-auto">
+                        class="btn btn-lg btn-v3 cta mx-auto">
                         {{ dynamicBlogData ? dynamicBlogData.btn9 : constants.btn9 }}
                     </a>
                 </div>
