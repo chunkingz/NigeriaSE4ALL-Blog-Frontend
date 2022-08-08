@@ -57,7 +57,7 @@
                     <div *ngFor="let section3Data of section3DynamicData">
 
                         <div class="card my-5 mx-4 card-shadow home-card">
-                            <a href="{{ section3Data.card_url }}" target="blank" class="text-reset">
+                            <a href="{{ section3Data.card_url }}" class="text-reset">
 
                                 <img src="{{ section3Data.card_img[0].url }}" class="card-img-top" alt="{{ section3Data.card_img_alt }}">
                                 <div class="card-body" id="{{ section3Data.color }}">
@@ -94,10 +94,15 @@
                 <div *ngFor="let section4Data of section4DynamicData">
 
                     <div class="section-4-card mb-5 mx-5">
-                        
-                        <a href="{{ section4Data.card_url }}" target="_blank">
+                        <div *ngIf="section4Data.open_link_new_tab == true;">
+                            <a href="{{ section4Data.card_url }}" target="_blank"></a>
+                        </div>
+                        <div *ngIf="section4Data.open_link_new_tab == false;">
+                            <a href="{{ section4Data.card_url }}"></a>
+                        </div>
+                        <!-- <a href="{{ section4Data.card_url }}" target="_blank"> -->
                         <img src="{{ section4Data.card_img[0].url }}" class="section4-card-img mt-3 shadow-lg" alt="{{ section4Data.card_img_alt }}">
-                        </a>                       
+                                               
                         
                         <div class="tag-title fw-bold mb-4 text-uppercase pt-4 fs-6">
                             <div class="circular {{section4Data.class_style_1}}">
@@ -114,12 +119,25 @@
                                 {{ section4Data.card_subtitle }}
                             </span>
                         </p>
-                        <p>
-                            <a id="view-app-btn" href="{{ section4Data.card_url }}" target="_blank"
+                        <div>
+                            <div *ngIf="section4Data.open_link_new_tab == true">
+                                <a id="view-app-btn" href="{{ section4Data.card_url }}" target="_blank"
+                                class="btn btn-lg btn-v3 cta">
+                                    {{ section4Data.card_btn_txt }}
+                                </a>
+                            </div>
+                                <div *ngIf="section4Data.open_link_new_tab == false">
+                                    <a id="view-app-btn" href="{{ section4Data.card_url }}"
+                                    class="btn btn-lg btn-v3 cta">
+                                        {{ section4Data.card_btn_txt }}
+                                    </a>
+                                </div> 
+                            
+                            <!-- <a id="view-app-btn" href="{{ section4Data.card_url }}" target="_blank"
                             class="btn btn-lg btn-v3 cta">
                                 {{ section4Data.card_btn_txt }}
-                            </a>
-                        </p>
+                            </a> -->
+                        </div>
                     </div>
 
                 </div>
