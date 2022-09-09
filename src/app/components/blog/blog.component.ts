@@ -40,7 +40,7 @@ export class BlogComponent implements OnInit {
    * Fetches all articles in the db
    */
   getAllArticles(apiEndPoint: string) {
-    this._data.getDynamicContent(apiEndPoint).subscribe(res => {
+    this._data.getDynamicContent(apiEndPoint, "published_date:DESC").subscribe(res => {
       this.blogData = res;
     }, error => {
       console.log('An unexpected error occurred');
