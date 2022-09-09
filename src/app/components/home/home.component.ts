@@ -71,8 +71,9 @@ export class HomeComponent implements OnInit {
    * see https://docs-v3.strapi.io/developer-docs/latest/developer-resources/content-api/content-api.html#filters
    */
    getAllBlogArticles(apiEndPoint: string) {
-    this._data.getDynamicContent(apiEndPoint, "published_date:ASC").subscribe(res => {
+    this._data.getDynamicContent(apiEndPoint, "published_date:DESC").subscribe(res => {
       this.blogData = res;
+      this.blogData = this.blogData.slice(0,5);
     }, error => {
       console.log('An unexpected error occurred');
       console.log(error.message);
